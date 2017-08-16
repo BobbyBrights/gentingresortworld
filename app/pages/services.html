@@ -1,0 +1,49 @@
+---
+hero: {
+  'bgUrl': './assets/img/hero_bg_services.jpg',
+  'title': 'Banking <br class="hidden-xs">Law',
+  'desc': 'Z. Hashim & Co.'
+}
+
+content: [{
+  title: 'Assets & Debt Recovery',
+  copy: '<p>NEW YORK (FORTUNE Small Business Magazine) - Mixing religion and business is getting more complicated as it grows more common, particularly for company owners. Consider Christopher Miller of ATSI, a computer networking firm in Athens, Ala., and his employee Darla Tillery. Miller repeatedly lectured Tillery about her allegedly sinful life. On one of her annual reviews he wrote, "Keep going to church, seek God first." When Miller fired Tillery, she sued ATSI for religious discrimination. Tillery lost, but the judge in the 2003 case noted that Miller&#039;s behavior "could be deemed objectively offensive by a reasonable jury."<p>U.S. courts normally try to balance the employer&#039;s right to express his values through his business and the right of employees not to feel discriminated against. Business owners are also free to express their faith in advertising and marketing materials, as long as they are not exclusionary. In a landmark 1984 case, a Jewish businessman filed a suit against a Christian yellow-pages phone directory based in Modesto, Calif., because the directory had refused to publish his listing. An appellate panel upheld the company&#039;s right to publish Christian-business directories but ruled that it could not exclude non-Christian advertisers.</p><p>Civil rights legislation bars employers from making any employment decision based on religion, but it covers only firms with 15 or more employees. Smaller companies are free to use religion as a reason to hire, fire, or promote an employee--as long as they&#039;re not located in a state whose laws cover smaller businesses. Laws in many states, such as Florida and Maryland, mimic federal law with a 15-person threshold. But in New Jersey and Oregon, for example, antidiscrimination rules apply even if you have only one employee. Smart business owners know the law and find ways to make employees of all faiths--or none--feel welcome at their companies.</p>'
+},
+{
+  title: 'Commercial Loans',
+  copy: '<p>NEW YORK (CNNMoney) -- Soldiers returning from the wars in Iraq and Afghanistan can look forward to a different kind of action when they reach U.S. soil: help for their businesses.</p><p>More government agencies and private firms are setting aside more contracts -- or procurement goals --for veteran-owned companies.</p><p>The trend comes as President Barack Obama visited the Washington Navy Yard last Friday to propose a series of job-boosting moves for veterans, including tax credits for firms that hire unemployed veterans and a challenge to the private sector to hire 100,000 unemployed veterans or their spouses by 2014.</p>'
+},
+{
+  title: 'Bankruptcy & Foreclosure',
+  copy: '<p>If you behind on your mortgage payments or are already in foreclosure, bankruptcy may be able to help you save your home. Usually, Chapter 13 bankruptcy is the best way to save your house. It allows you to make up missed mortgage payments through your repayment plan and get back on track. Chapter 7 bankruptcy, while providing temporary relief from foreclosure, usually doesn&#039;t prevent the eventual foreclosure of your home. However, if you file for Chapter 7 bankruptcy early enough (before you are in arrears), you may be able to get rid of other debts and free up money to make your monthly mortgage payments.</p><p>If you are facing foreclosure, or think you might soon be, read the below articles to find out how bankruptcy can help.</p>'
+},
+{
+  title: 'Liquidation & Receivership',
+  copy: '<p>The main differences between the appointment of a liquidator and that of a receiver are:</p><ul><li>A receiver is appointed by a secured creditor of the company (often a lender) under a power contained in (usually) a security agreement. A liquidator is appointed by either the shareholders of the company, or by the court on application of any creditor of the company, in accordance with the liquidation provisions of the Companies Act 1993.</li><li>The receiver&#039;s job is to take control of and sell only those company assets that have been pledged to secure the money owed. In most cases the amount owing will be a loan. In contrast a liquidator&#039;s job is to take control of <i>all</i> the assets of the company and sell those assets to try and repay the money owed by the company to everyone, not just one particular creditor.</li><li>A receiver can continue to trade the company whereas (usually) a liquidator can&#039;t keep trading. Trading an insolvent company, however, is risky so this doesn&#039;t always happen.</li><li>In a receivership the company directors still have a role although it&#039;s very limited because of the powers of the receiver to deal with the secured assets. In a liquidation situation the directors&#039; roles are effectively extinguished.</li><li>Once the receiver has done his or her job the company will come out of receivership and be handed back to the shareholders and directors. In theory the company can continue on, but usually doesn&#039;t. Once the liquidator has finished, the company is struck off the Register of Companies and ceases to exist.</li><li>It&#039;s possible for a company to be in receivership and liquidation at the same time. Whilst a company can only ever have one liquidator at one time it can have more than one receiver – which makes for a complex situation.</li></ul>'
+}]
+---
+
+{{> banner hero}}
+
+<section class="content pages">
+  <div class="pull-up">
+    <div class="container">
+      <div class="row">
+        <div class="inner-section-sidebar stabilizer"></div>
+        <div class="inner-section-content section-content bg">
+          <section class="content-sections">
+            <div class="content-slider-wrap slider-slick slick">
+              {{#each content}}
+              <div class="content-slider-item" data-paging="{{title}}">
+                <h4 class="header">{{title}}</h4>
+
+                {{{copy}}}
+              </div>
+              {{/each}}
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
