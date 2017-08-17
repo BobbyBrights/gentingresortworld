@@ -1,24 +1,26 @@
-$font-family-sans-serif: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-sans-serif: 'Brown-Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-family-base: $font-family-sans-serif;
-$headings-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$headings-font-family: 'Brown-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-size-base: 14px;
 
-$oswald-reg: 300;
-$oswald-bold: 500;
+$weight-thin: 'Brown-Thin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$weight-reg: 'Brown-Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$weight-bold: 'Brown-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-$open-reg: 400;
-$open-bold: 700;
 
 $blockquote-font-size: $font-size-base;
 
-$text-color: #57534D;
+$text-color: #4A4A4A;
 
-$brand-primary: #eb0029;
-$gray-lighter: #f1f2f2;
-$gray-light: #bcbec0;
-$gray: #5c6670;
-$gray-dark: #58595b;
-$gray-darker: #111820;
+$brand-primary: #EA1A38; // red
+
+$darkpurple: #4D0C41; // header background
+$purple: #9E1E5D; // header background
+
+$gray-lighter: #6F6B6B; // input placeholder
+$gray-light: #9B9B9B; // footer gray
+$gray: #3A3A3A; // footer background
+$gray-dark: #202020; // footer background
 $header-color: #1e252b;
 
 
@@ -26,11 +28,11 @@ $navbar-height: 80px;
 $navbar-border-radius: 0;
 $navbar-margin-bottom: 0;
 
-$navbar-default-bg: #000;
+$navbar-default-bg: $darkpurple;
 $navbar-default-border: transparent;
 $navbar-default-color: #FFFFFF;
 $navbar-default-link-color: #FFF;
-$navbar-default-link-hover-color: $gray-light;
+$navbar-default-link-hover-color: lighten($purple, 20);
 
 $navbar-default-link-active-color:  darken($navbar-default-link-hover-color, 20);
 $navbar-default-link-active-bg:     darken($navbar-default-bg, 2);
