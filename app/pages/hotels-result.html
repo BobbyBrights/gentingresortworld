@@ -1,0 +1,80 @@
+---
+results: [
+  {
+    name: 'First World Hotel',
+    desc: 'Offers a variety of room types to suit your budget and needs.',
+    price: '275'
+  },
+  {
+    name: 'Hotel on the Park',
+    desc: 'Hotel on the Park is a boutique hotel perfect for those who like to stay together. ',
+    price: '281'
+  },
+  {
+    name: 'Awana @ Resorts World Genting',
+    desc: 'Indulge in five-star luxury while taking in breathtaking views of a majestic mountain range landscape within the comfort of your room',
+    price: '337'
+  },
+  {
+    name: 'Maxims',
+    desc: 'Offers world-class services, from a wide variety of dining choices to entertainment venues.',
+    price: '400'
+  },
+  {
+    name: 'Resort Hotel',
+    desc: 'Offers a wide range of amenities and facilities, both for business and leisure',
+    price: '550'
+  },
+  {
+    name: 'Genting Grand',
+    desc: 'Offers a convenient and relaxing stay with its modern amenities and first-class services.',
+    price: '1,485'
+  },
+  {
+    name: 'Crockfords',
+    desc: 'The prestigious Crockfords offers premium accommodation with top-notch facilities and service.',
+    price: '1,650'
+  }
+]
+---
+
+
+{{> bar-search-filter}}
+
+<div class="page-body">
+  <div class="container">
+    {{#each results}}
+      <div class="col-sm-6 results-item">
+        <div class="row">
+          <div class="col-sm-3 hidden-xs">
+            <img src="assets/img/hotel-thumbnail.jpg" alt="{{name}}" class="result-image">
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <p class="result-name">{{name}}</p>
+            <p class="result-description">{{desc}}</p>
+            <a href="hotel-detail.html" class="btn">More Details</a>
+          </div>
+          <div class="col-xs-6 visible-xs">
+            <img src="assets/img/hotel-thumbnail.jpg" alt="{{name}}" class="result-image">
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div class="result-price">
+              {{#if @last}}
+                <p class="price">Sold out</p>
+              {{else}}
+                <p class="price">
+                  {{price}}
+                  <small>MYR</small>
+                </p>
+                <p>AVG Per Night</p>
+              {{/if}}
+
+              <a href="hotel-calendar.html" class="btn btn-primary btn-lg">Select</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    {{/each}}
+  </div>
+</div>

@@ -1,0 +1,194 @@
+---
+current: {
+  'pageticket': true
+  }
+
+form: [
+  {
+    'class': 'col-sm-5',
+    'placeholder': 'First Name*',
+    'required': true
+  },
+  {
+    'class': 'col-sm-3',
+    'placeholder': 'Last Name*',
+    'required': true
+  },
+  {
+    'class': 'col-sm-4',
+    'placeholder': 'Contact Number',
+    'required': false
+  },
+  {
+    'class': 'col-sm-8',
+    'placeholder': 'Email*',
+    'required': true
+  },
+  {
+    'class': 'col-sm-4',
+    'placeholder': 'Member ID',
+    'required': false
+  }
+]
+---
+
+{{>bar-show-steps current}}
+
+<div class="page-body">
+  <div class="container">
+    <div class="layout-purchase">
+      <div class="page-header">
+        <h1>
+          Alice in Wonderland
+          <a href="shows-details.html" class="btn">More Details</a>
+        </h1>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-3">
+          <img src="assets/img/show-poster.jpg" alt="Show Name">
+        </div>
+
+        <div class="col-sm-9">
+          <!-- Calendar -->
+          <div class="sections">
+            datepicer goes here
+          </div>
+
+          <!-- Legend -->
+          <div class="sections">
+            <div class="header-section">
+              <h4>Legend</h4>
+            </div>
+            <p>
+              Select the type and number of tickets you would like to buy. After each selection please click “Add” to add the tickets to your basket.
+            </p>
+
+            <table class="component-legend">
+              <tr>
+                <td><p><strong>Availability Information</strong></p></td>
+                <td>
+                  <ul>
+                    <li><span class="square selected"></span></li>
+                    <li>Selected day</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li><span class="square available"></span></li>
+                    <li>Available day</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li><span class="square unavailable"></span></li>
+                    <li>Unavailable day</li>
+                  </ul>
+                </td>
+              </tr>            
+            </table>
+          </div>
+          
+          <!-- Ticket Selection Review -->
+          <div class="sections">
+            <div class="header-section">
+              <h4>Ticket Selection</h4>
+              <p>Selected date: 24 August 2017</p>
+            </div>
+
+            <div class="panel">
+              <div class="row">
+                <div class="col-sm-7">
+                  <form action="">
+                    <table>
+                      <tr>
+                        <td>
+                          <label for="time">Time</label>
+                          <select class="form-control" name="" id="">
+                            <option value="">6pm</option>
+                            <option value="">8pm</option>
+                            <option value="">10pm</option>
+                          </select>
+                        </td>
+                        <td>
+                          <label for="">Seats</label>
+                          <select class="form-control" name="" id="">
+                            <option value="">VIP</option>
+                            <option value="">PS1</option>
+                            <option value="">PS2</option>
+                            <option value="">PS3</option>
+                            <option value="">PS4</option>
+                          </select>
+                        </td>
+                        <td>
+                          <label for="">Qty</label>
+                          <select class="form-control" name="" id="">
+                            <option value="1">1</option> 
+                            <option value="2">2</option>
+                            <option value="3">3</option> 
+                            <option value="4">4</option>
+                          </select>
+                        </td>
+                        <td>
+                          <label for="">Price</label>
+                          <div class="input-group">
+                            <input type="text" class="form-control" value="160.00">
+                            <span class="input-group-addon">MYR</span>
+                          </div>
+                        </td>
+                        <td>
+                          <input type="button" class="btn btn-primary" value="Add">
+                        </td>
+                      </tr>
+                    </table>
+                  </form>
+                </div>
+                <div class="col-sm-5">
+                  <table>
+                    <tr>
+                      <td>
+                        <label>Time</label>
+                        <p>20:00</p>
+                      </td>
+                      <td>
+                        <label>Seat</label>
+                        <p>PS1</p>
+                      </td>
+                      <td>
+                        <label>Qty</label>
+                        <p>2</p>
+                      </td>
+                      <td>
+                        <label>Price</label>
+                        <p>160.00 MYR</p>  
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Buyer Information -->
+          <div class="sections">
+            <div class="row">
+              <form action="">
+                {{#each form}}
+                  <div class="{{class}}">
+                    <label class="sr-only">{{placeholder}}</label>
+                    <input class="form-control" type="text" placeholder="{{placeholder}}" {{#if required}}required{{/if}}>
+                  </div>
+                {{/each}}
+
+                <div class="col-sm-4 col-sm-offset-8">
+                  <input type="submit" value="Express Checkout" class="btn btn-primary btn-block">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

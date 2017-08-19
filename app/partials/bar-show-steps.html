@@ -1,0 +1,20 @@
+<div class="search-bar header_bar-primary">
+  <div class="container">
+    {{> search-inline}}
+  </div>
+</div>
+
+<div class="header_bar-secondary">
+  <div class="container">
+    
+    <div class="btn-group btn-group-justified">
+      <span class="btn{{#if pageticket}} active{{/if}}">Ticket Selection</span>
+      <span class="btn{{#if pagecheckout}} active{{/if}}">Express Checkout</span>
+      <span class="btn{{#if pagethankyou}} active{{/if}}">Thank You</span>
+    </div>
+    <a href="cart" class="btn">
+      <span>he</span>
+      My Cart
+    </a>
+  </div>
+</div>
