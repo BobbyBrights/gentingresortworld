@@ -1,39 +1,48 @@
-<form action="" class="form-inline">
-  <div class="form-group">
-    <label for="filter-type" class="sr-only">Type:</label>
-    <select name="filter-type" id="a" class="form-control">
-      <option value="hotels">Hotels Only</option>
-      <option value="shows">Shows</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="filter-date" class="sr-only">Date:</label>
-    <div class="input-group">
-      <span class="input-group-addon">Date</span>
-      <input type="text" class="form-control" placeholder="Date">
+<div class="component-search-inline">
+  <form action="" class="form-inline">
+    <div class="form-group">
+      <label for="filter-type" class="sr-only">Type:</label>
+      <select name="filter-type" id="a" class="form-control">
+        <option value="hotels">Hotels Only</option>
+        <option value="shows">Shows</option>
+      </select>
     </div>
-  </div>
 
-  <div class="form-group">
-    <label for="filter-date" class="sr-only">Guest:</label>
-    <div class="input-group">
-      <span class="input-group-addon">Guest</span>
-      <input type="text" class="form-control" placeholder="Guest">
+    <div class="form-group hidden-xs">
+      <label for="filter-date" class="sr-only">Date:</label>
+      <div class="input-group">
+        <span class="input-group-addon">
+          <span class="icon icon-calendar"></span>
+        </span>
+        <input type="text" class="form-control" placeholder="Date">
+      </div>
     </div>
-  </div>
 
-  <div class="form-group">
-    <label for="filter-date" class="sr-only">Room:</label>
-    <div class="input-group">
-      <span class="input-group-addon">Room</span>
-      <input type="text" class="form-control" placeholder="Room">
+    <div class="form-group hidden-xs">
+      <label for="filter-date" class="sr-only">Guest:</label>
+      <div class="input-group">
+        <span class="input-group-addon">
+          <span class="icon icon-people-line"></span>
+        </span>
+        <input type="text" class="form-control" placeholder="Guest">
+      </div>
     </div>
-  </div>
 
-  <div class="form-group">
-    <label for="filter-date" class="sr-only">Promo Code:</label>
-    <input type="text" class="form-control" placeholder="Promo Code">
-  </div>
+    <div class="form-group hidden-xs">
+      <label for="filter-date" class="sr-only">Room:</label>
+      <div class="input-group">
+        <span class="input-group-addon">
+          <span class="icon icon-bed-line"></span>
+        </span>
+        <input type="text" class="form-control" placeholder="Room">
+      </div>
+    </div>
 
-  <input type="submit" value="Search Now" class="btn btn-primary">
-</form>
+    <div class="form-group hidden-xs">
+      <label for="filter-date" class="sr-only">Promo Code:</label>
+      <input type="text" class="form-control" placeholder="Promo Code">
+    </div>
+
+    <input type="submit" value="Search Now" class="btn btn-primary">
+  </form>
+</div>

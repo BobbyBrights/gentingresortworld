@@ -1,0 +1,112 @@
+.page-body {
+  > .container {
+    @media (max-width: $screen-xs-max) {
+      background-color: $purple;
+      padding: 0;
+    }
+  }
+}
+
+/* HOTEL RESULTS PAGE */
+.results-item {
+  background-color: #FFF;
+  margin-bottom: 10px;
+
+  .hotel-results-wrap {
+    @include clearfix;
+    padding: 15px 0;
+
+    @include breakpoint(tablet) {
+      border: 1px solid $gray-lighter;
+      height: 172px;
+      margin: 5px;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    .top-height {
+      height: 105px;
+    }
+  }
+
+  .result-price {
+    .price {
+      color: $brand-primary;
+      font-size: 36px;
+      line-height: 32px;
+      margin-bottom: 0;
+
+      sup {
+        color: $text-color;
+        font-size: 10px;
+        left: -8px;
+        top: -1.8em;
+      }
+    }
+  }
+}
+
+.hotel-results {
+  .hotel-results-desc {
+    @include make-xs-column(12);
+    @include make-sm-column(6);
+    font-weight: $weight-light;
+
+    @include breakpoint(tablet) {
+      padding: 0;
+    }
+
+    .h3 {
+      display: inline-block;
+      margin-top: 0;
+      width: calc(100% - 120px);
+      vertical-align: top;
+
+      @include breakpoint(tablet) {
+        width: auto;
+      }
+    }
+
+    .btn-moredetails {
+      float: right;
+    }
+
+    .top-height {
+      margin-bottom: 10px;
+    }
+  }
+
+  .top-height {
+    overflow: hidden;
+  }
+}
+
+
+
+
+
+
+/* SHOWS DETAILS PAGE */
+.layout-purchase {
+  background-color: $gray-well;
+  border: 1px solid $gray-lighter;
+  border-radius: $border-radius-base;
+  padding: 10px;
+
+  img {
+    border-radius: $border-radius-base;
+  }
+
+  .sections {
+    background-color: #FFF;
+    border: 1px solid $gray-lighter;
+    border-radius: $border-radius-base;
+    margin-bottom: 10px;
+    padding: 20px;
+
+    .panel {
+      border: 3px solid $purple;
+      border-radius: $border-radius-base;
+    } 
+  }
+}

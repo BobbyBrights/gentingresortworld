@@ -6,6 +6,37 @@ img {
   max-width: 100%;
 }
 
+ul.inline {
+  padding: 0;
+
+  li {
+    display: inline-block;
+    margin: 0 0 0 10px;
+    padding: 0;
+    vertical-align: middle;
+  }
+}
+
+/* HEADERS */
+.header_bar-primary, .header_bar-secondary {;
+  padding: 12px 0;
+}
+
+.header_bar-primary {
+  background-color: $purple;
+}
+
+.header_bar-secondary {
+  background-color: $gray-lighter;
+}
+
+/* PAGE */
+.page-body {
+  @include breakpoint(tablet) {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+}
 
 /* FOOTER */
 .footer {
@@ -70,7 +101,7 @@ img {
 
 .footer-copyright {
   background-color: $gray-dark;
-  color: $gray-light;
+  color: #9B9B9B;
   font-size: 12px;
   padding: 20px 0;
 
@@ -83,6 +114,6 @@ img {
   }
 
   a {
-    color: $gray-light;
+    color: #9B9B9B;
   }
 }

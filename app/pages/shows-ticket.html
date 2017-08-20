@@ -37,12 +37,10 @@ form: [
 <div class="page-body">
   <div class="container">
     <div class="layout-purchase">
-      <div class="page-header">
-        <h1>
-          Alice in Wonderland
-          <a href="shows-details.html" class="btn">More Details</a>
-        </h1>
-      </div>
+      <h1>
+        Alice in Wonderland
+        <a href="shows-details.html" class="btn btn-default btn-moredetails">More Details</a>
+      </h1>
 
       <div class="row">
         <div class="col-xs-12 col-sm-3">
@@ -96,75 +94,71 @@ form: [
               <p>Selected date: 24 August 2017</p>
             </div>
 
-            <div class="panel">
-              <div class="row">
-                <div class="col-sm-7">
-                  <form action="">
-                    <table>
-                      <tr>
-                        <td>
-                          <label for="time">Time</label>
-                          <select class="form-control" name="" id="">
-                            <option value="">6pm</option>
-                            <option value="">8pm</option>
-                            <option value="">10pm</option>
-                          </select>
-                        </td>
-                        <td>
-                          <label for="">Seats</label>
-                          <select class="form-control" name="" id="">
-                            <option value="">VIP</option>
-                            <option value="">PS1</option>
-                            <option value="">PS2</option>
-                            <option value="">PS3</option>
-                            <option value="">PS4</option>
-                          </select>
-                        </td>
-                        <td>
-                          <label for="">Qty</label>
-                          <select class="form-control" name="" id="">
-                            <option value="1">1</option> 
-                            <option value="2">2</option>
-                            <option value="3">3</option> 
-                            <option value="4">4</option>
-                          </select>
-                        </td>
-                        <td>
-                          <label for="">Price</label>
-                          <div class="input-group">
-                            <input type="text" class="form-control" value="160.00">
-                            <span class="input-group-addon">MYR</span>
-                          </div>
-                        </td>
-                        <td>
-                          <input type="button" class="btn btn-primary" value="Add">
-                        </td>
-                      </tr>
-                    </table>
-                  </form>
-                </div>
-                <div class="col-sm-5">
+            <div class="panel clearfix panel-form-purple">
+              <div class="panel-selection col-sm-7">
+                <form action="">
                   <table>
                     <tr>
                       <td>
-                        <label>Time</label>
-                        <p>20:00</p>
+                        <label for="time">Time</label>
+                        <select class="form-control" name="" id="">
+                          <option value="">6pm</option>
+                          <option value="">8pm</option>
+                          <option value="">10pm</option>
+                        </select>
                       </td>
                       <td>
-                        <label>Seat</label>
-                        <p>PS1</p>
+                        <label for="">Seats</label>
+                        <select class="form-control" name="" id="">
+                          <option value="">VIP</option>
+                          <option value="">PS1</option>
+                          <option value="">PS2</option>
+                          <option value="">PS3</option>
+                          <option value="">PS4</option>
+                        </select>
                       </td>
                       <td>
-                        <label>Qty</label>
-                        <p>2</p>
+                        <label for="">Qty</label>
+                        <select class="form-control" name="" id="">
+                          <option value="1">1</option> 
+                          <option value="2">2</option>
+                          <option value="3">3</option> 
+                          <option value="4">4</option>
+                        </select>
                       </td>
-                      <td>
-                        <label>Price</label>
-                        <p>160.00 MYR</p>  
+                      <td class="total-price">
+                        <label for="">Price</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" value="160.00">
+                          <span class="input-group-addon">MYR</span>
+                        </div>
+                        <input type="button" class="btn btn-primary" value="Add">
                       </td>
                     </tr>
                   </table>
-                </div>
+                </form>
+              </div>
+              <div class="panel-review col-sm-5">
+                <table>
+                  <tr>
+                    <td>
+                      <label>Time</label>
+                      <p>20:00</p>
+                    </td>
+                    <td>
+                      <label>Seat</label>
+                      <p>PS1</p>
+                    </td>
+                    <td>
+                      <label>Qty</label>
+                      <p>2</p>
+                    </td>
+                    <td>
+                      <label>Price</label>
+                      <p>160.00 MYR</p>  
+                    </td>
+                  </tr>
+                </table>
               </div>
             </div>
           </div>

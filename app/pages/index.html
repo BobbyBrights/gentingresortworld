@@ -7,16 +7,20 @@
       <form action="">
         <div class="form-group">
           <label for="filter-type" class="sr-only">Type:</label>
-          <select name="filter-type" id="a" class="form-control">
-            <option value="hotels">Hotels Only</option>
-            <option value="shows">Shows</option>
-          </select>
+          <div>
+            <select name="filter-type" id="a" class="form-control">
+              <option value="hotels">Hotels Only</option>
+              <option value="shows">Shows</option>
+            </select>
+          </div>
         </div>
         <div class="form-group">
           <label for="filter-date" class="sr-only">Date:</label>
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Date">
-            <span class="input-group-addon">Date</span>
+            <span class="input-group-addon">
+              <span class="icon icon-calendar"></span>
+            </span>
           </div>
         </div>
 
@@ -25,14 +29,18 @@
             <div class="col-xs-6">
               <label for="filter-date" class="sr-only">Guest:</label>
               <div class="input-group">
-                <span class="input-group-addon">Guest</span>
+                <span class="input-group-addon">
+                  <span class="icon icon-people-line"></span>
+                </span>
                 <input type="text" class="form-control" placeholder="Guest">
               </div>
             </div>
             <div class="col-xs-6">
               <label for="filter-date" class="sr-only">Room:</label>
               <div class="input-group">
-                <span class="input-group-addon">Room</span>
+                <span class="input-group-addon">
+                  <span class="icon icon-bed-line"></span>
+                </span>
                 <input type="text" class="form-control" placeholder="Room">
               </div>
             </div>
@@ -41,16 +49,18 @@
 
         <div class="form-group">
           <label for="filter-date" class="sr-only">Promo Code:</label>
-          <input type="text" class="form-control" placeholder="Promo Code">
+          <div>
+            <input type="text" class="form-control" placeholder="Promo Code">
+          </div>
         </div>
 
-        <input type="submit" value="Search Now" class="btn btn-primary">
+        <input type="submit" value="Search Now" class="btn btn-primary btn-block">
       </form>
 
       <p>Already a member? <a href="signin.html">Sign in</a></p>
     </div>
 
-    <a href="register.html" class="btn btn-darkpurple">Register as member for free</a>
+    <a href="register.html" class="btn btn-darkpurple btn-block">Register as member for free</a>
   </div>
 
   <div class="form-container form-floating form-wide">
@@ -60,9 +70,9 @@
 
       {{> search-inline}}
 
-      <ul>
-        <li><p>Already a member? <a href="signin.html">Sign in</a></p></li>
-        <li><p><a href="register.html">Register as member</a> for free</p></li>
+      <ul class="inline">
+        <li>Already a member? <a href="signin.html">Sign in</a></li>
+        <li><a href="register.html">Register as member</a> for free</li>
       </ul>
     </div>
   </div>

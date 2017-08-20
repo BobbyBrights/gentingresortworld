@@ -1,12 +1,15 @@
-$font-family-sans-serif: 'Brown-Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-sans-serif: 'Brown', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-family-base: $font-family-sans-serif;
-$headings-font-family: 'Brown-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$headings-font-family: 'Brown', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-size-base: 14px;
 
-$weight-thin: 'Brown-Thin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$weight-reg: 'Brown-Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$weight-bold: 'Brown-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
+$weight-thin: 100;
+$weight-light: 300;
+$weight-reg: normal;
+$weight-bold: bold;
+
+$headings-font-weight: $weight-bold;
 
 $blockquote-font-size: $font-size-base;
 
@@ -17,8 +20,11 @@ $brand-primary: #EA1A38; // red
 $darkpurple: #4D0C41; // header background
 $purple: #9E1E5D; // header background
 
-$gray-lighter: #6F6B6B; // input placeholder
-$gray-light: #9B9B9B; // footer gray
+$gray-line: #E7E7E7;
+$gray-well: #F4F4F4; // well background
+$gray-lighter: #D6D6D6; // footer gray
+$gray-light: #6F6B6B; // input placeholder
+$gray-cart: #4A4A4A; // cart button
 $gray: #3A3A3A; // footer background
 $gray-dark: #202020; // footer background
 $header-color: #1e252b;
@@ -41,8 +47,10 @@ $navbar-default-toggle-border-color: transparent;
 $navbar-default-toggle-hover-bg: transparent;
 $navbar-default-toggle-icon-bar-bg: #FFF;
 
-$border-radius-base: 2px;
-$border-radius-large: 4px;
+$border-radius-base: 4px;
+$border-radius-large: 6px;
+
+$input-height-base: 40px;
 
 /* -- FONT -------- */
 $icon-arrow-down:         '\e800';

@@ -1,5 +1,32 @@
 .btn {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  height: 40px;
+  line-height: 28px;
+  color: #FFF;
+
   p {
     margin-bottom: 0;
   }
+}
+
+.btn-primary {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn-darkpurple {
+  background-color: $darkpurple;
+}
+
+.btn-gray {
+  background-color: $gray-cart;
+}
+
+.btn-default {
+  color: $text-color;
+  text-transform: none;
+  font-weight: $weight-reg;
+  height: auto;
+  line-height: inherit;
 }
