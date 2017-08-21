@@ -6,15 +6,29 @@
 
 <div class="header_bar-secondary">
   <div class="container">
-    
-    <div class="btn-group btn-group-justified">
-      <span class="btn{{#if pageticket}} active{{/if}}">Ticket Selection</span>
-      <span class="btn{{#if pagecheckout}} active{{/if}}">Express Checkout</span>
-      <span class="btn{{#if pagethankyou}} active{{/if}}">Thank You</span>
-    </div>
-    <a href="cart" class="btn">
-      <span>he</span>
-      My Cart
-    </a>
+
+    <table>
+      <tr>
+        <td>
+          <div class="btn-group btn-group-justified component-steps-indicator">
+            <span class="btn{{#if pageticket}} active{{/if}}">
+              <span>Ticket Selection</span>
+            </span>
+            <span class="btn{{#if pagecheckout}} active{{/if}}">
+              <span>Express Checkout</span>
+            </span>
+            <span class="btn{{#if pagethankyou}} active{{/if}}">
+              <span>Thank You</span>
+            </span>
+          </div>
+        </td>
+        <td>
+          <a href="cart" class="btn btn-gray btn-cart">
+            My Cart
+            <span class="icon icon-cart"></span>
+          </a>
+        </td>
+      </tr>
+    </table>
   </div>
 </div>

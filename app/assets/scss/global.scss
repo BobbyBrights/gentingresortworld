@@ -17,6 +17,11 @@ ul.inline {
   }
 }
 
+.fineprint {
+  font-weight: $weight-light;
+  font-size: 12px;
+}
+
 /* HEADERS */
 .header_bar-primary, .header_bar-secondary {;
   padding: 12px 0;

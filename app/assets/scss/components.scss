@@ -1,5 +1,5 @@
 .component-info-settings {
-  font-family: $weight-bold;
+  font-weight: $weight-bold;
   padding: 0;
   text-align: center; 
 
@@ -105,6 +105,43 @@
 
     &.unavailable {
       background-color: $gray-line;
+    }
+  }
+}
+
+.component-steps-indicator {
+  width: 99%;
+
+  .btn {
+    background-color: #FFF;
+    font-weight: $weight-reg;
+    color: #9b9b9b;
+    cursor: default;
+    border: none;
+
+    + .btn {
+      border-left: 1px solid $gray-lighter;
+    }
+  }
+
+  .active {
+    background-color: $purple;
+    color: #FFF;
+
+    span {
+      display: inline-block;
+
+      &:after {
+        content: '';
+        display: block;
+        border-bottom: 1px solid #FFF;
+        margin: -5px auto 0;
+        width: 90%;
+      }
+    }
+
+    + .btn {
+      border-left-color: transparent;;
     }
   }
 }

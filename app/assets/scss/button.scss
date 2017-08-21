@@ -1,7 +1,6 @@
 .btn {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 12px;
   height: 40px;
   line-height: 28px;
   color: #FFF;
@@ -29,4 +28,15 @@
   font-weight: $weight-reg;
   height: auto;
   line-height: inherit;
+  font-size: 12px;
+}
+
+
+.btn-cart {
+  width: 128px;
+  
+  &:hover {
+    background-color: darken($gray-cart, 10);
+    color: #FFF;
+  }
 }
