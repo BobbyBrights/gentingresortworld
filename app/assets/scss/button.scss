@@ -1,12 +1,20 @@
 .btn {
   text-transform: uppercase;
   font-weight: bold;
+  font-size: 12px;
   height: 40px;
   line-height: 28px;
   color: #FFF;
+  text-align: center;
+  word-wrap: normal;
+  white-space: normal;
 
   p {
     margin-bottom: 0;
+  }
+
+  &:hover {
+    color: #FFF;
   }
 }
 
@@ -19,7 +27,11 @@
 }
 
 .btn-gray {
-  background-color: $gray-cart;
+  background-color: #9B9B9B;
+
+  &:hover {
+    background-color: darken(#9B9B9B, 10);
+  }
 }
 
 .btn-default {
@@ -29,14 +41,28 @@
   height: auto;
   line-height: inherit;
   font-size: 12px;
+
+  &:hover {
+    color: $text-color;
+  }
 }
 
-
 .btn-cart {
+  background-color: $gray-cart;
   width: 128px;
   
   &:hover {
     background-color: darken($gray-cart, 10);
-    color: #FFF;
+  }
+
+  &:after {
+    content: $icon-cart;
+    font-family: 'icons';
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 8px;
+    line-height: 24px;
+    position: relative;
+    top: 1px;
   }
 }

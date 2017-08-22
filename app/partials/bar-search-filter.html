@@ -6,45 +6,55 @@
 
 <div class="header_bar-secondary">
   <div class="container">
-    <form action="" class="form-inline">
-      <div class="btn-group" role="group">
-        <button type="button" class="btn btn-default">Hotels</button>
-        <button type="button" class="btn btn-default">Room</button>
-        <button type="button" class="btn btn-default">Addon</button>
-        <button type="button" class="btn btn-default">Confirm</button>
-      </div>
+    <table>
+      <tr>
+        <td>
+          <div class="btn-group btn-group-justified component-steps-indicator">
+            <span class="btn{{#if pagehotels}} active{{/if}}">
+              <span>Hotels</span>
+            </span>
 
-      <div class="form-group">
-        <select class="form-control">
-          <option value="1">Package 1</option>
-          <option value="2">Package 2</option>
-          <option value="3">Package 3</option>
-        </select>
-      </div>
+            <span class="btn{{#if pageroom}} active{{/if}}">
+              <span>Room</span>
+            </span>
 
-      <div class="form-group">
-        <div class="input-group">
-          <span class="input-group-addon">
-            <span class="icon icon-calendar"></span>
-            <strong>CHECK IN</strong>
-          </span>
-          <input type="text" class="form-control" placeholder="Date">
-        </div>
-        <div class="input-group">
-          <span class="input-group-addon">
-            <span class="icon icon-calendar"></span>
-            <strong>CHECK OUT</strong>
-          </span>
-          <input type="text" class="form-control" placeholder="Date">
-        </div>
-      </div>
+            <span class="btn{{#if pageaddon}} active{{/if}}">
+              <span>Add-on</span>
+            </span>
 
-      <div class="form-group">
-        <a href="cart" class="btn btn-gray">
-          <span class="icon icon-cart"></span>
-          My Cart
-        </a>
-      </div>
-    </form>
+            <span class="btn{{#if pageconfirm}} active{{/if}}">
+              <span>Confirm</span>
+            </span>
+            
+          </div>
+        </td>
+        <td class="bar-select">
+          <select class="form-control">
+            <option value="1">Package 1</option>
+            <option value="2">Package 2</option>
+            <option value="3">Package 3</option>
+          </select>
+        </td>
+        <td class="bar-checkout">
+          <ul class="calendar">
+            <li>
+              <p>
+                <strong>Check In</strong>
+                <span class="date">17 08 2017</span>
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>Check Out</strong>
+                <span class="date">19 08 2017</span>
+              </p>
+            </li>
+          </ul>
+        </td>
+        <td>
+          <a href="cart" class="btn btn-cart">My Cart</a>
+        </td>
+      </tr>
+    </table>
   </div>
 </div>

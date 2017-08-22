@@ -13,11 +13,7 @@
   margin-bottom: 10px;
 
   .hotel-results-wrap {
-    @include clearfix;
-    padding: 15px 0;
-
     @include breakpoint(tablet) {
-      border: 1px solid $gray-lighter;
       height: 172px;
       margin: 5px;
     }
@@ -26,22 +22,6 @@
   @include breakpoint(tablet) {
     .top-height {
       height: 105px;
-    }
-  }
-
-  .result-price {
-    .price {
-      color: $brand-primary;
-      font-size: 36px;
-      line-height: 32px;
-      margin-bottom: 0;
-
-      sup {
-        color: $text-color;
-        font-size: 10px;
-        left: -8px;
-        top: -1.8em;
-      }
     }
   }
 }
@@ -81,18 +61,216 @@
   }
 }
 
+/* HOTEL - ROOM */
+.hotel-rooms-hero {
+  @include clearfix;
 
+  > div {
+    float: left;
+  }
 
+  .hotel-rooms-intro {
+    h2 + p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+  }
+}
 
+@include breakpoint(phablet) {
+  .hotel-rooms-intro {
+    width: 440px;
+    height: 450px;
 
+    &.item-well {
+      padding: 32px;
+    }
+  }
+
+  .hotel-rooms-slideshow {
+    width: 700px;
+  }
+}
+
+@include breakpoint(tablet) {
+  .hotel-rooms-item {
+    margin: 10px 0;
+
+    > div {
+      float: left;
+      padding: 0 10px;
+    }
+  }
+  .hotel-rooms-image {
+    width: 280px;
+  }
+
+  .hotel-rooms-info {
+    width: 340px;
+    line-height: 16px;
+  }
+
+  .hotel-rooms-rate {
+    width: 376px;
+
+    .item-well {
+      min-height: 174px;
+    }
+  }
+
+  .hotel-rooms-price {
+    width: 130px;
+
+    .top-height {
+      height: 86px;
+    }
+  }
+}
+
+.hotel-rooms-size {
+  margin-bottom: 0;
+  padding: 0;
+  font-weight: $weight-reg;
+
+  li {
+    display: inline-block;
+    vertical-align: middle;
+
+    + li {
+      margin-left: 30px;
+    }
+
+    &:before {
+      font-family: 'icons';
+      font-size: 20px;
+      margin-right: 5px;
+    }
+  }
+
+  .hotel-rooms-bed:before {
+    content: $icon-bed;
+  }
+
+  .hotel-rooms-guest:before {
+    content: $icon-people-fill;
+  }
+}
+
+.hotel-rooms-rate {
+  text-transform: uppercase;
+
+  .item-well {
+    margin-bottom: 0;
+    border: none;
+  }
+  
+  .calendar-date-price {
+    div {
+      width: 25%;
+      font-size: 12px;
+      font-weight: $weight-reg;
+      padding: 0 5px;
+      margin-top: 10px;
+      float: left;
+
+      p {
+        margin-bottom: 0;
+      }
+
+      .date {
+        color: $brand-primary;
+      }
+    }
+  }
+}
+
+/* HOTEL CALENDAR */
+table.hotel-room-rate-calendar {
+  th {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: $weight-reg;
+    text-align: center;
+  }
+
+  td {
+    vertical-align: top;
+    width: 14.285%;
+
+    div {
+      border: 2px solid transparent;
+      background: #FFF;
+      border-radius: $border-radius-base;
+      height: 96px;
+      margin: 5px;
+      text-transform: uppercase;
+    }
+
+    &.unavailable {
+      div {
+        background-color: #E7E7E7;
+
+        p:not(.date) {
+          font-size: 18px;
+          color: #9B9B9B;
+        }
+      }
+    }
+
+    &.selected {
+      div {
+        border: 2px solid $purple;
+      }
+    }
+
+    p.date {
+      border-bottom: 2px solid $gray-well;
+      margin-bottom: 0;
+    }
+
+    p, ul {
+      padding: 7px 10px 4px;
+    }
+
+    ul {
+      @include clearfix;
+
+      li {
+        width: 50%;
+        float: left;
+        display: block;
+        line-height: 14px;
+
+        &.member p span {
+          color: $brand-primary;
+        }
+
+        &.guest p span {
+          font-weight: $weight-light;
+        }
+
+        p {
+          font-size: 9px;
+          padding: 0;
+          font-weight: $weight-reg;
+
+          span {
+            display: block;
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  + .btn {
+    margin: 20px auto;
+    width: 149px;
+  }
+}
 
 /* SHOWS DETAILS PAGE */
 .layout-purchase {
-  background-color: $gray-well;
-  border: 1px solid $gray-lighter;
-  border-radius: $border-radius-base;
-  padding: 10px;
-
   img {
     border-radius: $border-radius-base;
   }
@@ -109,4 +287,16 @@
       border-radius: $border-radius-base;
     } 
   }
+}
+
+.page-landing {
+  background-image: url('../img/landing-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 100px 0;
+}
+
+.page-landing-wide {
+  padding: 200px 0;
 }

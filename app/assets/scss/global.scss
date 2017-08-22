@@ -1,3 +1,7 @@
+html, body {
+  font-weight: $weight-light;
+}
+
 * {
   -webkit-font-smoothing: antialiased;
 }
@@ -29,10 +33,144 @@ ul.inline {
 
 .header_bar-primary {
   background-color: $purple;
+
+  .btn {
+    font-size: 15px;
+  }
 }
 
 .header_bar-secondary {
   background-color: $gray-lighter;
+
+  td + td {
+    padding-left: 5px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+
+  .bar-select {
+    width: 240px;
+  }
+
+  .bar-checkout {
+    ul {
+      width: 434px;
+      background: #FFF;
+      padding: 0;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      border-radius: $border-radius-base;
+
+      li {
+        display: inline-block;
+        padding: 3px 20px 9px;
+      }
+
+      p {
+        color: $text-color;
+        margin-bottom: 0;
+
+        &:before {
+          font-family: 'icons';
+          font-size: 20px;
+          margin-right: 8px;
+          position: relative;
+          top: 2px;
+        }
+      }
+
+      &.calendar {
+        p {
+          span.date {
+            font-weight: $weight-light;
+          }
+
+          &:before {
+            content: $icon-calendar;
+          }
+        }
+      }
+    }
+  }
+
+  /*> .container > table td:last-child {
+    width: 128px;
+  }*/
+}
+
+.calendar-header {
+  font-weight: $weight-reg;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: 10px 0;
+
+  .calendar-weekly-room {
+    td {
+      position: relative;
+      width: 1%;
+      text-align: center;
+    }
+
+    .prev, .next {
+      font-size: 9px;
+      height: 28px;
+
+      &:before, &:after {
+        font-size: 20px;
+        margin-top: -15px;
+        position: absolute;
+        top: 50%;
+      }
+    }
+
+    .prev {
+      float: left;
+      padding-left: 20px;
+    }
+
+    .next {
+      float: right;
+      padding-right: 20px;
+    }
+  }
+
+  button, p {
+    display: inline-block;
+  } 
+
+  button {
+    background: none;
+    border: none;
+    text-transform: uppercase;
+  }
+
+  .prev, .next {
+    position: relative;
+
+    &:before, &:after {
+      font-family: 'icons';
+    }
+  }
+
+  .prev {
+    &:before {
+      content: $icon-arrow-left;
+      left: 0;
+    }
+  }
+
+  .next {
+    &:after {
+      content: $icon-arrow-right;
+      right: 0;
+    }
+  }
+
+  .title {
+    text-align: center;
+  }
 }
 
 /* PAGE */
@@ -43,8 +181,31 @@ ul.inline {
   }
 }
 
+.item-well {
+  background-color: #FFF;
+  margin-bottom: 10px;
+  padding: 14px 4px;
+  @include clearfix;
+
+  @include breakpoint(tablet) {
+    border: 1px solid $gray-lighter;
+
+    .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+      margin-top: 0;
+    }
+  }
+
+  &.item-well-fill {
+    background-color: $gray-well;
+    border-radius: $border-radius-base;
+    padding: 10px;
+  }
+}
+
 /* FOOTER */
 .footer {
+  font-weight: $weight-reg;
+
   ul {
     margin-bottom: 0;
     padding: 0;

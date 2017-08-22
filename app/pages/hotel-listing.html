@@ -1,4 +1,8 @@
 ---
+current: {
+  'pagehotels': true
+  }
+
 results: [
   {
     name: 'First World Hotel',
@@ -39,14 +43,14 @@ results: [
 ---
 
 
-{{> bar-search-filter}}
+{{> bar-search-filter current}}
 
 <div class="page-body">
   <div class="container">
     {{#each results}}
       <div class="col-sm-6 results-item hotel-results">
         <div class="row">
-          <div class="hotel-results-wrap">
+          <div class="hotel-results-wrap item-well">
             <div class="col-sm-3 hidden-xs">
               <img src="assets/img/hotel-thumbnail.jpg" alt="{{name}}" class="result-image">
             </div>
@@ -62,7 +66,7 @@ results: [
               <img src="assets/img/hotel-thumbnail.jpg" alt="{{name}}" class="result-image">
             </div>
             <div class="col-xs-6 col-sm-3">
-              <div class="result-price">
+              <div class="component-price-option">
                 <div class="top-height">
                   {{#if @last}}
                     <p class="price">SOLD OUT</p>

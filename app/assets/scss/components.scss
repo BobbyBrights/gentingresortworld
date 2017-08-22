@@ -110,14 +110,14 @@
 }
 
 .component-steps-indicator {
-  width: 99%;
 
   .btn {
-    background-color: #FFF;
     font-weight: $weight-reg;
+    background-color: #FFF;
     color: #9b9b9b;
     cursor: default;
     border: none;
+    padding: 0;
 
     + .btn {
       border-left: 1px solid $gray-lighter;
@@ -141,7 +141,136 @@
     }
 
     + .btn {
-      border-left-color: transparent;;
+      border-left-color: transparent;
+    }
+  }
+}
+
+.component-price-option {
+  font-weight: $weight-reg;
+
+  .price {
+    color: $brand-primary;
+    font-size: 36px;
+    line-height: 32px;
+    margin-bottom: 0;
+
+    sup {
+      color: $text-color;
+      font-size: 10px;
+      left: -8px;
+      top: -1.8em;
+    }
+  }
+
+  .btn-gray {
+    height: auto;
+    line-height: 14px;
+  }
+}
+
+
+/* SLIDESHOW */
+.component-slideshow {
+  position: relative;
+  padding: 0;
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  ul.slides {
+    li {
+      position: relative;
+
+      .caption {
+        position: absolute;
+        z-index: 1;
+        color: #FFF;
+        font-weight: $weight-bold;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        line-height: 19px;
+        padding: 0px 60px;
+        bottom: 60px;
+
+        p {
+          font-size: 20px;
+
+          &.header {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  ul.dots, ul.arrows {
+    position: absolute;
+    
+    button {
+      padding: 0;
+    }
+  }
+
+  ul.dots {
+    text-align: center;
+    bottom: 35px;
+    left: 0;
+    width: 100%;
+
+    li {
+      > button {
+        background: #FFF;
+        display: block;
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        border: 3px solid #FFF;
+        margin: 0 2px;
+      }
+
+      &.active button {
+        background-color: #2B2B2B;
+      }
+
+      &:hover button {
+        background-color: $gray-lighter;
+      }
+    }
+  }
+
+  ul.arrows {
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    button {
+      background: transparent;
+      border: none;
+      height: 100%;
+      color: #FFF;
+      font-size: 20px;
+      position: absolute;
+      padding: 0 30px;
+      top: 0;
+    }
+
+    .prev {
+      button {
+        left: 0;
+      }
+    }
+
+    .next {
+      button {
+        right: 0;
+      }
     }
   }
 }
