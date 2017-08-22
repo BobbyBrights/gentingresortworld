@@ -274,3 +274,20 @@
     }
   }
 }
+
+.component-preloader {
+  width: 250px;
+  border-radius: 12px;
+  border: 2px solid $brand-primary;
+  height: 12px;
+  margin: 20px auto;
+
+  .mask {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    background-color: $brand-primary;
+    width: 80%;
+    display: block;
+    height: 100%;
+  }
+}
