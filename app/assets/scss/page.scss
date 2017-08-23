@@ -269,6 +269,71 @@ table.hotel-room-rate-calendar {
   }
 }
 
+/* HOTEL ADDON */
+[role="tablist"] {
+  font-weight: $weight-bold;
+  
+  li a {
+    background-color: $gray-lighter;
+  }
+
+  li.active a { 
+    background-color: #F9F9F9;
+  }
+}
+
+.tab-content {
+  background: #FFF;
+
+  .tab-pane {
+    padding: 10px;
+  }
+}
+
+.show-info {
+  border-radius: $border-radius-large;
+  background-color: $purple;
+  color: #FFF;
+  font-weight: $weight-reg;
+
+  .head, .subhead {
+    text-align: center;
+  }
+
+  .head {
+    font-size: 20px;
+  }
+
+  .subhead {
+    font-size: 18px;
+  }
+
+  hr {
+    background-color: #F16C6C;
+    height: 1px;
+    border: none;
+  }
+
+  ul {
+    padding: 20px 0;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      vertical-align: top;
+      width: 225px;
+
+      + li {
+        margin-left: 40px;
+      }
+    }
+  }
+}
+
+.layout-price {
+  font-size: 18px;
+}
+
 /* SHOWS DETAILS PAGE */
 .layout-purchase {
   img {
@@ -278,7 +343,7 @@ table.hotel-room-rate-calendar {
   .sections {
     background-color: #FFF;
     border: 1px solid $gray-lighter;
-    border-radius: $border-radius-base;
+    border-radius: $border-radius-large;
     margin-bottom: 10px;
     padding: 20px;
 

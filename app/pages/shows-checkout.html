@@ -34,41 +34,8 @@ current: {
               </table>
             </div>
             <div class="col-sm-7">
-              <h4>Please select a payment method</h4>
-
               <form action="">
-                <div class="checkout-payment-method">
-                  <label class="btn btn-default">
-                    <input type="radio" name="checkout-payment-method[]" class="radio-button" value="Credit Card">
-                    Credit Card
-                  </label>
-                  <label class="btn btn-default">
-                    <input type="radio" name="checkout-payment-method[]" class="radio-button" value="Debit Card">
-                    Debit Card
-                  </label>
-                  <label class="btn btn-default">
-                    <input type="radio" name="checkout-payment-method[]" class="radio-button" value="China UnionPay">
-                    China UnionPay
-                  </label>
-                  <label class="btn btn-default">
-                    <input type="radio" name="checkout-payment-method[]" class="radio-button" value="Alipay">
-                    Alipay
-                  </label>
-                  <label class="btn btn-default">
-                    <input type="radio" name="checkout-payment-method[]" class="radio-button" value="Maybank2u">
-                    Maybank2u
-                  </label>
-                </div>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox"> Yes, I have read and agree to the <a href="#">Terms and Conditions.</a>
-                  </label>
-                </div>
-
-                <div class="fineprint">
-                  <p>I hereby expressly declare that i have read, understood and voluntarily and unconditionally agreed to the terms and conditions stipulated in the <a href="#" target="_blank">Personal Data Precessing Statement</a> and hereby consent to the processing of my Personal Data in the manner described in the Personal Data Processing Statement.</p>
-                  <p><strong>Please proceed to counter for your tax invoice.</strong></p>
-                </div>
+                {{> payment-method}}
 
                 <input type="submit" value="Payment" class="btn btn-primary btn-block">
               </form>
@@ -78,7 +45,7 @@ current: {
         <div class="col-sm-4">
           <div class="sections">
             <h4>Order Summary</h4>
-            <table>
+            <table class="component-review-price table-compact">
               <tr>
                 <th colspan="2">
                   <h3>Show</h3>
@@ -108,14 +75,11 @@ current: {
                 <th>Seat No.</th>
                 <td>BP233</td>
               </tr>
-              <tr>
-                <td colspan="2">&nbsp;</td>
-              </tr>
-              <tr>
+              <tr class="review-total">
                 <th>Total</th>
                 <td>160.00 MYR</td>
               </tr>
-              <tr>
+              <tr class="review-total grand-total">
                 <th>Grand Total</th>
                 <td><strong>160.00 MYR</strong></td>
               </tr>

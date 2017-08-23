@@ -199,6 +199,10 @@ ul.inline {
     background-color: $gray-well;
     border-radius: $border-radius-base;
     padding: 10px;
+
+    &.purple {
+      background-color: $darkpurple;
+    }
   }
 }
 

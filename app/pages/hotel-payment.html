@@ -1,0 +1,105 @@
+---
+current: {
+  pageconfirm: true
+}
+---
+
+{{> bar-search-filter current}}
+
+<div class="page-body">
+  <div class="container">
+    <div class="item-well item-well-fill layout-purchase">
+      <div class="sections clearfix">
+        <div class="col-sm-8">
+          <div class="clearfix">
+            <div class="col-sm-6">
+              <table class="component-review-price">
+                <tr>
+                  <th colspan="2">
+                    <h3>Shows & Events</h3>
+                  </th>
+                </tr>
+                <tr>
+                  <th>Show</th>
+                  <td>All Star Jukebox in Concert</td>
+                </tr>
+                <tr>
+                  <th>Seat</th>
+                  <td>VVIP</td>
+                </tr>
+                <tr>
+                  <th>Date</th>
+                  <td>5th August 2017</td>
+                </tr>
+                <tr>
+                  <th>Quantity</th>
+                  <td>2</td>
+                </tr>
+                <tr class="review-total">
+                  <th>
+                    Total
+                  </th>
+                  <td>
+                    454.40 MYR
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="col-sm-6">
+              <table class="component-review-price">
+                <tr>
+                  <th colspan="2">
+                    <h3>Hotel</h3>
+                  </th>
+                </tr>
+                <tr>
+                  <th>Hotel</th>
+                  <td>Genting Grand</td>
+                </tr>
+                <tr>
+                  <th>Room</th>
+                  <td>Premier Executive Suite</td>
+                </tr>
+                <tr>
+                  <th>Check In</th>
+                  <td>5th August 2017</td>
+                </tr>
+                <tr>
+                  <th>Check Out</th>
+                  <td>7th August 2017</td>
+                </tr>
+                <tr>
+                  <th>No of Room(s)</th>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <th>No of Night(s)</th>
+                  <td>1</td>
+                </tr>
+                <tr class="review-total">
+                  <th>Total</th>
+                  <td>998 MYR</td>
+                </tr>
+                <tr class="review-total grand-total">
+                  <th>Grand Total</th>
+                  <td>
+                    <strong>1453.40 MYR</strong>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          {{> payment-method}}
+
+          <ul class="nav nav-justified nav-pills">
+            <li><a href="hotel-price.html" class="btn btn-gray">Back</a></li>
+            <li><a href="#" class="btn btn-primary">Payment</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
