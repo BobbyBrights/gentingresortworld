@@ -9,7 +9,7 @@
         <form action="">
           <div class="form-group">
             <label for="filter-type" class="sr-only">Type:</label>
-            <div>
+            <div class="select">
               <select name="filter-type" id="a" class="form-control">
                 <option value="hotels">Hotels Only</option>
                 <option value="shows">Shows</option>
@@ -60,10 +60,13 @@
           <a href="hotel-listing.html" class="btn btn-primary btn-block">Search Now</a>
         </form>
 
-        <p>Already a member? <a href="signin.html">Sign in</a></p>
+        <p class="text-center">Already a member? <a href="signin.html" data-toggle="modal" data-target="#modal-signin"><strong>Sign in</strong></a></p>
       </div>
 
-      <a href="register.html" class="btn btn-darkpurple btn-block">Register as member for free</a>
+      <a href="register.html" class="btn btn-darkpurple btn-block" data-toggle="modal" data-target="#modal-signup">Register as member for free</a>
     </div>
   </div>
 </div>
+
+{{> modal-signin}}
+{{> modal-signup}}

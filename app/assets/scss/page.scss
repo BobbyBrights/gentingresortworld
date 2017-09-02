@@ -1,5 +1,10 @@
+
+
 .page-body {
   > .container {
+    overflow: hidden;
+    position: relative;
+    
     @media (max-width: $screen-xs-max) {
       background-color: $purple;
       padding: 0;
@@ -291,10 +296,13 @@ table.hotel-room-rate-calendar {
 }
 
 .show-info {
-  border-radius: $border-radius-large;
-  background-color: $purple;
   color: #FFF;
   font-weight: $weight-reg;
+
+  img {
+    width: 100%;
+    border-radius: 0 !important;
+  }
 
   .head, .subhead {
     text-align: center;
@@ -302,6 +310,7 @@ table.hotel-room-rate-calendar {
 
   .head {
     font-size: 20px;
+    padding-top: 10px;
   }
 
   .subhead {
@@ -309,13 +318,16 @@ table.hotel-room-rate-calendar {
   }
 
   hr {
-    background-color: #F16C6C;
+    background-color: $purple-line;
     height: 1px;
     border: none;
+    margin: 10px auto;
+    width: 95%;
   }
 
   ul {
-    padding: 20px 0;
+    font-size: 16px;
+    padding: 20px 30px;
     margin: 0;
 
     li {
@@ -336,22 +348,104 @@ table.hotel-room-rate-calendar {
 
 /* SHOWS DETAILS PAGE */
 .layout-purchase {
+  margin-bottom: 10px;
+  padding: 14px 4px;
+  @include clearfix;
+
   img {
     border-radius: $border-radius-base;
   }
 
   .sections {
+    margin-bottom: 10px;
+    padding: 20px;
     background-color: #FFF;
     border: 1px solid $gray-lighter;
     border-radius: $border-radius-large;
-    margin-bottom: 10px;
-    padding: 20px;
 
     .panel {
       border: 3px solid $purple;
       border-radius: $border-radius-base;
     } 
   }
+
+  div.column-left {
+    @include make-sm-column(8);
+
+    .sections {
+      padding: 0;
+    }
+  }
+
+  div.column-right {
+    @include make-sm-column(4);
+    padding-left: 0;
+  }
+
+  .column {
+    .sections {
+      padding: 0;
+
+      > div {
+        padding: 20px;
+
+        + div {
+          border-left: 1px solid $gray-line;
+        }
+      }
+    }
+  }
+
+  &.purple {
+    .column-left {
+      .sections {
+        background: $purple;
+        border: none;
+      }
+    }
+  }
+
+  .tab .sections {
+    padding: 0;
+    border: none;
+
+    .tab-content {
+      background: transparent;
+      padding: 5px;
+    }
+
+    .nav-tabs {
+      a {
+        white-space: nowrap;
+      }
+    }
+
+    table {
+      width: 100%;
+
+      .terms {
+        margin: 20px 0 30px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+.show-selection, .show-selected {
+  border-bottom: 1px solid $gray-line;
+
+  td {
+    padding: 10px 0;
+    width: 70%;
+
+    + td {
+      width: 30%;
+    }
+  }
+}
+
+.show-selected {
+  font-weight: $weight-reg;
 }
 
 .page-landing {
@@ -365,3 +459,7 @@ table.hotel-room-rate-calendar {
 .page-landing-wide {
   padding: 200px 0;
 }
+
+
+/* MEMBERS */
+@import 'pages/members';

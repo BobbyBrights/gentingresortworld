@@ -1,0 +1,112 @@
+---
+table: [
+  ["01/08/2017", "OPENING BALANCE", "3.00"],
+  ["06/08/2017", "AD-HOC CASINO EVENTS ADJUSTMENT TESTING KIOSK PURPOSE - PMP", "100.00"],
+  ["06/08/2017", "PD & MMP EVENT ADJUSTMENT GPNNGC-DEDUCT 100GP FOR RM10-NNB146813", "(100.00)"],
+  ["06/08/2017", "PD & MMP EVENT ADJUSTMENT RM100NN SLOTS CREDIT-NNB146813", "100.00"],
+  ["07/08/2017", "AD-HOC CASINO EVENTS ADJUSTMENT TESTING KIOSK PURPOSE PMP-REVERSED", "(100.00)"],
+  ["17/08/2017", "AD-HOC CASINO EVENTS ADJUSTMENT TESTING", "70.00"],
+  ["23/08/2017", "PD & MMP EVENT CLOSING BALANCE", "67.00"]
+]
+---
+
+
+<div class="page-body page-member">
+  <div class="container">
+    <div class="row">
+      <div class="member-sidebar fill-bg">
+        <div class="member-sidebar-tab">
+          <ul>
+            <li><a href="/member-profile.html">Profile</a></li>
+            <li class="active"><a href="/member-statement.html">Statement</a></li>
+          </ul>
+          
+          <div class="select-statement">
+            <p>Genting Points Statement</p>
+
+            <label>Select Month</label>
+            <div class="row">
+              <div class="col-xs-8">
+                <div class="select">
+                  <select name="" id="" class="form-control">
+                    <option value="">August 2017</option>
+                    <option value="">July 2017</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-xs-4">
+                <button class="btn btn-primary btn-block">Submit</button>
+              </div>
+            </div>
+
+            <p>NOTE: Each statement will be available for 1 year from the statement month</p>
+          </div>
+        </div>
+
+        <div class="member-sidebar-details">
+          <section>
+            <p class="h3 purple">Genting Points Statement</p>
+            <p>
+              <span class="label">Name</span>
+              James bond
+            </p>
+            <p>
+              <span class="label">Membership ID</span>
+              123456789
+            </p>
+            <p>
+              <span class="label">Statement Period</span>
+              01/08/2017 - 23/08/2017
+            </p>
+            <p>
+              <span class="label">Date Generated</span>
+              01/08/2017 | 13:31:08
+            </p>
+          </section>
+          <section class="lg points-expiry">
+            <p>
+              <span class="label">Points Expiry Profile</span>
+              Genting Point (GP)
+            </p>
+
+            <p>
+              <span class="label">Expiry Date</span>
+              27/01/2018
+            </p>
+
+            <p>
+              <span class="label">Points</span>
+              67.00
+            </p>
+          </section>
+          <section>
+            <p class="fineprint">
+              The shelf life of GP has been standardized to three (3) years. The balance of GP will automatically expire on the 28th of your Birthday Month if there were no point-earning activities recorded in the past 3 years (calculated from the 28th of your birthday month every year).
+            </p>
+          </section>
+        </div>
+      </div>
+      <div class="member-maincontent fill-bg">
+        <table class="table-statement">
+          <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>GP</th>
+          </tr>
+          {{#each table}}
+            <tr>
+              <td>{{0}}</td>
+              <td>{{1}}</td>
+              <td>{{2}}</td>
+            </tr>
+          {{/each}}
+        </table>
+        <p class="fineprint">
+          <strong>Disclaimer:</strong><br>
+          Whilst care has been taken to ensure the accuracy of the materials produced, Genting Rewards Group (include their employees, officers, agents or contractors) make no warranty or representatino expressed or implied to, or assume any responsibility for the accuracy, responsibility or completeness of the same or the assumptin on which it is based. Genting Rewards Group shall not be liable or responsible for any losses or damages suffered resulting from the reproduction of or reliance on any of the materials herein for whatsoever purposes.
+        </p>
+        <button class="btn btn-primary center-block">Print</button>
+      </div>
+    </div>
+  </div>
+</div>

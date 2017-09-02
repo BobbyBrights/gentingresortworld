@@ -13,7 +13,7 @@
     margin-bottom: 0;
   }
 
-  &:hover {
+  &:hover, &:active, &:focus {
     color: #FFF;
   }
 }
@@ -69,4 +69,14 @@
 
 .btn-link {
   color: $gray-cart;
+  font-weight: $weight-reg;
+
+  &:hover {
+    color: $gray-cart;
+  }
+}
+
+.btn-reset {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  background: rgba(155, 155, 155, 0.2);
 }

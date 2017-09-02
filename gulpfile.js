@@ -110,10 +110,17 @@ gulp.task('server', ['build'], function() {
 });
 
 gulp.task('default', ['build', 'server'], function() {
-  gulp.watch(PATHS.assets, ['copy', 'reload']);
-  gulp.watch(['app/pages/**/*.html'], ['pages', 'reload']);
-  gulp.watch(['app/{layouts,partials,data,helpers}/**/*.html'], ['pages:reset', 'pages', 'reload']);
-  gulp.watch(['app/assets/scss/**/*.scss'], ['sass', 'reload']);
-  gulp.watch(['app/assets/js/**/*.js'], ['js', 'reload']);
-  gulp.watch(['app/assets/img/**/*'], ['images', 'reload']);
+  // gulp.watch(PATHS.assets, ['copy', 'reload']);
+  // gulp.watch(['app/pages/**/*.html'], ['pages', 'reload']);
+  // gulp.watch(['app/{layouts,partials,data,helpers}/**/*.html'], ['pages:reset', 'pages', 'reload']);
+  // gulp.watch(['app/assets/scss/**/*.scss'], ['sass', 'reload']);
+  // gulp.watch(['app/assets/js/**/*.js'], ['js', 'reload']);
+  // gulp.watch(['app/assets/img/**/*'], ['images', 'reload']);
+
+  gulp.watch(PATHS.assets, ['copy']);
+  gulp.watch(['app/pages/**/*.html'], ['pages']);
+  gulp.watch(['app/{layouts,partials,data,helpers}/**/*.html'], ['pages:reset', 'pages']);
+  gulp.watch(['app/assets/scss/**/*.scss'], ['sass']);
+  gulp.watch(['app/assets/js/**/*.js'], ['js']);
+  gulp.watch(['app/assets/img/**/*'], ['images']);
 });

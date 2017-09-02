@@ -18,8 +18,11 @@ $text-color: #4A4A4A;
 
 $brand-primary: #EA1A38; // red
 
-$darkpurple: #4D0C41; // header background
-$purple: #9E1E5D; // header background
+$darkerpurple: #2F0111; // rgb(47, 1, 17)
+$darkpurple: #4D0C41; // header background rgb(77, 12, 65)
+$purple: #9E1E5D; // header background rgb(158, 30, 93)
+$purple-line: #F16C6C; // rgb(241, 108, 108)
+$purple-red: #66123C; // rgb(102, 18, 60)
 
 $gray-line: #E7E7E7;
 $gray-well: #F4F4F4; // well background
@@ -31,7 +34,8 @@ $gray-dark: #202020; // footer background
 $header-color: #1e252b;
 
 
-$navbar-height: 80px;
+
+$navbar-height: 85px;
 $navbar-border-radius: 0;
 $navbar-margin-bottom: 0;
 
@@ -49,11 +53,15 @@ $navbar-default-toggle-hover-bg: transparent;
 $navbar-default-toggle-icon-bar-bg: #FFF;
 
 $border-radius-base: 4px;
-$border-radius-large: 6px;
+$border-radius-large: 8px;
 
 $input-height-base: 40px;
-$input-border: #979797;
+$input-border: #FFF;
 $input-color-placeholder: $gray-light;
+
+$modal-lg:                    900px;
+$modal-md:                    605px;
+$modal-sm:                    320px;
 
 /* -- FONT -------- */
 $icon-arrow-down:         '\e800';
@@ -62,6 +70,7 @@ $icon-arrow-left:         '\e802';
 $icon-arrow-right-circle: '\e803';
 $icon-arrow-right:        '\e804';
 $icon-arrow-up:           '\e805';
+$icon-checkbox-checked:   '\e806';
 $icon-calendar:           '\e807';
 $icon-cart:               '\e808';
 $icon-close-circle:       '\e809';
@@ -74,6 +83,11 @@ $icon-people-line:        '\e80f';
 $icon-plus-circle:        '\e810';
 $icon-trophy:             '\e811';
 $icon-bed-line:           '\e812';
+$icon-checkbox-empty:     '\e813';
+$icon-radio-checked:      '\e814';
+$icon-radio-empty:        '\e815';
+$icon-cancel:             '\e816';
+$icon-expand:             '\e817';
 $icon-youtube:            '\f167';
 $icon-diamond:            '\f219';
 $icon-bed:                '\f236';

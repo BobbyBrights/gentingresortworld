@@ -9,9 +9,9 @@ current: {
 <div class="page-body">
   <div class="container">
     <div class="item-well item-well-fill layout-purchase">
-      <div class="sections clearfix">
-        <div class="col-sm-8">
-          <div class="clearfix">
+      <div class="row">
+        <div class="column-left column">
+          <div class="clearfix sections">
             <div class="col-sm-6">
               <table class="component-review-price">
                 <tr>
@@ -91,13 +91,14 @@ current: {
           </div>
         </div>
 
-        <div class="col-sm-4">
-          {{> payment-method}}
-
-          <ul class="nav nav-justified nav-pills">
-            <li><a href="hotel-price.html" class="btn btn-gray">Back</a></li>
-            <li><a href="#" class="btn btn-primary">Payment</a></li>
-          </ul>
+        <div class="column-right">
+          <div class="sections">
+            {{> payment-method}}
+            <ul class="nav nav-justified nav-pills">
+              <li><a href="hotel-price.html" class="btn btn-gray">Back</a></li>
+              <li><a href="#" class="btn btn-primary">Payment</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

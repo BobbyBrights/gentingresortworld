@@ -4,100 +4,115 @@ current: {
 }
 ---
 
+{{> bar-search-filter current}}
+
 <div class="page-body">
   <div class="container">
-    <div class="item-well item-well-fill purple">
-      <div class="col-sm-8 show-info">
-        <div>
-          <p class="head">Add-on : Shows</p>
-          <hr>
-          <p class="subhead">All Star Jukebox in Concert</p>
-          <img src="assets/img/addon-show.jpg" alt="">
-          <ul>
-            <li>
-              <p>Overview</p>
-              <p>Concert by Andy Hui, Janice Vidal &amp; Jonathan Wong.</p>
-            </li>
-            <li>
-              <p>Date : 5th August 2017</p>
-              <p>Time : 8:30pm</p>
-              <p>Arena of Stars</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <ul class="nav nav-tabs nav-justified" role="tablist">
-          <li role="presentation"><a href="#addon-guest" aria-controls="home" role="tab" data-toggle="tab">Normal Price</a></li>
-          <li role="presentation" class="active"><a href="#addon-member" aria-controls="profile" role="tab" data-toggle="tab">Genting Rewards Members</a></li>
-        </ul>
-
-        <!-- Tab panes -->
-        <div class="tab-content">
-          <div role="tabpanel" class="tab-pane" id="addon-guest">
-            <p>Normal</p>
+    <div class="layout-purchase item-well item-well-fill purple">
+      <div class="row">
+        <div class="column-left column">
+          <div class="sections show-info">
+            <p class="head">Add-on : Shows</p>
+            <hr>
+            <p class="subhead">All Star Jukebox in Concert</p>
+            <img src="assets/img/addon-show.jpg" alt="">
+            <ul>
+              <li>
+                <p>Overview</p>
+                <p>Concert by Andy Hui, Janice Vidal &amp; Jonathan Wong.</p>
+              </li>
+              <li>
+                <p>Date : 5th August 2017</p>
+                <p>Time : 8:30pm</p>
+                <p>Arena of Stars</p>
+              </li>
+            </ul>
           </div>
-          <div role="tabpanel" class="tab-pane active" id="addon-member">
-            <form action="">
-              <table>
-                <tr>
-                  <td>
-                    <div class="radio">
-                      <label>
-                        Cash/Credit Card
-                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                      </label>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="radio">
-                      <label>
-                        Members' Points
-                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                      </label>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan="2">Seat</td>
-                </tr>
-                <tr>
-                  <td>
-                    <select name="" id="" class="form-control">
-                      <option value="1">VVIP RM454.50</option>
-                      <option value="1">VVIP RM908.00</option>
-                    </select>
-                  </td>
-                  <td>
-                    <span class="icon icon-minus-circle"></span>
-                    <input type="text" value="1">
-                    <span class="icon icon-plus-circle"></span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <p><strong>Selected Seat</strong></p>
-                    <p>VVIP RM 454.40 - 1 pax</p>
-                  </td>
-                  <td>
-                    <p><strong>Total</strong></p>
-                    <p>RM 454.40</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan="2">
-                    <p>
-                      ** All numbered seat.<br>
-                      ** Ticket price is subject to RM4 processing fee.<br>
-                      *** GRC member entitled for 20% discount, applicable to VVIP-PS5. 
-                    </p>
+        </div>
+        <div class="column-right tab">
+          <div class="sections">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation"><a href="#addon-guest" aria-controls="home" role="tab" data-toggle="tab">Normal Price</a></li>
+              <li role="presentation" class="active"><a href="#addon-member" aria-controls="profile" role="tab" data-toggle="tab">Genting Rewards Members</a></li>
+            </ul>
 
-                    <a href="hotel-payment-addon.html" class="btn btn-primary btn-block">Next</a>
-                    <a href="hotel-payment.html" class="btn btn-link btn-block">Skip</a>
-                  </td>
-                </tr>
-              </table>
-            </form>
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane" id="addon-guest">
+                <p>Normal</p>
+              </div>
+              <div role="tabpanel" class="tab-pane active" id="addon-member">
+                <form action="">
+                  <table>
+                    <tr>
+                      <td>
+                        <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                          <span>Cash/Credit Card</span>
+                        </label>
+                      </td>
+                      <td>
+                        <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                          <span>Members' Points</span>
+                        </label>
+                      </td>
+                    </tr>
+                  </table>
+                  <table>
+                    <tr>
+                      <td colspan="2">
+                        <p class="lead">Seat</p>
+                      </td>
+                    </tr>
+                    <tr class="show-selection">
+                      <td>
+                        <div class="select">
+                          <select name="" id="" class="form-control">
+                            <option value="1">VVIP RM454.50</option>
+                            <option value="1">VVIP RM908.00</option>
+                          </select>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <span class="icon icon-minus-circle"></span>
+                          </span>
+                          <input type="number" class="form-control" value="1" style="width: 50px;">
+                          <span class="input-group-addon">
+                            <span class="icon icon-plus-circle"></span> 
+                          </span>
+                        </div>
+                        
+                      </td>
+                    </tr>
+                    <tr class="show-selected">
+                      <td>
+                        <p><strong>Selected Seat</strong></p>
+                        <p>VVIP RM 454.40 - 1 pax</p>
+                      </td>
+                      <td>
+                        <p><strong>Total</strong></p>
+                        <p class="color-red">RM 454.40</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">
+                        <p class="terms">
+                          ** All numbered seat.<br>
+                          ** Ticket price is subject to RM4 processing fee.<br>
+                          *** GRC member entitled for 20% discount, applicable to VVIP-PS5. 
+                        </p>
+
+                        <a href="hotel-payment.html" class="btn btn-primary btn-block">Next</a>
+                        <a href="hotel-payment.html" class="btn btn-link btn-block">Skip</a>
+                      </td>
+                    </tr>
+                  </table>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -10,13 +10,13 @@
   <link rel="stylesheet" href="assets/css/app.css">
 </head>
 <body class="{{overlay}}">
-
+  
   <div class="border-top-brand"></div>
 
   <nav class="navbar navbar-default">
     <div class="container">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-menu" aria-expanded="false">
+        <button type="button" class="navbar-toggle" data-target="#nav-menu" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -26,41 +26,44 @@
           <h1 itemprop="name" class="sr-only">Genting Resorts World</h1>
           <span itemprop="image"><img src="./assets/img/logo-rw.svg" alt="Genting Resorts World"></span>
         </a>
-      </div>
-
-      <div id="nav-menu" class="collapse navbar-collapse">
-        <!--  
-        {{> info-settings}}
-        -->
-        <ul class="nav navbar-nav navbar-right">
-          <!-- <li>
-            <p>Sign in or create an account</p>
-          </li> -->
+        <ul class="navbar-menu">
           <li>
-            <a href="about.html">
-              <span class="sr-only">Facebook</span>
-              <span class="icon icon-facebook-squared"></span>
-            </a>
+            {{> info-settings}}
           </li>
           <li>
-            <a href="#" >
-              <span class="sr-only">YouTube</span>
-              <span class="icon icon-youtube"></span>
-            </a>
+            Sign in or create an account
           </li>
           <li>
-            <a href="#">
-              <span class="sr-only">Twitter</span>
-              <span class="icon icon-twitter-squared"></span>
-            </a>
+            <div>
+              <ul class="header_social-links">
+                <li>
+                  <a href="about.html">
+                    <span class="sr-only">Facebook</span>
+                    <span class="icon icon-facebook-squared"></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" >
+                    <span class="sr-only">YouTube</span>
+                    <span class="icon icon-youtube"></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="sr-only">Twitter</span>
+                    <span class="icon icon-twitter-squared"></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="sr-only">Instagram</span>
+                    <span class="icon icon-instagram"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </li>
-          <li>
-            <a href="#">
-              <span class="sr-only">Instagram</span>
-              <span class="icon icon-instagram"></span>
-            </a>
-          </li>
-          <li class="dropdown">
+          <li class="dropdown user-profile">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
               <span class="icon icon-user-circle-o"></span>
               <!-- <span class="caret"></span> -->
@@ -79,6 +82,7 @@
       </div>
     </div>
   </nav>
+  <!-- {{> menu}} -->
   
   {{> header}}
   
@@ -117,7 +121,7 @@
     </div>
   </section>
 
-
+  <!-- {{> modal-currency}} -->
   <script src="assets/js/app.js"></script>
 </body>
 </html>
