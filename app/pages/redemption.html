@@ -1,0 +1,44 @@
+---
+list: ['Complimentary Room Redemption Guide', 'Voucher / Promo Code Redemption Guide']
+---
+
+{{> bar-search}}
+
+<div class="page-body page-others">
+  <div class="container">
+    <div class="col-sm-8 column-banner fill-bg">
+      <div class="banner">
+        <img src="/assets/img/hero-redemption.jpg" alt="Build Your Career with Us">
+        <div class="banner-headline">          
+          <p>How it works</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 column-sidebar fill-bg">
+      <div class="column-sidebar-wrap">
+        <h3>The Redemption Guide</h3>
+        <p>A complete step by step guide to redeem your complimentary & promo code.</p>
+        
+        <div class="panel-group" role="tablist">
+          {{#each list}}
+            <div class="panel">
+              <div class="panel-heading" role="tab">
+                <h4 data-toggle="collapse">{{this}}</h4>
+              </div>
+              <div class="panel-collapse collapse">
+                <div class="panel-body">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis atque, quibusdam nostrum ab delectus obcaecati quisquam dolorem corporis magni, aut molestias totam quidem laborum pariatur. Magnam earum non voluptates tempora!
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis atque, quibusdam nostrum ab delectus obcaecati quisquam dolorem corporis magni, aut molestias totam quidem laborum pariatur. Magnam earum non voluptates tempora!
+                  </p>
+                </div>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

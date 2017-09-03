@@ -1,20 +1,5 @@
-.page-member {
-  background: #F4F4F4;
-  margin: 0;
-
-  input, textarea, .form-group .select {
-    border: 1px solid #979797;
-    background: $gray-well;
-  }
-}
-
 .member-sidebar {
   @include make-sm-column(4);
-
-  &.fill-bg:before {
-    width: calc(100% - 20px);
-    left: 10px;
-  }
 }
 
 .member-sidebar-tab {

@@ -1,0 +1,96 @@
+.page-others {
+  background: #F4F4F4;
+  margin: 0;
+}
+
+.column-banner, .column-sidebar {
+  .banner {
+    @include make-row();
+  }
+}
+
+.column-banner {
+  background: #FFF;
+}
+
+.panel-group {
+  border-top: 1px solid $gray-line;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+
+  .panel {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 1px solid $gray-line;
+
+    .panel-heading {
+      background: transparent;
+      border-radius: 0;
+
+      h4 {
+        cursor: pointer;
+      }
+
+      + .panel-collapse > .panel-body {
+        border: none;
+      }
+    }
+
+    .panel-heading, .panel-body {
+      padding: 17px 0 20px;
+      border: none;
+    }
+  }
+
+  h4 {
+    font-size: 20px;
+    font-weight: $weight-light;
+    color: $purple;
+    margin: 0;
+  }
+}
+
+.banner {
+  font-size: 48px;
+  color: #FFF;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: $weight-reg;
+  position: relative;
+  line-height: 40px;
+
+  strong {
+    font-weight: $weight-bold;
+  }
+
+  .banner-headline {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+    }
+
+    p {
+      width: 300px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 50px;
+    }
+  }
+}
+
+.banner-content {
+  padding: 20px;
+
+  h3 {
+    color: $purple;
+  }
+}

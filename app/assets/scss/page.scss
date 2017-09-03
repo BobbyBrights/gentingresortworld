@@ -1,4 +1,38 @@
+.page-member, .page-others {
+  background: #F4F4F4;
+  margin: 0;
 
+  input, textarea, .form-group .select {
+    border: 1px solid #979797;
+    background: $gray-well;
+  }
+}
+
+.column-sidebar {
+  &.fill-bg:before {
+    width: calc(100% - 20px);  
+    left: 10px;
+  }
+
+  .column-sidebar-wrap {
+    padding: 20px 15px 0;
+    background: #FFF;
+
+    > h3, > h4 {
+      color: $purple;
+      margin-top: 0;
+    }
+  }
+
+  section {
+    padding: 20px 0;
+
+    .section-header {
+      color: $purple;
+      font-weight: $weight-bold;
+    }
+  }
+}
 
 .page-body {
   > .container {
@@ -275,7 +309,7 @@ table.hotel-room-rate-calendar {
 }
 
 /* HOTEL ADDON */
-[role="tablist"] {
+.nav-tabs[role="tablist"] {
   font-weight: $weight-bold;
   
   li a {
@@ -463,3 +497,4 @@ table.hotel-room-rate-calendar {
 
 /* MEMBERS */
 @import 'pages/members';
+@import 'pages/others';

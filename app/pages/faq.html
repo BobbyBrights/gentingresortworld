@@ -1,0 +1,44 @@
+---
+list: ['Promotions', 'Gaming', 'Genting Rewards Card Membership', 'Genting Points', 'Others']
+---
+
+{{> bar-search}}
+
+<div class="page-body page-others">
+  <div class="container">
+    <div class="col-sm-8 column-banner fill-bg">
+      <div class="banner">
+        <img src="/assets/img/hero-faq.jpg" alt="Build Your Career with Us">
+        <div class="banner-headline">          
+          <p>Frequently Asked Questions</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 column-sidebar fill-bg">
+      <div class="column-sidebar-wrap">
+        <h3>Frequently Asked Questions</h3>
+        <p>Let us help with any questions you might have</p>
+        
+        <div class="panel-group" role="tablist">
+          {{#each list}}
+            <div class="panel">
+              <div class="panel-heading" role="tab">
+                <h4 data-toggle="collapse">{{this}}</h4>
+              </div>
+              <div class="panel-collapse collapse">
+                <div class="panel-body">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis atque, quibusdam nostrum ab delectus obcaecati quisquam dolorem corporis magni, aut molestias totam quidem laborum pariatur. Magnam earum non voluptates tempora!
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis atque, quibusdam nostrum ab delectus obcaecati quisquam dolorem corporis magni, aut molestias totam quidem laborum pariatur. Magnam earum non voluptates tempora!
+                  </p>
+                </div>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
