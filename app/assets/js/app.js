@@ -16,6 +16,40 @@ $(document).ready(function () {
   }
 
 
+  // Open Menu
+  var $btnMenu = $('#toggle-menu'),
+      $contentMenu = $('#nav-menu');
+
+  $btnMenu.on('click', function() {
+    $contentMenu.toggleClass('in');
+    $('body').toggleClass('no-scroll');
+  });
+
+
+  // Landing Page Background
+  var $body = $('body'),
+      $footer = $('#footer');
+
+  $('.page-landing').height($w.height());
+
+
+  // Close other modals before opening new one
+  $('.modal').on('show.bs.modal', function () {
+    $('.modal').not($(this)).each(function () {
+      $(this).modal('hide');
+    });
+  });
+  
+
+  // Datepicker
+  var dateToday = new Date();
+  $('input.datepicker').datepicker({
+    numberOfMonths: 2,
+    minDate: dateToday
+  });
+
+
+
 
 
   // Slick Slider - Testimonial

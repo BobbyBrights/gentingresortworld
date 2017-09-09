@@ -1,29 +1,18 @@
-{{> search-inline}}
-  
-<div class="header_bar-secondary">
+<div class="header_bar-secondary header-bar">
   <div class="container">
-
     <table>
       <tr>
-        <td>
-          <div class="btn-group btn-group-justified component-steps-indicator">
-            <span class="btn{{#if pageticket}} active{{/if}}">
-              <span>Ticket Selection</span>
-            </span>
-            <span class="btn{{#if pagecheckout}} active{{/if}}">
-              <span>Express Checkout</span>
-            </span>
-            <span class="btn{{#if pagethankyou}} active{{/if}}">
-              <span>Thank You</span>
-            </span>
-          </div>
+        <td class="hidden-xs">
+          {{> steps-indicator-shows}}
         </td>
-        <td>
-          <a href="cart" class="btn btn-cart">
-            My Cart
-          </a>
-        </td>
+        {{> bar-search-partial}}
       </tr>
     </table>
+  </div>
+</div>
+
+<div class="header-bar visible-xs">
+  <div class="container">
+    {{> steps-indicator-shows}}
   </div>
 </div>

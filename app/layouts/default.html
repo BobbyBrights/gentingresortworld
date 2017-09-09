@@ -9,14 +9,14 @@
 
   <link rel="stylesheet" href="assets/css/app.css">
 </head>
-<body class="{{overlay}}">
+<body class="{{class}}">
   
   <div class="border-top-brand"></div>
 
   <nav class="navbar navbar-default">
     <div class="container">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-target="#nav-menu" aria-expanded="false">
+        <button type="button" class="navbar-toggle" id="toggle-menu">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -24,65 +24,40 @@
         </button>
         <a itemscope itemtype="http://schema.org/LocalBusiness" class="navbar-brand" href="index.html">
           <h1 itemprop="name" class="sr-only">Genting Resorts World</h1>
-          <span itemprop="image"><img src="./assets/img/logo-rw.svg" alt="Genting Resorts World"></span>
+          <span itemprop="image"><img src="assets/img/logo-rw.svg" alt="Genting Resorts World"></span>
         </a>
         <ul class="navbar-menu">
           <li>
             {{> info-settings}}
           </li>
           <li>
-            Sign in or create an account
+            <a href="#">
+              <span class="sr-only">Cart</span>
+              <span class="icon icon-cart"></span>
+              <span class="badge">42</span>
+            </a>
           </li>
-          <li>
-            <div>
-              <ul class="header_social-links">
-                <li>
-                  <a href="about.html">
-                    <span class="sr-only">Facebook</span>
-                    <span class="icon icon-facebook-squared"></span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" >
-                    <span class="sr-only">YouTube</span>
-                    <span class="icon icon-youtube"></span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span class="sr-only">Twitter</span>
-                    <span class="icon icon-twitter-squared"></span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span class="sr-only">Instagram</span>
-                    <span class="icon icon-instagram"></span>
-                  </a>
-                </li>
-              </ul>
-            </div>
+          <li class="hidden-xs">
+            Sign in or create an account
           </li>
           <li class="dropdown user-profile">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-              <span class="icon icon-user-circle-o"></span>
-              <!-- <span class="caret"></span> -->
+              <!-- <span class="icon icon-user-circle-o"></span> -->
+              <img src="assets/img/profile.jpg" alt="" class="avatar">
             </a>
             <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
+              <li><a href="#" data-toggle="modal" data-target="#modal-signin">Login</a></li>
+              <li><a href="member-profile.html">My Account</a></li>
+              <li><a href="#">My Booking</a></li>
+              <li><a href="#">Redemption</a></li>
+              <li><a href="#">Log Out</a></li>
             </ul>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  <!-- {{> menu}} -->
+  {{> menu}}
   
   {{> header}}
   
@@ -94,16 +69,16 @@
         <ul>
           <li class="logo">
             <a href="/">
-              <img src="./assets/img/logo-rw.svg" alt="Genting Resorts World">
+              <img src="assets/img/logo-footer.svg" alt="Genting Resorts World">
             </a>
           </li>
           <li>
-            <a href="#">How it works</a>
+            <a href="redemption.html">Redemption Guide</a>
           </li>
-          <li><a href="#">Language &amp; Currency</a></li>
-          <li><a href="#">FAQs</a></li>
-          <li><a href="#">Career</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">My Booking</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+          <li><a href="career.html">Career</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
     </div>
@@ -121,7 +96,7 @@
     </div>
   </section>
 
-  <!-- {{> modal-currency}} -->
+  {{> modal-settings}}
   <script src="assets/js/app.js"></script>
 </body>
 </html>

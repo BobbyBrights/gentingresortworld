@@ -1,37 +1,39 @@
-<div class="modal fade modal-signin" id="modal-signin" tabindex="-1" role="dialog" aria-labelledby="#SignUp">
+<div class="modal fade modal-signin purple" id="modal-signin" tabindex="-1" role="dialog" aria-labelledby="#SignUp">
   <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
-  <div class="modal-dialog modal-sm" role="document">
-    <div class="modal-content modal-purple">
-      <div class="modal-body">
-
-        <h4 class="header">Members Sign In</h4>
-        <p>Please sign in if you are a Genting Rewards member to enjoy exclusive offers and discounts.</p>
-
-        <form action="">
-          <div class="form-group">
-            <label class="sr-only">Member ID</label>
-            <input type="text" class="form-control" placeholder="Member ID">
-          </div>
-          <div class="form-group">
-            <label class="sr-only">Pin Number</label>
-            <input type="text" class="form-control" placeholder="Pin Number">
-          </div>
-
-          <input type="submit" class="btn btn-primary btn-block" value="Sign In">
-        </form>
-
-        <ul class="separator footer-cta">
-          <li><a href="#">Create Pin</a></li>
-          <li><a href="#">Forgot Password?</a></li>
-        </ul>
-      </div>
-    </div>
-
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-body">
-        <h4 class="header">Register as Member</h4>
-        <p>Enjoy exclusive discount for Genting Rewards members.</p>
-        <a href="register.html" data-toggle="modal" data-target="#modal-signup" class="btn btn-primary btn-block">Sign Up for Free</a>
+        <h1 class="header">Members Sign In</h1>
+        <div class="row">
+          <div class="col-xs-4">
+            <p>Please sign in if you are a Genting Rewards member to enjoy exclusive offers and discounts.</p>
+            <form>
+              <div class="form-group">
+                <label class="sr-only">Member ID</label>
+                <input type="text" class="form-control" placeholder="Member ID">
+              </div>
+              <div class="form-group">
+                <label class="sr-only">Pin Number</label>
+                <input type="text" class="form-control" placeholder="Pin Number">
+              </div>
+
+              <input type="submit" class="btn btn-primary btn-block" value="Sign In">
+            </form>
+          </div>
+          <div class="col-xs-4">
+            <p>Sign in with your social media account.</p>
+            <a href="#" class="btn btn-socialmedia fb">Sign in with Facebook</a>
+            <a href="#" class="btn btn-socialmedia google">Sign in with Google</a>
+          </div>
+          <div class="col-xs-4">
+            <div class="well">
+              <h4 class="header">Register as Member</h4>
+              <p>Enjoy exclusive discount for Genting Rewards members.</p>
+              <a href="register.html" data-toggle="modal" data-target="#modal-signup" class="btn btn-primary btn-block">Sign Up for Free</a>
+            </div>
+            <a href="#" class="text-center btn-block btn-link" data-toggle="modal" data-target="#modal-signup-new">Continue as Guest</a>
+          </div>  
+        </div>
       </div>
     </div>
   </div>

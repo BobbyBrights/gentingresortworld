@@ -53,12 +53,17 @@
 }
 
 .banner {
-  font-size: 48px;
   color: #FFF;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   font-weight: $weight-reg;
   position: relative;
-  line-height: 40px;
+  font-size: 22px;
+  line-height: 20px;
+  
+  @include breakpoint(tablet) {
+    font-size: 48px;
+    line-height: 40px;
+  }
 
   strong {
     font-weight: $weight-bold;
@@ -82,7 +87,11 @@
       width: 300px;
       display: inline-block;
       vertical-align: middle;
-      margin-left: 50px;
+      margin-left: 10px;
+
+      @include breakpoint(tablet) {
+        margin-left: 50px;
+      }      
     }
   }
 }

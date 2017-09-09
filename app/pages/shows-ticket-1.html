@@ -1,0 +1,80 @@
+---
+class: 'shows-selection modal-open'
+
+current: {
+  'pageticket': true
+  }
+---
+
+<div class="modal fade modal-shows-selection purple" id="modal-shows-selection" tabindex="-1" role="dialog" style="display: block; opacity: 1;">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="component-steps-indicator">
+          <ul>
+            <li class="active">
+              <div>
+                <span class="badge">1</span>
+                <span>Ticket Selection</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span class="badge">2</span>
+                <span>Checkout</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span class="badge">3</span>
+                <span>Thank You</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="layout-purchase">
+          <div class="show-info-wrap">
+            <div class="show-info">
+              <p class="show-column-header text-center">Shows</p>
+              <p class="text-center">All Star Jukebox in Concert</p>
+              <img src="assets/img/addon-show.jpg" alt="">
+              <div class="show-detail">
+                <p class="overview">Overview</p>
+                <p>Concert by Andy Hui, Janice Vidal &amp; Jonathan Wong. <a href="#" id="btn-show-detail-more">More Details</a></p>
+              </div>
+              <div id="show-detail-more" class="show-detail-more">
+                <button class="close"></button>
+                <p>
+                  A 45 mins interactive show hosted in the same immersive set, by the very convincing, very delightful, awfully captivating cast. Itis suitable for children aged two years and up, brings together immersive storytelling, activities for all younglings.
+                </p>
+                <p>
+                  "Just a little further" said Alice to the herself as she plunged deeper into the depths of the cake. How is it that it never ends? And how will I ever find the plate? By this time the Mad Hatter had arrived to see a pair of legs sticking out of a very large cake.
+                </p>
+                <p>
+                  A 45 mins interactive show hosted in the same immersive set, by the very convincing, very delightful, awfully captivating cast. Itis suitable for children aged two years and up, brings together immersive storytelling, activities for all younglings.
+                </p>
+                <p>
+                  "Just a little further" said Alice to the herself as she plunged deeper into the depths of the cake. How is it that it never ends? And how will I ever find the plate? By this time the Mad Hatter had arrived to see a pair of legs sticking out of a very large cake.
+                </p>
+                <p>
+                  A 45 mins interactive show hosted in the same immersive set, by the very convincing, very delightful, awfully captivating cast. Itis suitable for children aged two years and up, brings together immersive storytelling, activities for all younglings.
+                </p>
+                <p>
+                  "Just a little further" said Alice to the herself as she plunged deeper into the depths of the cake. How is it that it never ends? And how will I ever find the plate? By this time the Mad Hatter had arrived to see a pair of legs sticking out of a very large cake.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="show-selection">
+            <div class="row">
+              <div class="col-sm-6">{{> form-show-selection-modal}}</div>
+              <div class="col-sm-6">{{> form-guest-details}}</div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

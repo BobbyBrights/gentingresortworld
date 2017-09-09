@@ -59,7 +59,7 @@
 
       &.btn-edit {
         left: auto;
-        right: 0;
+        right: 10px;
       }
     }
 
@@ -216,7 +216,6 @@
 .radio label {
   display: inline-block;
   margin-right: 20px;
-  padding: 0;
   color: $text-color !important;
 }
 
@@ -309,17 +308,23 @@
   .btn {
     margin: 20px auto;
     font-size: 16px;
-    width: 40%;
+    width: 100%;
+    
+    @include breakpoint(tablet) {
+      width: 40%;
+    }
   }
 }
 
 .points-progress-wrap {
+  margin-bottom: 20px;
   margin-top: 20px;
 }
 
 .points-progress-bar-wrap {
   position: relative;
   margin-top: 50px;
+  height: 60px;
 
   .points-progress-bar-stops {
     font-size: 12px;
@@ -343,7 +348,7 @@
     }
 
     &.bottom {
-      bottom: -49px;
+      bottom: 0;
 
       &:after {
         border-width: 0 5px 5px 5px;
@@ -386,7 +391,7 @@
     &:nth-child(5) {
       right: 0;
       text-align: right;
-      bottom: -61px;
+      bottom: -12px;
 
       &:after {
         left: auto;

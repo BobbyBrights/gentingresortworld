@@ -256,62 +256,52 @@ dates: [
 
 <div class="page-body">
   <div class="container">
-    <div class="layout-purchase item-well item-well-fill">
-      <table class="hotel-room-rate-calendar">  
-        <tr>
-          <th colspan="7" class="calendar-header">
-            <button class="prev"></button>
-            <p class="title"><strong>AUGUST</strong> 2017</p>
-            <button class="next"></button>
-          </th>
-        </tr>
-        <tr>
-          <th>Mon</th>
-          <th>Tue</th>
-          <th>Wed</th>
-          <th>Thu</th>
-          <th>Fri</th>
-          <th>Sat</th>
-          <th>Sun</th>          
-        </tr>
-        <tr>
-          {{#each dates}}
-            <td class="{{class}}">
-              <div>
-                <p class="date">{{{date}}}</p>
-                {{#if full}}
-                <p>Fully Booked</p>
-                {{/if}}
-                {{#if available}}
-                  {{#unless @first}}
-                    <ul>
-                      <li class="member">
-                        <p>
-                          MYR
-                          <span>{{price-member}}</span>
-                          Member
-                        </p>
-                      </li>
-                      <li class="guest">
-                        <p>
-                          MYR
-                          <span>{{price-guest}}</span>
-                          Non Member
-                        </p>
-                      </li>
-                    </ul>
-                  {{/unless}}
-                {{/if}}
-              </div>
-            </td>
-            {{#modulo nth=7}}
-            </tr>
-            <tr>
-            {{/modulo}}
-          {{/each}}
+    <div class="layout-purchase layout-calendar">
+      <div class="calendar-header large">
+        <button class="prev"></button>
+        <p class="title"><strong>AUG-SEP</strong> 2017</p>
+        <button class="next"></button>
+      </div>
+      <div class="item-well item-well-fill inverse">
+        <table class="hotel-room-rate-calendar">  
+          <tr>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+            <th>Sun</th>          
           </tr>
-      </table>
-      <a href="hotel-room-loading.html" class="btn btn-primary center-block">Book Now</a>
+          <tr>
+            {{#each dates}}
+              <td class="{{class}}">
+                <div>
+                  <p class="date">{{{date}}}</p>
+                  {{#if full}}
+                  <p>Fully Booked</p>
+                  {{/if}}
+                  {{#if available}}
+                    {{#unless @first}}
+                      <p>
+                        <small>MYR</small>
+                        <span>{{price-member}}</span>
+                      </p>
+                    {{/unless}}
+                  {{/if}}
+                </div>
+              </td>
+              {{#modulo nth=7}}
+              </tr>
+              <tr>
+              {{/modulo}}
+            {{/each}}
+            </tr>
+        </table>
+        <a href="#" class="btn btn-primary center-block" data-toggle="modal" data-target="#modal-loading">Book Now</a>
+      </div>
     </div>
   </div>
 </div>
+
+{{> modal-loading}}

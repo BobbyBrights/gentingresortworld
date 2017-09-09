@@ -23,6 +23,8 @@ $darkpurple: #4D0C41; // header background rgb(77, 12, 65)
 $purple: #9E1E5D; // header background rgb(158, 30, 93)
 $purple-line: #F16C6C; // rgb(241, 108, 108)
 $purple-red: #66123C; // rgb(102, 18, 60)
+$purple-header: #3F0C23; // rgb(77, 12, 65)
+$yellow: #F8E71C; // rgba(248, 231, 28)
 
 $gray-line: #E7E7E7;
 $gray-well: #F4F4F4; // well background
@@ -39,7 +41,7 @@ $navbar-height: 85px;
 $navbar-border-radius: 0;
 $navbar-margin-bottom: 0;
 
-$navbar-default-bg: $darkpurple;
+$navbar-default-bg: $purple-header;
 $navbar-default-border: transparent;
 $navbar-default-color: #FFFFFF;
 $navbar-default-link-color: #FFF;
@@ -61,9 +63,10 @@ $input-height-base: 40px;
 $input-border: #FFF;
 $input-color-placeholder: $gray-light;
 
-$modal-lg:                    900px;
+$modal-lg:                    1030px;
 $modal-md:                    605px;
-$modal-sm:                    320px;
+$modal-sm:                    360px;
+$modal-backdrop-opacity:  0.9;
 
 /* -- FONT -------- */
 $icon-arrow-down:         '\e800';
@@ -97,4 +100,9 @@ $icon-handshake-o:        '\f2b5';
 $icon-user-circle-o:      '\f2be';
 $icon-twitter-squared:    '\f304';
 $icon-facebook-squared:   '\f308';
+$icon-camera:             '\e818';
+$icon-edit:               '\e819';
+$icon-language:           '\e81a';
+$icon-coin:               '\e81b';
+$icon-google:             '\e825';
 

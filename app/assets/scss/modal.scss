@@ -39,13 +39,27 @@
       border-bottom-color: $purple-line;
     }
   }
+
+  .select {
+    background: #FFF;
+  }
 }
 
 .modal-settings {
   color: #FFF;
 
+  .modal-content, .modal-body {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+  }
+
   .modal-dialog {
-    width: 765px;
+    width: 320px;
+    
+    @include breakpoint(tablet) {
+      width: 765px;
+    }
   }
 
   .column-setting {
@@ -58,22 +72,6 @@
 
   .h3, h3 {
     font-weight: $weight-light;
-  }
-
-  ul {
-    padding: 0;
-    font-size: 16px;
-
-    li {
-      list-style-type: none;
-      padding: 16px 0 12px;
-      border-bottom: 1px solid #FFF;
-
-      &.selected {
-        color: $brand-primary;
-        font-weight: $weight-bold;
-      }
-    }
   }
 }
 
@@ -91,12 +89,21 @@
     padding: 0;
     text-align: center;
 
+    @include breakpoint(tablet) {
+      text-align: right;
+    }
+
     li {
       display: inline-block; 
       vertical-align: middle;
       margin: 0 5px;
+      width: 45%;
 
       .btn {
+        width: 100%;
+      }
+
+      @include breakpoint(tablet) {
         width: 135px;
       }
     }
@@ -107,15 +114,294 @@
   }
 
   .form-group {
-    background: #FFF;
     border-radius: $border-radius-base;
+    margin-bottom: 4px;
   }
 }
 
 
 /* SPECIFIC */
+.modal.purple {
+  .modal-content {
+    background: #561136;
+    padding: 20px;
+    color: #FFF;
+
+    .modal-body {
+      border-radius: $border-radius-base;
+      background: $purple;
+
+      > .header {
+        border-color: $purple-line;
+        font-weight: $weight-reg;
+        font-size: 20px;
+
+        @include breakpoint(tablet) {
+          font-size: 36px;
+        }
+      }
+    }
+  }
+
+  hr {
+    background: $purple-line;
+    height: 1px;
+    border: none;
+    margin: 10px 0;
+  }
+}
+
 .modal-signup {
   .form-group {
     margin-bottom: 10px;
+  }
+}
+
+.modal-signin {
+  .modal-content {
+    background: #561136;
+    padding: 20px;
+    color: #FFF;
+
+    .modal-body {
+      border-radius: $border-radius-base;
+      background: $purple;
+
+      > .header {
+        border-color: $purple-line;
+        font-weight: $weight-reg;
+        font-size: 20px;
+
+        @include breakpoint(tablet) {
+          font-size: 36px;
+        }
+      }
+
+      p {
+        text-align: center;
+
+        @include breakpoint(tablet) {
+          text-align: center;
+        }
+      }
+    }
+
+    table {
+      width: 100%;
+
+      td {
+        width: 1%;
+
+        &:nth-child(2) > div {
+          padding: 0 30px;
+        }
+      }
+    }
+  }
+
+  .well {
+    background: #FFF;
+    color: $text-color;
+
+    p {
+      font-weight: $weight-light;
+    }
+  }
+
+  a {
+    color: #FFF;
+  }
+
+  .border-left {
+    position: relative;
+
+    @media (max-width: $screen-xs-max) {
+      .clearfix {
+        margin-left: -10px;
+        margin-row: -10px;
+      }
+    }
+
+    @include breakpoint(tablet) {
+      > p {
+        padding-left: 10px;
+      }
+
+      &:before {
+        content: '';
+        border-left: 1px solid $purple-line;
+        position: absolute;
+        left: 5px;
+        bottom: 0;
+        height: 75%;
+      }
+    }
+
+  }
+
+  .footer-signin {
+    font-weight: $weight-reg;
+    margin: 20px auto 0;
+
+    a {
+      color: $brand-primary;
+    }
+  }
+}
+
+.modal-show-datepicker {
+  .modal-content {
+    border-radius: 0;
+
+    &.calendar-wrap {
+      padding: 10px;
+    }
+  }  
+}
+
+.modal-loading {
+  .modal-content {
+    border-radius: 0;
+    background: #000;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  p {
+    font-size: 18px;
+    color: #FFF;
+  }
+
+  .modal-footer {
+    border: none;
+    color: #9B9B9B;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 34px;
+
+    p {
+      color: #9B9B9B;
+    }
+
+    p .icon {
+      color: $brand-primary;
+    }
+
+    ul {
+      padding: 0;
+      text-align: center;
+
+      li {
+        margin: 0 10px;
+        display: inline-block;
+
+        .icon {
+          color: #E7E7E7;
+          font-size: 20px;
+          margin-right: 5px;
+          position: relative;
+          top: 3px;
+        }
+      }
+    }
+
+  }
+}
+
+.modal-shows-selection {
+  &.purple .modal-content .modal-body {
+    background-color: transparent;
+    padding: 0;
+    color: $text-color;
+  }
+
+  .layout-purchase {
+    padding: 0;
+    margin-bottom: 0;
+
+    .sections {
+      margin-bottom: 0;
+    }
+  }
+
+  .show-info-wrap {
+    padding-right: 20px;
+  }
+
+  .show-info {
+    background: $purple;
+    border-radius: $border-radius-base;   
+  }
+
+  .show-detail {
+    p {
+      font-size: 14px;
+
+      &.overview {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .show-selection {
+    padding-left: 0;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  .calendar-wrap {
+    margin-left: -20px;
+    margin-right: -20px;
+    background: #FFF;
+    padding: 7px;
+    color: $text-color;
+    margin-bottom: 3px;
+
+    + .calendar-wrap {
+      margin-bottom: 8px;
+    }
+
+    .shows-calendar {
+      th {
+        font-size: 12px;
+        font-weight: $weight-reg;
+        padding-bottom: 5px;
+      }
+
+      td span {
+        height: 33px;
+        width: 40px;
+        line-height: 31px;
+      }
+    }
+  }
+
+  .component-legend {
+    ul {
+      margin-bottom: 0;
+    }
+  }
+
+  .calendar-header {
+    border-bottom: 1px solid $gray-line;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+
+    .title {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    .modal-dialog {
+      margin: 0;
+
+      .show-info-wrap, .show-selection {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
   }
 }

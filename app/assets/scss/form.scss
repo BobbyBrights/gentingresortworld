@@ -1,11 +1,12 @@
 form {
-  .form-control {
-    font-weight: $weight-reg;
-  }
-
   .btn {
     height: 40px;
   }
+}
+
+.form-control {
+  font-weight: $weight-reg;
+  box-shadow: none;
 }
 
 .form-layout {
@@ -55,6 +56,10 @@ form {
     height: 47px;
   }
 
+  .select {
+    background: #FFF;
+  }
+
   .form-wrap {
     background: rgba(255, 255, 255, 0.85);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
@@ -68,7 +73,7 @@ form {
   label + div {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
     border: none;
-    border-radius: $border-radius-large;
+    border-radius: $border-radius-base;
 
     .form-control {
       box-shadow: none;
@@ -94,7 +99,8 @@ form {
 
 .form-compact {
   margin: 0 auto;
-  width: 375px;
+  font-size: 15px;
+  /*width: 375px;*/
 
   .form-wrap {
     margin-bottom: 10px;
@@ -104,6 +110,25 @@ form {
   p {
     font-weight: $weight-reg;
     margin-top: 20px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+}
+
+.form-purple {
+  .form-wrap {
+    background: rgba(158, 30, 93, 0.9);
+  }
+
+  h3 {
+    margin-top: 0;
+    font-weight: $weight-reg;
+  }
+
+  h3, h4, a, p, .component-info-settings * {
+    color: #FFF;
   }
 }
 
@@ -123,6 +148,20 @@ form {
 
   form {
     margin-bottom: 20px;
+  }
+
+  .cta-wrap {
+    margin-top: 30px;
+
+    h3 {
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .btn {
+      font-size: 14px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
   }
 }
 
@@ -150,11 +189,14 @@ form {
 }
 
 
-label:not(.input-replace, .sr-only) {
+label:not(.sr-only, .radio-as-list) {
   overflow: hidden;
   position: relative;
   min-height: 20px;
 
+  .radio &, .checkbox & {
+    padding: 0;
+  }
 
   input[type="radio"], input[type="checkbox"] {
     position: absolute;
@@ -195,6 +237,31 @@ label:not(.input-replace, .sr-only) {
   }
 }
 
+label.radio-as-list {
+  cursor: pointer;
+  padding: 16px 0 12px;
+  border-bottom: 1px solid #FFF;
+  overflow: hidden;
+  position: relative;
+  font-size: 16px;
+
+  input {
+    position: absolute;
+    left: -100px;
+
+    + span {
+      font-weight: $weight-reg;
+    }
+
+    &:checked {
+      + span {
+        color: $brand-primary;
+        font-weight: $weight-bold;
+      }
+    }
+  }
+}
+
 .select {
   position: relative;
   border-radius: $border-radius-base;
@@ -217,5 +284,25 @@ label:not(.input-replace, .sr-only) {
     top: 50%;
     margin-top: -8px;
     color: $text-color;
+  }
+
+  /* HEADER */
+
+  .header_bar-primary &, .header_bar-secondary & {
+    background-color: #FFF;
+
+    select {
+      height: 40px;
+    }
+  }
+
+  &.payment-method {
+    background: $gray-cart;
+    color: #FFF;
+    margin-bottom: 20px;
+
+    select, &:after {
+      color: #FFF;
+    }
   }
 }

@@ -1,18 +1,21 @@
 <div class="page-landing page-landing-wide">
 
   <div class="container">
-    <div class="form-container form-floating form-wide">
+    <div class="form-container form-floating form-wide form-purple">
 
       <div class="form-wrap">
         {{> info-settings}}
 
         {{> search-inline}}
-
-        <ul class="inline">
-          <li>Already a member? <a href="signin.html">Sign in</a></li>
-          <li><a href="register.html">Register as member</a> for free</li>
-        </ul>
+      </div>
+      <div class="text-center cta-wrap">
+        <h3>Sign in to get better rates</h3>
+        <a href="signin.html" class="btn btn-primary" data-toggle="modal" data-target="#modal-signin">Members sign in</a>
+        <a href="register.html" class="btn btn-darkpurple" data-toggle="modal" data-target="#modal-signup-new">Register as member for free</a>
       </div>
     </div>
   </div>
 </div>
+
+{{> modal-signin}}
+{{> modal-signup-new}}

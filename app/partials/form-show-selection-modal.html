@@ -1,0 +1,72 @@
+<div class="form-show-selection">
+  <p class="show-column-header">Venue: Arena of Stars</p>
+  
+  <div class="review-show-selection">
+    <table id="table-show-selection">
+      <tr>
+        <th>Time</th>
+        <th>Seat</th>
+        <th>Qty</th>
+        <th>Price</th>
+        <th></th>
+      </tr>
+      <tr class="row-review-show">
+        <td>20:00</td>
+        <td>PS1</td>
+        <td>2</td>
+        <td class="price">MYR160.00</td>
+        <td><button class="icon icon-minus-circle btn-remove"><span class="sr-only">Remove</span></button></td>
+      </tr>
+      <tr class="add-row">
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td class="price">-</td>
+        <td><button class="icon icon-minus-circle"><span class="sr-only">Remove</span></button></td>
+      </tr>
+    </table>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="form-group">
+        <label>Select Date</label>
+        <div class="select">
+          <select name="showDate" id="" class="form-control">
+            <option value="20:00">31 AUG 2017 | 8:00pm</option>
+            <option value="21:00">31 AUG 2017 | 8:00pm</option>
+            <option value="22:00">31 AUG 2017 | 8:00pm</option>
+            <option value="23:00">31 AUG 2017 | 8:00pm</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-9">
+      <div class="form-group">
+        <label>Select Seat</label>
+        <div class="select">
+          <select name="showSeat" id="" class="form-control">
+            <option value="PS5|80.40">PS5: 80.40MYR/50GP</option>
+            <option value="PS1|40.20">PS1: 40.20MYR/40GP</option>
+            <option value="PS4|30.10">PS4: 30.10MYR/30GP</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-3 qty"> 
+      <div class="form-group">
+        <label>Quantity</label>
+        <div class="select">
+          <select name="showQty" id="" class="form-control">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary btn-block" id="add-show">Add</button>
+</div>

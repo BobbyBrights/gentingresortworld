@@ -12,6 +12,7 @@
       margin-right: 10px;
     }
 
+
     span.icon {
       font-size: 20px;
 
@@ -21,13 +22,48 @@
       }
     }
 
-    button.dropdown-toggle {
+    button {
       background: transparent;
       border: none;
-      color: $brand-primary;
       padding: 0;
+
+      .icon {
+        color: $brand-primary;
+      }
+
+      &:hover span {
+        color: $purple;
+      }
     }
   }
+
+  .navbar & {
+    button {
+      color: #FFF;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      li {
+        margin: 0;
+
+        + li:before {
+          content: '';
+          margin: 0;
+        }
+        
+      }
+      .weather {
+        display: none;
+      }
+
+      .language, .currency {
+        .icon + span {
+          display: none;
+        }
+      }
+    }
+  }
+
 }
 
 .component-search-inline {
@@ -36,7 +72,7 @@
       display: inline-block;
       margin-bottom: 0;
       vertical-align: middle;
-      width: 12%;
+      width: 13%;
 
       &:nth-child(1) {
         width: 58%;
@@ -51,11 +87,11 @@
       }
     }
 
-    input[type="submit"] {
+    .btn-search {
       width: 40%;
 
       @include breakpoint(tablet) {
-        width: 20%;
+        width: 18%;
       }
     }
   }
@@ -70,12 +106,15 @@
 }
 
 .component-legend {
-  margin-top: 20px;
-  border-top: 1px solid $gray-line;
   width: 100%;
 
+  .header + p {
+    font-size: 12px;
+  }
+
   td {
-    padding-top: 15px;
+    padding: 0 !important;
+    width: 1% !important;
   }
 
   ul {
@@ -84,16 +123,18 @@
     li {
       display: inline-block;
       vertical-align: middle;
-      font-weight: $weight-thin;
+      font-weight: $weight-reg;
+      font-size: 11px;
+      line-height: 10px;
     }
   }
 
   .square {
     border-radius: $border-radius-base;
     display: block;
-    height: 35px;
+    height: 22px;
     margin-right: 10px;
-    width: 35px;
+    width: 22px;
 
     &.selected {
       background-color: $purple;
@@ -110,6 +151,114 @@
 }
 
 .component-steps-indicator {
+  ul {
+    padding: 0;
+    list-style: none;
+    background: transparent;
+    border-radius: $border-radius-base;
+    margin-bottom: 0;
+    height: 40px;
+    font-size: 12px;
+    padding: 4px;
+    text-align: center;
+
+    @include breakpoint(tablet) {
+      background: #FFF;
+      width: 360px;
+    }
+
+    .modal-shows-selection & {
+      width: 100%;
+      margin-bottom: 20px;
+      background: #FFF;
+
+      @media (max-width: $screen-xs-max) {
+        li:not(.active) {
+          .badge + span {
+            display: none;
+          }
+        }
+      }
+    }
+
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      height: 32px;
+      position: relative;
+      margin: 0 17px;
+      text-transform: uppercase;
+      font-weight: $weight-reg;
+      color: $text-color;
+
+      &:first-child {
+        margin-left: 0;
+      }
+      
+      @include breakpoint(tablet) {
+        margin: 0 12px;
+
+        &.active {
+          margin: 0 16px 0 7px;
+        }
+      }
+
+      + li:before {
+        content: $icon-arrow-right;
+        font-family: 'icons';
+        color: #9B9B9B;
+        font-weight: bold;
+        font-size: 8px;
+        position: absolute;
+        left: -18px;
+        top: 11px;
+      }
+      
+      &.chosen-date {
+        margin: 0 0 0 -16px;
+
+        &:before {
+          content: '';
+        }
+
+        div {
+          padding: 8px 7px 7px;
+
+          &:before {
+            content: $icon-calendar;
+            font-family: 'icons';
+            margin-right: 5px;
+          }
+        }
+
+        span:after {
+          border-bottom: none;
+          margin: 0;
+        }
+      }
+
+      > div {
+        padding: 8px 7px 7px;
+        border-radius: $border-radius-base;
+      }
+
+      .badge {
+        font-weight: $weight-bold;
+        height: 16px;
+        width: 16px;
+        text-align: center;
+        padding: 3px 0 0;
+        color: #FFF;
+        background: #9b9b9b;
+        position: relative;
+        top: -1px;
+
+        + span {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
 
   .btn {
     font-weight: $weight-reg;
@@ -125,23 +274,14 @@
   }
 
   .active {
-    background-color: $purple;
-    color: #FFF;
+    > div {
+      background-color: $purple;
+      color: #FFF;
 
-    span {
-      display: inline-block;
-
-      &:after {
-        content: '';
-        display: block;
-        border-bottom: 1px solid #FFF;
-        margin: -5px auto 0;
-        width: 90%;
+      .badge {
+        background: #FFF;
+        color: $text-color;
       }
-    }
-
-    + .btn {
-      border-left-color: transparent;
     }
   }
 }
@@ -293,18 +433,39 @@
 }
 
 /* PRICE SUMMARY TABLE */
+.component-review-customer-info {
+  font-size: 16px;
+  margin-top: 10px;
+  width: 100%;
+
+  th, td {
+    width: 1%;
+    padding: 5px 0;
+  }
+
+  td {
+    font-weight: $weight-light;
+  }
+}
+
 .component-review-price {
-  font-size: 18px;
+  font-size: 16px;
   width: 100%;
   height: 100%;
 
   h3 {
     text-align: center;
+    border-bottom: 1px solid $gray-line; 
+    padding-bottom: 10px;
   }
 
   tr {
+    th {
+      width: 150px;
+    }
     td {
       padding: 18px 0;
+      font-weight: $weight-light;
     }
 
     &:nth-child(1n+3) {
@@ -390,6 +551,183 @@
         color: #FFF;
         font-weight: $weight-reg;
       }
+    }
+  }
+}
+
+.shows-calendar {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+
+  th, td {
+    text-transform: uppercase;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  td {
+    color: #9B9B9B;
+    
+    span {
+      display: block;
+      border-radius: $border-radius-base;
+      border: 2px solid transparent;
+      margin: 2px;
+      height: 33px;
+      width: 40px;
+      line-height: 30px;
+
+      @include breakpoint(tablet) {
+        height: 37px;
+        width: 44px;
+        line-height: 35px;
+      }
+    }
+
+    &.unavailable {
+      span {
+        background: $gray-line;
+      }
+    }
+
+    &.available, .selected {
+      span {
+        border-color: $purple;
+      }
+    }
+
+    &.selected {
+      span {
+        background: $purple;
+        color: #FFF;
+      }
+    }
+  }
+}
+
+.ui-datepicker {
+  background: $purple;
+  border-radius: $border-radius-large;
+  width: 674px !important;
+  padding: 20px;
+  box-sizing: border-box;
+  @include clearfix();
+
+  .ui-datepicker-title {
+    color: #FFF;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+
+    .ui-datepicker-month {
+      font-weight: $weight-bold;
+    }
+
+    .ui-datepicker-year {
+      font-weight: $weight-light;
+    }
+  }
+
+  .ui-datepicker-group {
+    float: left;
+
+    + .ui-datepicker-group {
+      margin-left: 54px;
+    }
+  }
+
+  td {
+    text-align: center;
+
+    a {
+      display: inline-block;
+    }
+  }
+
+  .ui-state-disabled .ui-state-default {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .ui-datepicker-calendar {
+    width: 290px;
+  }
+
+  .ui-datepicker-current-day {
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 24px;
+      height: 24px;
+      display: block;
+      background: #FFF;
+      border-radius: 50%;
+      z-index: 0;
+      position: absolute;
+      top: -3px;
+      left: 8px;
+    }
+  }
+
+  .ui-state-default {
+    color: #FFF;
+    font-weight: $weight-reg;
+    font-size: 15px;
+    width: 24px;
+    height: 24px;
+
+    &.ui-state-active {
+      color: $purple;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  tbody > tr:first-child > td {
+    padding-top: 10px;
+  }
+
+  th {
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFF;
+    padding-bottom: 6px;
+    font-weight: $weight-reg;
+    border-bottom: 1px solid $purple-line;
+    font-size: 12px;
+  }
+
+  .ui-datepicker-header {
+    position: relative;
+  }
+
+  .ui-datepicker-prev, .ui-datepicker-next {
+    position: absolute;
+    top: 0;
+    
+    span {
+      display: none;
+    }
+
+    &:before, &:after {
+      font-family: 'icons';
+      font-size: 16px;
+      color: #FFF;
+    }
+  }
+
+  .ui-datepicker-prev {
+    left: 0;
+    &:before {
+      content: $icon-arrow-left;
+    }
+  }
+
+  .ui-datepicker-next {
+    right: 0;
+    &:after {
+      content: $icon-arrow-right;
     }
   }
 }

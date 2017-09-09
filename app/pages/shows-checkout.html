@@ -6,84 +6,86 @@ current: {
 
 {{>bar-show-steps current}}
 
-<div class="page-body">
+<div class="page-body page-shows">
   <div class="container">
-    <div class="layout-payment item-well item-well-fill">
+    <div class="layout-purchase item-well item-well-fill">
       <div class="row">
         <div class="column-left column">
           <div class="sections clearfix">
-            <div class="col-sm-5">
+            <div class="col-sm-6">
               <h3>Customer Information</h3>
-              <table>
+              <table class="component-review-customer-info">
                 <tr>
-                  <td>Name</td>
+                  <th>Name</th>
                   <td>: John Doe</td>
                 </tr>
                 <tr>
-                  <td>Email</td>
+                  <th>Email</th>
                   <td>: john.doe@email.com</td>
                 </tr>
                 <tr>
-                  <td>Contact</td>
+                  <th>Contact</th>
                   <td>: 0123456789</td>
                 </tr>
                 <tr>
-                  <td>Member ID</td>
+                  <th>Member ID</th>
                   <td>: 1234567</td>
                 </tr>
               </table>
             </div>
-            <div class="col-sm-7">
-              <form action="">
-                {{> payment-method}}
-
-                <input type="submit" value="Payment" class="btn btn-primary btn-block">
-              </form>
+            <div class="col-sm-6">
+              <h4>Order Summary</h4>
+              <hr>
+              <table class="component-review-price table-compact">
+                <tr>
+                  <th colspan="2">
+                    <h3>Show</h3>
+                  </th>
+                </tr>
+                <tr>
+                  <th>Show</th>
+                  <td>Alice in Wonderland</td>
+                </tr>
+                <tr>
+                  <th>Date</th>
+                  <td>24 August 2017</td>
+                </tr>
+                <tr>
+                  <th>Category</th>
+                  <td>PS1</td>
+                </tr>
+                <tr>
+                  <th>Unit Price</th>
+                  <td>80.00</td>
+                </tr>
+                <tr>
+                  <th>Quantity</th>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <th>Seat No.</th>
+                  <td>BP233</td>
+                </tr>
+                <tr class="review-total">
+                  <th>Total</th>
+                  <td>160.00 MYR</td>
+                </tr>
+                <tr class="review-total grand-total">
+                  <th>Grand Total</th>
+                  <td><strong>160.00 MYR</strong></td>
+                </tr>
+              </table>
+              
             </div>
           </div>
         </div>
-        <div class="column-right column">
+        <div class="column-right column column-checkout">
           <div class="sections">
-            <h4>Order Summary</h4>
-            <table class="component-review-price table-compact">
-              <tr>
-                <th colspan="2">
-                  <h3>Show</h3>
-                </th>
-              </tr>
-              <tr>
-                <th>Show</th>
-                <td>Alice in Wonderland</td>
-              </tr>
-              <tr>
-                <th>Date</th>
-                <td>24 August 2017</td>
-              </tr>
-              <tr>
-                <th>Category</th>
-                <td>PS1</td>
-              </tr>
-              <tr>
-                <th>Unit Price</th>
-                <td>80.00</td>
-              </tr>
-              <tr>
-                <th>Quantity</th>
-                <td>2</td>
-              </tr>
-              <tr>
-                <th>Seat No.</th>
-                <td>BP233</td>
-              </tr>
-              <tr class="review-total">
-                <th>Total</th>
-                <td>160.00 MYR</td>
-              </tr>
-              <tr class="review-total grand-total">
-                <th>Grand Total</th>
-                <td><strong>160.00 MYR</strong></td>
-              </tr>
-            </table>
+            <form action="">
+              {{> payment-method}}
+
+              <input type="submit" value="Payment" class="btn btn-primary btn-block">
+            </form>
           </div>
         </div>
       </div>

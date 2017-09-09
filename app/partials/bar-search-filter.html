@@ -1,58 +1,18 @@
-{{> bar-search}}
-
-<div class="header_bar-secondary">
+<div class="header_bar-secondary header-bar">
   <div class="container">
     <table>
       <tr>
-        <td>
-          <div class="btn-group btn-group-justified component-steps-indicator">
-            <span class="btn{{#if pagehotels}} active{{/if}}">
-              <span>Hotels</span>
-            </span>
-
-            <span class="btn{{#if pageroom}} active{{/if}}">
-              <span>Room</span>
-            </span>
-
-            <span class="btn{{#if pageaddon}} active{{/if}}">
-              <span>Add-on</span>
-            </span>
-
-            <span class="btn{{#if pageconfirm}} active{{/if}}">
-              <span>Confirm</span>
-            </span>
-            
-          </div>
+        <td class="hidden-xs">
+          {{> steps-indicator-hotel}}
         </td>
-        <td class="bar-select">
-          <div class="select">
-            <select class="form-control">
-              <option value="1">Package 1</option>
-              <option value="2">Package 2</option>
-              <option value="3">Package 3</option>
-            </select>
-          </div>
-        </td>
-        <td class="bar-checkout">
-          <ul class="calendar">
-            <li>
-              <p>
-                <strong>Check In</strong>
-                <span class="date">17 08 2017</span>
-              </p>
-            </li>
-            <li>
-              <p>
-                <strong>Check Out</strong>
-                <span class="date">19 08 2017</span>
-              </p>
-            </li>
-          </ul>
-        </td>
-        <td>
-          <a href="cart" class="btn btn-cart">My Cart</a>
-        </td>
+        {{> bar-search-partial}}
       </tr>
     </table>
+  </div>
+</div>
+
+<div class="header-bar visible-xs">
+  <div class="container">
+    {{> steps-indicator-hotel}}
   </div>
 </div>

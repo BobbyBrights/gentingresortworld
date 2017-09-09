@@ -22,26 +22,6 @@
 }
 
 
-@mixin background($class-name, $bg-color, $text-color, $header-color: $text-color) {
-  .#{$class-name} {
-    background-color: $bg-color;
-    color: $text-color;
-
-    .header {
-      color: $header-color;      
-    }
-  }
-}
-
-
-@mixin bgimg($filename) {
-  background-image: url('../img/#{$filename}');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-
 @mixin transition($type: all, $time: 0.5s) {
   -webkit-transition: $type $time cubic-bezier(0.455, 0.03, 0.515, 0.955);
   -o-transition: $type $time cubic-bezier(0.455, 0.03, 0.515, 0.955);
