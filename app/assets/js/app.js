@@ -33,8 +33,6 @@ $(document).ready(function () {
   // Datepicker
   var dateToday = new Date();
 
-  console.log(md)
-
   if (md.mobile()) {
     $('.form-floating input.datepicker').datepicker({
       minDate: dateToday
@@ -47,6 +45,10 @@ $(document).ready(function () {
   }
 
   // INLINE DATE PICKER
+  $('.datepicker').datepicker({
+    minDate: dateToday
+  });
+
   $('.datepicker-inline').datepicker({
     minDate: dateToday,
     altFormat: 'dd/mm/yyyy',

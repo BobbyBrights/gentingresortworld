@@ -51,40 +51,45 @@ results: [
     {{#each results}}
       <div class="col-sm-6 results-item hotel-results">
         <div class="row">
-          <div class="hotel-results-wrap item-well">
+          <div class="hotel-results-wrap">
             <div class="col-sm-3 hidden-xs">
               <img src="assets/img/hotel-thumbnail.jpg" alt="{{name}}" class="result-image">
             </div>
             <div class="hotel-results-desc">
               <div class="top-height">
                 <p class="h3">{{name}}</p>
-                <a href="hotel-room.html" class="btn btn-default visible-xs-inline-block btn-moredetails btn-sm">More Details</a>
-                <p class="result-description">{{desc}}</p>
+                <p class="result-description">
+                  {{desc}} <a href="hotel-room.html" class="visible-xs-inline">More Details</a>
+                </p>
               </div>
               <a href="hotel-room.html" class="btn btn-default hidden-xs">More Details</a>
             </div>
-            <div class="col-xs-6 visible-xs">
-              <img src="assets/img/hotel-thumbnail.jpg" alt="{{name}}" class="result-image">
-            </div>
-            <div class="col-xs-6 col-sm-3">
-              <div class="component-price-option">
-                <div class="top-height">
-                  {{#if @last}}
-                    <p class="price">SOLD OUT</p>
-                  {{else}}
-                    <p class="price">
-                      {{price}}
-                      <sup>MYR</sup>
-                    </p>
-                    <p>AVG Per Night</p>
-                  {{/if}}
-                </div>
-                {{#unless @last}}
-                  <a href="hotel-room-calendar.html" class="btn btn-primary btn-block">
-                    Select
-                  </a>
-                {{/unless}}
-              </div>
+            <div class="col-sm-3">
+              <table class="hotel-image-price">
+                <tr>
+                  <td class="visible-xs"><img src="assets/img/hotel-thumbnail.jpg" alt="{{name}}" class="result-image"></td>
+                  <td>
+                    <div class="component-price-option">
+                      <div class="top-height">
+                        {{#if @last}}
+                          <p class="price">SOLD OUT</p>
+                        {{else}}
+                          <p class="price">
+                            {{price}}
+                            <sup>MYR</sup>
+                          </p>
+                          <p>AVG Per Night</p>
+                        {{/if}}
+                      </div>
+                      {{#unless @last}}
+                        <a href="hotel-room-calendar.html" class="btn btn-primary btn-block">
+                          Select
+                        </a>
+                      {{/unless}}
+                    </div>
+                  </td>
+                </tr>
+              </table>
             </div>
           </div>
         </div>

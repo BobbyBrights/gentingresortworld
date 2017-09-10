@@ -48,12 +48,19 @@
 
 /* HOTEL RESULTS PAGE */
 .results-item {
-  background-color: #FFF;
+  border-bottom: 2px solid $purple;
   margin-bottom: 10px;
 
+  @include breakpoint(tablet) {
+    border-bottom: none;
+  }
+
   .hotel-results-wrap {
+    padding: 10px;
+
     @include breakpoint(tablet) {
       height: 172px;
+      border: 1px solid $gray-line;
       margin: 5px;
     }
   }
@@ -66,6 +73,9 @@
 }
 
 .hotel-results {
+  background: #FFF;
+  margin: 2px 0;
+
   .hotel-results-desc {
     @include make-xs-column(12);
     @include make-sm-column(6);
@@ -97,6 +107,14 @@
 
   .top-height {
     overflow: hidden;
+  }
+}
+
+.hotel-image-price {
+  width: 100%;
+
+  td {
+    vertical-align: bottom;
   }
 }
 
