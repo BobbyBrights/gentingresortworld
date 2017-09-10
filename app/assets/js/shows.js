@@ -19,30 +19,11 @@ $(document).ready(function () {
 
     var newRow = '<tr class="row-review-show"><td>'+ date +'</td><td>'+ seat +'</td><td>'+ qty +'</td><td class="price">MYR'+ price.toFixed(2) +'</td><td><button class="icon icon-minus-circle btn-remove"><span class="sr-only">Remove</span></button></td></tr>';
 
-    $('#table-show-selection').append(newRow);
-    $('tr.add-row').remove();
-
-    if ($('.row-review-show').length == 2) {
-      $('#add-show').hide();
-    } else {
-      $('#add-show').show();
-
-      if (($('.row-review-show').length < 2)) {
-        $('#table-show-selection').append('<tr class="add-row"><td>-</td><td>-</td><td>-</td><td class="price">-</td><td><button class="icon icon-minus-circle"><span class="sr-only">Remove</span></button></td></tr>');
-      }
-    }
+    $('#table-show-selection tr.add-row').before(newRow);
   });
 
   // REMOVE SHOWS
   $('body').on('click', '.btn-remove', function() {
     $(this).parents('tr').remove();
-
-    if ($('.row-review-show').length < 2) {
-      $('#add-show').show();
-      $('#table-show-selection').append('<tr class="add-row"><td>-</td><td>-</td><td>-</td><td class="price">-</td><td><button class="icon icon-minus-circle"><span class="sr-only">Remove</span></button></td></tr>');
-    }
-
-    console.log($('.row-review-show').length);
-
   });
 });
