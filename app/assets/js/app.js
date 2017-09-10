@@ -1,19 +1,8 @@
 $(document).ready(function () {
   $w = $(window);
 
-  $w.on('resize', function() {
-    if ($w.height() < 868) {
-      $('body > .section-full-height').height($w.height());
-    } else {
-      $('body > .section-full-height').height(868);
-    }
-  });
-
-  if ($w.height() < 868) {
-    $('body > .section-full-height').height($w.height());
-  } else {
-    $('body > .section-full-height').height(868);
-  }
+  // Detect mobile
+  var md = new MobileDetect(window.navigator.userAgent);
 
 
   // Open Menu
@@ -43,10 +32,19 @@ $(document).ready(function () {
 
   // Datepicker
   var dateToday = new Date();
-  $('input.datepicker').datepicker({
-    numberOfMonths: 2,
-    minDate: dateToday
-  });
+
+  console.log(md)
+
+  if (md.mobile()) {
+    $('.form-floating input.datepicker').datepicker({
+      minDate: dateToday
+    });
+  } else {
+    $('.form-floating input.datepicker').datepicker({
+      numberOfMonths: 2,
+      minDate: dateToday
+    });
+  }
 
   // INLINE DATE PICKER
   $('.datepicker-inline').datepicker({

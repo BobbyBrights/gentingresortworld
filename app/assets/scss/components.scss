@@ -612,10 +612,15 @@
 .ui-datepicker {
   background: $purple;
   border-radius: $border-radius-large;
-  width: 674px !important;
   padding: 20px;
   box-sizing: border-box;
   @include clearfix();
+
+  @include breakpoint(tablet) {
+    .form-floating & {
+      width: 674px !important;
+    }
+  }
 
   .ui-datepicker-title {
     color: #FFF;
@@ -708,6 +713,11 @@
   .ui-datepicker-prev, .ui-datepicker-next {
     position: absolute;
     top: 0;
+
+    &.ui-state-disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
     
     span {
       display: none;
