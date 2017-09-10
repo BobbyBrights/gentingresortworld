@@ -195,6 +195,17 @@
         }
       }
     }
+
+    tr.total {
+      font-size: 18px;
+      font-weight: $weight-bold;
+      text-transform: uppercase;
+      
+      td {
+        border-top: none;
+        border-bottom: 1px solid $text-color;
+      }
+    }
   }
 
   button {

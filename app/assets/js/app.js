@@ -48,6 +48,15 @@ $(document).ready(function () {
     minDate: dateToday
   });
 
+  // INLINE DATE PICKER
+  $('.datepicker-inline').datepicker({
+    minDate: dateToday,
+    altFormat: 'dd/mm/yyyy',
+    onSelect: function(dateText, inst) { 
+      $('#showDate').val(dateText);
+    }
+  });
+
 
 
 

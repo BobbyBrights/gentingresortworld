@@ -75,67 +75,8 @@ current: {
 
                   <label>Select Date</label>
                   <div class="calendar-wrap">
-                    <div class="calendar-header large">
-                      <button class="prev"></button>
-                      <p class="title"><strong>AUGUST</strong> 2017</p>
-                      <button class="next"></button>
-                    </div>
-                    <table class="shows-calendar">
-                      <tr>
-                        <th>Mon</th>
-                        <th>Tue</th>
-                        <th>Wed</th>
-                        <th>Thu</th>
-                        <th>Fri</th>
-                        <th>Sat</th>
-                        <th>Sun</th>
-                      </tr>
-                      <tr>
-                        <td class="unavailable"> <span></span></td>
-                        <td class="unavailable"> <span>1</span></td>
-                        <td class="unavailable"> <span>2</span></td>
-                        <td class="unavailable"> <span>3</span></td>
-                        <td class="unavailable"> <span>4</span></td>
-                        <td class="unavailable"> <span>5</span></td>
-                        <td class="unavailable"> <span>6</span></td>
-                      </tr>
-                      <tr>
-                        <td class="unavailable"> <span>7</span></td>
-                        <td class="unavailable"> <span>8</span></td>
-                        <td class="unavailable"> <span>9</span></td>
-                        <td class="unavailable"> <span>10</span></td>
-                        <td class="unavailable"> <span>11</span></td>
-                        <td class="unavailable"> <span>12</span></td>
-                        <td class="unavailable"> <span>13</span></td>
-                      </tr>
-                      <tr>
-                        <td class="unavailable"> <span>14</span></td>
-                        <td class="available"> <span>15</span></td>
-                        <td class="available"> <span>16</span></td>
-                        <td class="available"> <span>17</span></td>
-                        <td class="available"> <span>18</span></td>
-                        <td class="available"> <span>19</span></td>
-                        <td class="available"> <span>20</span></td>
-                      </tr>
-                      <tr>
-                        <td class="available"> <span>21</span></td>
-                        <td class="available"> <span>22</span></td>
-                        <td class="available"> <span>23</span></td>
-                        <td class="available"> <span>24</span></td>
-                        <td class="selected"> <span>25</span></td>
-                        <td class="available"> <span>26</span></td>
-                        <td class="available"> <span>27</span></td>
-                      </tr>
-                      <tr>
-                        <td class="available"> <span>28</span></td>
-                        <td class="available"> <span>29</span></td>
-                        <td class="available"> <span>30</span></td>
-                        <td class="available"> <span>31</span></td>
-                        <td class="unavailable"> <span></span></td>
-                        <td class="unavailable"> <span></span></td>
-                        <td class="unavailable"> <span></span></td>
-                      </tr>
-                    </table>
+                    <div class="datepicker-inline"></div>
+                    <input type="hidden" name="" id="showDate">
                   </div>
                   <div class="calendar-wrap">
                     <table class="component-legend">
@@ -162,6 +103,20 @@ current: {
                     </table>
                   </div>
 
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div class="form-group">
+                        <label>Select Time</label>
+                        <div class="select">
+                          <select name="showTime" id="showTime" class="form-control">
+                            <option value="20:00">20:00</option>
+                            <option value="21:00">21:00</option>
+                            <option value="22:00">22:00</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   <div class="row">
                     <div class="col-xs-9">
                       <div class="form-group">
@@ -201,19 +156,16 @@ current: {
                     <th>Price</th>
                     <th></th>
                   </tr>
-                  <tr class="row-review-show">
-                    <td>20:00</td>
-                    <td>PS1</td>
-                    <td>2</td>
-                    <td class="price">MYR160.00</td>
-                    <td><button class="icon icon-minus-circle btn-remove"><span class="sr-only">Remove</span></button></td>
-                  </tr>
                   <tr class="add-row">
                     <td>-</td>
                     <td>-</td>
                     <td>-</td>
                     <td class="price">-</td>
                     <td><button class="icon icon-minus-circle"><span class="sr-only">Remove</span></button></td>
+                  </tr>
+                  <tr class="total">
+                    <td colspan="3">Total</td>
+                    <td class="price" colspan="2"></td>
                   </tr>
                 </table>
               </div>

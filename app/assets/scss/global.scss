@@ -317,7 +317,7 @@ ul.separator {
   }
 }
 
-.calendar-header {
+.calendar-header, .ui-datepicker-inline .ui-datepicker-header {
   font-weight: $weight-light;
   text-transform: uppercase;
   text-align: center;
