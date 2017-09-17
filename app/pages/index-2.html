@@ -1,17 +1,112 @@
-<div class="page-landing page-landing-wide">
+---
+class: landing
+---
+
+<div class="page-landing">
 
   <div class="container">
-    <div class="form-container form-floating form-wide form-purple">
+    <div class="align-middle">
+      <div class="form-search">
+        <div class="form-container form-floating form-compact">
 
-      <div class="form-wrap">
-        {{> info-settings}}
+          <div class="form-wrap">
+            {{> info-settings}}
+            <p>Where do you want to go?</p>
+            <form action="">
+              <div class="form-group">
+                <label for="filter-type" class="sr-only">Type:</label>
+                <div class="select">
+                  <select name="filter-type" id="a" class="form-control">
+                    <option value="hotels">Hotels Only</option>
+                    <option value="shows">Shows</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="filter-date" class="sr-only">Date:</label>
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <span class="icon icon-calendar"></span>
+                  </span>
+                  <input type="text" class="form-control datepicker" placeholder="Date">
+                </div>
+              </div>
 
-        {{> search-inline}}
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <label for="filter-date" class="sr-only">Guest:</label>
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <span class="icon icon-people-line"></span>
+                      </span>
+                      <input type="text" class="form-control" placeholder="Guest">
+                    </div>
+                  </div>
+                  <div class="col-xs-6">
+                    <label for="filter-date" class="sr-only">Room:</label>
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <span class="icon icon-bed-line"></span>
+                      </span>
+                      <input type="text" class="form-control" placeholder="Room">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="filter-date" class="sr-only">Promo Code:</label>
+                <div>
+                  <input type="text" class="form-control text-center" placeholder="Promo Code">
+                </div>
+              </div>
+
+              <!-- <input type="submit" value="Search Now" class="btn btn-primary btn-block"> -->
+              <a href="hotel-listing.html" class="btn btn-primary btn-block">Search Now</a>
+            </form>
+          </div>
+        </div>
       </div>
-      <div class="text-center cta-wrap">
-        <h3>Sign in to get better rates</h3>
-        <a href="signin.html" class="btn btn-primary" data-toggle="modal" data-target="#modal-signin">Members sign in</a>
-        <a href="register.html" class="btn btn-darkpurple" data-toggle="modal" data-target="#modal-signup-new">Register as member for free</a>
+      <div class="form-signin">
+        <div class="form-container form-floating form-compact form-purple">
+          
+          <h3>Sign in to get better rates</h3>
+
+          <div class="form-wrap">
+            <h4 class="text-center">Members Sign in</h4>
+
+            <form action="">
+              <div class="form-group">
+                <label class="sr-only">Member ID:</label>
+                <div>
+                  <input type="text" class="form-control" placeholder="Member ID">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="sr-only">PIN Number:</label>
+                <div>
+                  <input type="text" class="form-control" placeholder="PIN Number">
+                </div>
+              </div>
+
+              <button class="btn btn-primary btn-block">Sign In</button>
+
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="" id="">
+                  <span>Keep me signed in</span>
+                </label>
+              </div>
+            </form>
+
+            <p class="text-center">
+              <a href="#">Activate PIN</a> | <a href="#">Forgot PIN?</a>
+            </p>
+
+            <a href="register.html" class="btn btn-darkpurple btn-block" data-toggle="modal" data-target="#modal-signup">Register as member for free</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -19,3 +114,4 @@
 
 {{> modal-signin}}
 {{> modal-signup-new}}
+{{> modal-signup}}

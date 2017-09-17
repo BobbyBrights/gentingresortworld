@@ -1,3 +1,24 @@
+.page-shows {
+  .layout-purchase .wrap {
+    position: relative;
+    margin: -15px;
+    padding: 15px;
+    @include clearfix;
+
+    &:after {
+      border: 15px solid gray;
+      content: '';
+      display: block;
+      border-radius: 4px;
+      width: 100%;
+      left: 0;
+      top: 0;
+      height: 100%;
+      position: absolute;
+    }
+  }
+}
+
 .modal-shows-selection {
   .modal-dialog {
     @media (min-width: $screen-lg-min) {
@@ -65,8 +86,22 @@
   }
 
   .show-detail {
-    padding: 25px;
+    padding: 25px 25px 5px;
     text-align: left;
+    position: relative;
+
+    &:before {
+      content: '';
+      background: $purple;
+      width: 100%;
+      left: 0;
+      height: 100%;
+      bottom: 0;
+    }
+
+    @include breakpoint(tablet) {
+      padding: 25px;
+    }
 
     hr {
       margin: 20px 0;
@@ -132,9 +167,13 @@
 
 .form-show-selection {
   background: $purple;
-  border-top-right-radius: $border-radius-large;
-  border-top-left-radius: $border-radius-large;
   padding: 0 20px 20px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+
+  @include breakpoint(tablet) {
+    padding-top: 20px;
+  }
 
   label {
     margin-bottom: 0;
@@ -225,6 +264,15 @@
   border-bottom-right-radius: $border-radius-large;
   border-bottom-left-radius: $border-radius-large;
   padding: 20px;
+
+  @media (max-width: $screen-xs-max) {
+    border-radius: 0 !important;
+    margin-left: -25px;
+    margin-right: -25px;
+    padding: 20px 30px;
+    background: #FFF;
+    margin-top: 20px;
+  }
 
   > p {
     color: $text-color;

@@ -1,7 +1,7 @@
 .btn {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 12px;
   height: 40px;
   line-height: 28px;
   color: #FFF;
@@ -16,6 +16,10 @@
   &:hover, &:active, &:focus {
     color: #FFF;
   }
+
+  @include breakpoint(tablet) {
+    font-size: 14px;
+  }
 }
 
 .btn-primary {
@@ -24,11 +28,15 @@
 
 .btn-darkpurple {
   background-color: $darkpurple;
+
+  &:hover {
+    background-color: darken($darkpurple, 5);
+  }
 }
 
 .btn-gray {
-  background-color: $gray-lighter;
-  color: $gray-light; 
+  background-color: #9B9B9B;
+  color: #FFF; 
 
   &:hover {
     background-color: darken(#9B9B9B, 10);

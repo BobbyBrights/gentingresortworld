@@ -15,7 +15,7 @@
     display: inline-block;
     text-align: left;
     vertical-align: middle;
-    margin-top: 40px;
+    margin-top: 70px;
   }
 
   .btn {
@@ -92,6 +92,10 @@
 
     @include breakpoint(tablet) {
       text-align: right;
+
+      &.center {
+        text-align: center;
+      }
     }
 
     li {
@@ -144,6 +148,11 @@
     }
   }
 
+  .select:not(.payment-method) {
+    background: #FFF;
+  }
+
+
   hr {
     background: $purple-line;
     height: 1px;
@@ -183,6 +192,15 @@
 
         @include breakpoint(tablet) {
           text-align: center;
+        }
+      }
+
+      .col-sm-4:nth-child(2) {
+        margin: 30px 0;
+
+        @include breakpoint(tablet) {
+          margin: 0;
+          padding-top:38px;
         }
       }
     }
@@ -442,5 +460,55 @@
     background: transparent;
     width: 0;
     height: 0;
+  }
+}
+
+.terms-well {
+  background: #ECECEC;
+  padding: 15px;
+  margin: 15px 10px;
+  color: $text-color;
+
+  @include breakpoint(tablet) {
+    margin: 15px;
+    padding: 30px;
+  }
+}
+
+.terms.checkbox {
+  margin-left: 10px;
+  margin-right: 10px;
+
+  @include breakpoint(tablet) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  label {
+    text-align: left;
+
+    @include breakpoint(tablet) {
+      height: 30px;
+      line-height: 30px;
+    }
+  }
+
+  span {
+    font-size: 14px;
+    font-weight: $weight-bold;
+    padding-left: 35px !important;
+
+    &:before {
+      font-size: 20px;
+      font-weight: $weight-reg;
+    }
+
+    @include breakpoint(tablet) {
+      padding-left: 45px !important;
+
+      &:before {
+        font-size: 25px;
+      }
+    }
   }
 }

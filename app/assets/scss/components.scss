@@ -186,7 +186,7 @@
       vertical-align: middle;
       height: 32px;
       position: relative;
-      margin: 0 17px;
+      margin: 0 15px;
       text-transform: uppercase;
       font-weight: $weight-reg;
       color: $text-color;
@@ -288,6 +288,26 @@
 
 .component-price-option {
   font-weight: $weight-reg;
+  width: 100%;
+
+  td {
+    width: 33.33%;
+    vertical-align: middle;
+    padding: 0 3px;
+
+    @include breakpoint(tablet) {
+      display: block;
+      width: 100%;
+
+      .btn {
+        margin-bottom: 5px;
+      }
+    }
+
+    .btn {
+      width: 100%;
+    }
+  }
 
   .price {
     color: $brand-primary;
@@ -303,9 +323,13 @@
     }
   }
 
-  .btn-gray {
-    height: auto;
-    line-height: 14px;
+  .btn {
+    display: inline-block;
+    width: 100px;
+
+    &.btn-gray {
+      line-height: 14px;
+    }
   }
 }
 
@@ -325,8 +349,8 @@
     }
   }
 
-  ul.slides {
-    li {
+  .slides {
+    div {
       position: relative;
 
       .caption {
@@ -339,6 +363,10 @@
         padding: 0px 60px;
         bottom: 60px;
 
+        @media (max-width: $screen-xs-max) {
+          display: none;
+        }
+
         p {
           font-size: 20px;
 
@@ -350,7 +378,38 @@
     }
   }
 
-  ul.dots, ul.arrows {
+  .slick-arrow {
+    position: absolute;
+    width: 30px;
+    background: transparent;
+    border: none;
+    height: 100%;
+    color: #FFF;
+    font-size: 20px;
+    position: absolute;
+    padding: 0 30px;
+    top: 0;
+    z-index: 1;
+
+    span:not(.icon) {
+      display: none;
+    }
+
+    &:before {
+      font-family: 'icons';
+      font-size: 20px;
+    }
+
+    &.slick-prev {
+      left: 0;
+    }
+
+    &.slick-next {
+      right: 0;
+    }
+  }
+
+  ul.dots, ul.slick-dots, ul.arrows {
     position: absolute;
     
     button {
@@ -358,7 +417,7 @@
     }
   }
 
-  ul.dots {
+  ul.dots, ul.slick-dots {
     text-align: center;
     bottom: 35px;
     left: 0;
@@ -373,10 +432,13 @@
         border-radius: 50%;
         border: 3px solid #FFF;
         margin: 0 2px;
+        text-indent: -9999px;
       }
 
-      &.active button {
-        background-color: #2B2B2B;
+      &.active, &.slick-active {
+        button {
+          background-color: #2B2B2B;
+        }
       }
 
       &:hover button {

@@ -1,6 +1,6 @@
 ---
 current: {
-  'pagehotel': true
+  'pagehotels': true
   }
 
 dates: [
@@ -41,24 +41,29 @@ dates: [
   <div class="container">
     <div class="hotel-rooms-hero">
       <div class="hotel-rooms-slideshow component-slideshow">
-        <ul class="slides">
-          <li>
+        <div class="slides">
+          <div>
             <img src="assets/img/hotel-slideshow-01.jpg" alt="">
             <div class="caption">
               <p class="header">Grand Lobby</p>
               <p>Experience a haven of luxury and style</p>
             </div>
-          </li>
-        </ul>
-        <ul class="dots">
-          <li class="active"><button></button></li>
-          <li><button></button></li>
-          <li><button></button></li>
-        </ul>
-        <ul class="arrows">
-          <li class="prev"><button class="icon icon-arrow-left"></button></li>
-          <li class="next"><button class="icon icon-arrow-right"></button></li>
-        </ul>
+          </div>
+          <div>
+            <img src="assets/img/hotel-slideshow-01.jpg" alt="">
+            <div class="caption">
+              <p class="header">Slide 2</p>
+              <p>Description 2</p>
+            </div>
+          </div>
+          <div>
+            <img src="assets/img/hotel-slideshow-01.jpg" alt="">
+            <div class="caption">
+              <p class="header">Slide 3</p>
+              <p>This is Slide #3</p>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="hotel-rooms-intro item-well item-well-fill">
         <h2>Genting Grand</h2>
@@ -68,7 +73,7 @@ dates: [
       </div>
     </div>
     <div class="hotel-rooms-rooms">
-      <div class="hotel-rooms-item item-well">
+      <div class="hotel-rooms-item">
         <div class="hotel-rooms-image">
           <img src="assets/img/hotel-thumbnail-01.jpg" alt="">
         </div>
@@ -87,42 +92,48 @@ dates: [
           </ul>
         </div>
         <div class="hotel-rooms-rate">
-          <div class="item-well item-well-fill">
-            <div class="clearfix calendar-header">
-              <table class="calendar-weekly-room">
-                <tr>
-                  <td><button class="prev">7 Days Before</button></td>
-                  <td><span class="title">19 Aug 2017</span></td>
-                  <td><button class="next">7 Days After</button></td>
-                </tr>
-              </table>
-            </div>
-            <div class="calendar-date-price clearfix">
-              {{#each dates}}
-                <div>
-                  <p class="date">{{date}}/<strong>08</strong></p>
-                  <p class="price">{{{price}}}</p>
-                </div>
-              {{/each}}
-            </div>
+          <div class="clearfix calendar-header">
+            <table class="calendar-weekly-room">
+              <tr>
+                <td><button class="prev">7 Days Before</button></td>
+                <td><span class="title">19 Aug 2017</span></td>
+                <td><button class="next">7 Days After</button></td>
+              </tr>
+            </table>
+          </div>
+          <div class="calendar-date-price clearfix">
+            {{#each dates}}
+              <div>
+                <p class="date">{{date}}/<strong>08</strong></p>
+                <p class="price">{{{price}}}</p>
+              </div>
+            {{/each}}
           </div>
         </div>
         <div class="hotel-rooms-price">
-          <div class="component-price-option">
-            <div class="top-height">
-                <p class="price">
-                  281
-                  <sup>MYR</sup>
-                </p>
-                <p>Per Night</p>
-            </div>
-            <a href="hotel-room-calendar.html" class="btn btn-gray btn-block">
-              Rate Calendar
-            </a>
-            <a href="hotel-price.html" class="btn btn-primary btn-block">
-              Select
-            </a>
-          </div>
+          <table class="component-price-option">
+            <tr>
+              <td>
+                <div class="top-height">
+                  <p class="price">
+                    281
+                    <sup>MYR</sup>
+                  </p>
+                  <p>Per Night</p>
+                </div>
+              </td>
+              <td>
+                <a href="hotel-room-calendar.html" class="btn btn-gray btn-block">
+                  Rate Calendar
+                </a>
+              </td>
+              <td>
+                <a href="hotel-price.html" class="btn btn-primary btn-block">
+                  Select
+                </a>
+              </td>
+            </tr>
+          </table>
         </div>
       </div>      
     </div>

@@ -1,100 +1,105 @@
-<div class="modal fade modal-signup" id="modal-signup" tabindex="-1" role="dialog">
-  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  <div class="modal-dialog" role="document">
-    <div class="modal-content modal-purple">
+<div class="modal fade modal-signup purple" id="modal-signup" tabindex="-1" role="dialog">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
       <div class="modal-body">
-        <h4 class="header">Register as Member</h4>
+        <h4 class="header">New Member Registration</h4>
 
-        <p>Continue to fill in details</p>
+        <p>Please key in your details</p>
 
         <form action="">
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-4">
               <div class="form-group">
-                <div class="select">
-                  <select name="" id="" placeholder="Title" class="form-control">
-                    <option value="">Mr</option>
-                    <option value="">Mrs</option>
-                    <option value="">Ms</option>
-                  </select>
-                </div>
+                <label>First Name</label>
+                <input type="text" class="form-control" placeholder="As in NRIC/Passport">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="First Name">
+                <label>Last Name (Surname)</label>
+                <input type="text" class="form-control" placeholder="As in NRIC/Passport">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Last Name">
+                <label>NRIC/Passport No</label>
+                <input type="text" class="form-control" placeholder="e.g. 791009-19-1234">
               </div>            
-              <div class="form-group">
-                <div class="select">
-                  <select name="" id="" class="form-control" placeholder="Nationality">
-                    <option value="">Malaysian</option>
-                    <option value="">Singaporean</option>
-                  </select>
+            </div>
+            <div class="col-sm-4">
+              <label>Mobile No.</label>
+              <div class="row">
+                <div class="col-xs-6">
+                  <div class="form-group">
+                    <div class="select">
+                      <select name="" id="" class="form-control">
+                        <option value="">Please Select</option>
+                        <option value="">010</option>
+                        <option value="">011</option>
+                        <option value="">012</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="e.g. 123456789">
+                  </div>
                 </div>
               </div>
-              <div class="form-group clearfix">
-                <div class="col-sm-6">
-                  <div class="input-group">
-                    <span class="input-group-addon">ID No.</span>
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="select">
-                    <select name="" id="" placeholder="ID Type" class="form-control">
-                      <option value="">Passport</option>
-                      <option value="">ID / IC</option>
-                      <option value="">Army</option>
-                    </select>
-                  </div>
-                </div>
+              <div class="form-group">
+                <label>Email Address</label>
+                <input type="text" class="form-control" placeholder="e.g. john.doe@gmail.com">
               </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-4">
               <div class="form-group">
-                <div class="input-group">
-                  <input type="text" class="form-control">
-                  <span class="input-group-btn">
-                    <button class="btn"><span class="icon icon-calendar"></span></button>
-                  </span>
-                </div>
+                <label>Security code</label>
+                <img src="assets/img/captcha.jpg" alt="">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Contact No.">
+                <button href="#" class="btn btn-primary btn-block">Refresh</button>
               </div>
               <div class="form-group">
-                <div class="select">
-                  <select name="" id="" class="form-control">
-                    <option value="">State</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="select">
-                  <select name="" id="" class="form-control">
-                    <option value="">Country</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Email">
+                <label>Type the security code shown above</label>
+                <input type="text" class="form-control">
               </div>
             </div>
           </div>
 
+
           <div class="row">
-        
-            <div class="checkbox terms">
+            <div class="terms-well">
+              <p>
+                I confirm that the information given in this form is true, complete and accurate.<br>
+                本人谨此声明,在本表格所提供的资料,据本人所知及所信,均属真实无讹及完整. 
+              </p>
+
+              <p>
+                I hereby expressly declare that I have read, understood and voluntarily and unconditionally agreed to the terms and conditions stipulated in the <a href="#">Personal Data Processing Statement</a> and hereby consent to the processing of my Personal Data in the manner described in the Personal Data Processing Statement.
+              </p>
+
+              <p>
+                Saya dengan ini secara nyata mengesahkan bahawa saya telah membaca, memahami dan secara sukarela dan tanpa syarat bersetuju dengan terma-terma dan syarat-syarat yang ditetapkan dalam <a href="#">Penyata Pemprosesan Data Peribadi</a> dan dengan ini memberi persetujuan kepada pemprosesan dan penggunaan Data Peribadi saya seperti yang diperuntukkan di dalam Penyata Pemprosesan Data Peribadi. 
+              </p>
+
+              <p>
+                在此明确宣明，本人已阅理解并自愿及无条件地同意于<a href="#">个人资料处理声明</a>所规定的条规和条件. 及同意本人的个人资料根据个人资料处理声明涵盖之方式被处理之.
+              </p>
+
+              <p>
+                I have read and understand all information of Genting Rewards and agree to abide with the <a href="#">Terms & Conditions</a> governing Genting Rewards.
+                <br>
+                本人确认已阅读、理解并同意遵守云尊卡的<a href="#">条款和条件</a>.
+              </p>
+            </div>
+            <div class="checkbox terms text-center">
               <label>
                 <input type="checkbox"> 
                 <span>
-                  Yes! I would like to apply to become a Genting Rewards<sup>&trade;</sup> member and agree to the <a href="#">membership terms and conditions</a>. I acknowledge and agree that my application for membership is subject to consideration and acceptance by Genting Worldcard Services Sdn Bhd.
+                  Please check the box to indicate that you have read and accepted our terms and conditions.
                 </span>
               </label>
             </div>
 
-            <ul class="footer-cta">
+            <ul class="footer-cta center">
               <li>
                 <input type="reset" class="btn btn-reset">
               </li>

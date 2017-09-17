@@ -13,6 +13,29 @@
   
   <div class="border-top-brand"></div>
 
+  {{#ifEquals class 'landing'}}
+  <div class="slides-bg hidden-xs hidden-sm">
+    <div style="background-image: url('assets/img/landing-bg-01.jpg">
+      <p style="bottom: 10px;">
+        <span style="font-size: 130px;">Come on</span>
+        <span class="font-notera" style="font-size: 130px; padding-left: 40px;">UP</span>
+      </p>
+    </div>
+    <div style="background-image: url('assets/img/landing-bg-02.jpg">
+      <p>
+        <span style="font-size: 70px;">Exciting things are</span>
+        <span class="font-notera" style="font-size: 160px; display:block; line-height: 40px;">happening</span>
+      </p>
+    </div>
+    <div style="background-image: url('assets/img/landing-bg-03.jpg">
+      <p style="bottom: 10px;">
+        <span style="font-size: 130px;">You</span>
+        <span class="font-notera" style="font-size: 130px;">Matter</span>
+      </p>
+    </div>
+  </div>
+  {{/ifEquals}}
+
   <nav class="navbar navbar-default">
     <div class="container">
       <div class="navbar-header">
@@ -38,7 +61,7 @@
             </a>
           </li>
           <li class="hidden-xs">
-            Sign in or create an account
+            <a href="#" data-toggle="modal" data-target="#modal-signin">Sign in or create an account</a>
           </li>
           <li class="dropdown user-profile">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">

@@ -89,19 +89,6 @@
         left: 0;
         top: -7px;
       }
-
-      .btn-upload-image {
-        background: $purple;
-        color: #FFF;
-        border: 3px solid #FFF;
-        padding: 0;
-        border-radius: 50%;
-        font-size: 16px;
-        position: absolute;
-        right: 5px;
-        bottom: 10px;
-        z-index: 1;
-      }
     }
 
     .profile-info {
@@ -165,7 +152,11 @@
 
 .member-sidebar-details {
   background: #FFF;
-  padding: 20px;
+  padding: 20px 20px 0;
+
+  @include breakpoint(tablet) {
+    padding: 20px;
+  }
 
   section {
     &.lg {
@@ -178,6 +169,10 @@
           font-size: 18px;
         }
       }
+    }
+
+    @media (max-width: $screen-xs-max) {
+      padding-bottom: 0;
     }
   }
 
@@ -222,8 +217,12 @@
 .member-maincontent {
   @include make-sm-column(8);
   background: #FFF;
-  padding: 30px 40px;
+  padding: 0 30px;
   position: relative;
+
+  @include breakpoint(tablet) {
+    padding: 30px 40px;
+  }
 
   &:before {
     content: '';
@@ -466,5 +465,27 @@
 .form-group {
   p {
     color: $text-color;
+  }
+}
+
+.btn-upload-image {
+  background: $purple;
+  color: #FFF;
+  border: 3px solid #FFF;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 16px;
+  position: absolute !important;
+  right: 5px;
+  bottom: 10px;
+  z-index: 1;
+  overflow: hidden;
+
+  input[type="file"] {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    top: -240px;
+    z-index: -1;
   }
 }

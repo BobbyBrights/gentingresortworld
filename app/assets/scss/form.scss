@@ -60,6 +60,10 @@ form {
     background: #FFF;
   }
 
+  .checkbox {
+    color: #FFF;
+  }
+
   .form-wrap {
     background: rgba(255, 255, 255, 0.85);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
@@ -127,14 +131,31 @@ form {
     font-weight: $weight-reg;
   }
 
-  h3, h4, a, p, .component-info-settings * {
-    color: #FFF;
+  @include breakpoint(tablet) {
+    h3, h4, a, p, .component-info-settings *, .component-info-settings li button .icon {
+      color: #FFF;
+    }
+
+    .component-info-settings li button:hover * {
+      color: $brand-primary;
+    }
+  }
+
+
+  .page-landing & {
+    h3, h4, a, p {
+      color: #FFF;
+    }
   }
 }
 
 .form-wide {
   .form-wrap {
     padding: 25px;
+
+    @media (max-width: $screen-xs-max) {
+      background: rgba(255, 255, 255, 0.85);
+    }
   }
 
   ul.inline {
@@ -150,6 +171,39 @@ form {
     margin-bottom: 20px;
   }
 
+  .form-group {
+    float: left;
+    padding: 0 5px;
+    width: 100%;
+
+    @include breakpoint(tablet) {
+      &.search-type {
+        width: 20%;
+      }
+
+      &.search-date {
+        width: 16%;
+      }
+
+      &.search-guestroom {
+        width: 28%;
+        padding: 0 10px;
+
+        > .row > div {
+          padding: 0 5px;
+        }
+      }
+
+      &.search-promocode {
+        width: 16%;
+      }
+
+      &.search-button {
+        width: 20%;
+      }
+    }
+  }
+
   .cta-wrap {
     margin-top: 30px;
 
@@ -158,9 +212,16 @@ form {
     }
 
     .btn {
-      font-size: 14px;
       padding-left: 30px;
       padding-right: 30px;
+    }
+  }
+
+  .btn {
+    font-size: 14px;
+
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
     }
   }
 }
