@@ -426,6 +426,11 @@
         color: $brand-primary;
         font-weight: $weight-reg;
         line-height: 8px;
+
+        @include breakpoint(tablet) {
+          font-size: 28px;
+          line-height: 24px;
+        }
       }
 
       @include breakpoint(tablet) {
@@ -669,8 +674,8 @@ body.landing {
     width: 100%;
     height: calc(100% - 135px);
     
-
-    @media (min-height: 645px) {
+    .slick-dots {
+      z-index: 5;
     }
 
     div {

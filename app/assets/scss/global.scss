@@ -279,7 +279,7 @@ hr {
     width: 65%;
     
     @include breakpoint(tablet) {
-      width: 229px;
+      width: 320px;
     }
   }
 
@@ -312,6 +312,51 @@ hr {
 
     .btn {
       width: 100%;
+    }
+  }
+}
+
+.member-info-bar {
+  background: #9B9B9B;
+
+  @media (max-width: $screen-xs-max) {
+    .container {
+      padding: 0;
+    }
+  }
+
+  .clearfix > div {
+    color: #FFF;
+    font-weight: $weight-reg;
+    padding: 7px 20px 8px;
+
+    &:nth-child(1) {
+      background: $darkerpurple;
+      font-style: italic;
+
+      @media (max-width: $screen-xs-max) {
+        text-align: center;
+        
+        a {
+          display: none;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      background: #7D194A;
+    }
+
+    &:nth-child(3) {
+      background: #66123C;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: #999999;
     }
   }
 }

@@ -60,9 +60,9 @@ $(document).ready(function () {
     });
   }
 
-  if (md.mobile() && md.tablet()) {
+  if ((md.mobile() && md.tablet()) || (!md.mobile() && !md.tablet())) {
     $('.slides-bg').slick({
-      autoplay: false,
+      autoplay: true,
       arrows: false,
       dots: true,
       fade: true
