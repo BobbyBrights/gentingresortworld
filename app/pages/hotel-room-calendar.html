@@ -275,7 +275,8 @@ dates: [
           </div>
           <div class="calendar-rate-dates">
             {{#each dates}}
-            <div class="calendar-rate-item {{class}}">
+            <label class="calendar-rate-item {{class}}">
+              <input type="checkbox" name="" id="">
               <div>
                 <p class="date">{{{date}}}</p>
                 {{#if full}}
@@ -290,11 +291,11 @@ dates: [
                   {{/unless}}
                 {{/if}}
               </div>
-            </div>
+            </label>
             {{/each}}
           </div>
         </div>
-        <a href="#" class="btn btn-primary center-block" data-toggle="modal" data-target="#modal-loading">Book Now</a>
+        <a href="#" id="btn-booknow" class="btn btn-primary center-block" data-toggle="modal" data-target="#modal-loading">Book Now</a>
       </div>
     </div>
   </div>

@@ -186,7 +186,7 @@
       vertical-align: middle;
       height: 32px;
       position: relative;
-      margin: 0 15px;
+      margin: 0 13px;
       text-transform: uppercase;
       font-weight: $weight-reg;
       color: $text-color;
@@ -215,7 +215,11 @@
       }
       
       &.chosen-date {
-        margin: 0 0 0 -16px;
+        margin: 0 0 0 -13px;
+
+        @include breakpoint(tablet) {
+          margin: 0 0 0 -16px;
+        }
 
         &:before {
           content: '';
@@ -488,7 +492,7 @@
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
     background-color: $brand-primary;
-    width: 80%;
+    width: 0;
     display: block;
     height: 100%;
   }
@@ -830,9 +834,18 @@
 
     .ui-datepicker-inline.ui-datepicker {
       padding: 20px;
+      background: darken($purple, 5);
 
       tbody > tr:first-child > td.date-range-selected:before {
         top: 6px;
+      }
+
+      table td {
+        padding-left: 0;
+
+        &:last-child {
+          width: auto;
+        }
       }
     }
 

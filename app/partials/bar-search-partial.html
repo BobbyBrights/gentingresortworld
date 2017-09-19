@@ -1,18 +1,21 @@
 <td class="bar-select">
   <div class="select">
-    <select class="form-control">
-      <option value="1">Hotel Only</option>
-      <option value="2">Hotel & Shows & Theme Park</option>
-      <option value="3">Shows</option>
+    <select name="filter-type" id="a" class="form-control">
+      <option value="hotels">Hotels Only</option>
+      <option value="shows">Shows Only</option>
+      <option value="hotels">Hotels + Shows</option>
+      <option value="hotels">Hotels + Theme Park</option>
+      <option value="hotels">Hotels + Shows + Theme Park</option>
     </select>
   </div>
 </td>
 <td class="bar-date hidden-xs">
-  <div class="input-group">
+  <div class="input-group" id="datepicker-range">
     <span class="input-group-addon">
       <span class="icon icon-calendar"></span>
     </span>
-    <input type="text" class="form-control text-right datepicker" placeholder="Date">
+    <input id="" type="text" class="form-control input" placeholder="Date">
+    <div class="range"></div>
   </div>
 </td>
 <td class="bar-promo hidden-xs">

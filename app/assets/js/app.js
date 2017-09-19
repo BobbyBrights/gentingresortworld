@@ -4,6 +4,8 @@ $(document).ready(function () {
   // Detect mobile
   var md = new MobileDetect(window.navigator.userAgent);
 
+  console.log('hery')
+
 
   // Open Menu
   var $btnMenu = $('#toggle-menu'),
@@ -159,11 +161,11 @@ $(document).ready(function () {
 
   // INLINE DATE PICKER
   $('.datepicker').datepicker({
-    minDate: dateToday
+    minDate: 0
   });
 
   $('.datepicker-inline').datepicker({
-    minDate: dateToday,
+    minDate: 0,
     altFormat: 'dd/mm/yyyy',
     onSelect: function(dateText, inst) { 
       $('#showDate').val(dateText);
@@ -194,4 +196,34 @@ $(document).ready(function () {
       fade: true
     });
   }
+
+
+
+
+  // DUMMY FLOW
+  $('#modal-loading').on('shown.bs.modal', function(e) {
+    var loader = $(e.currentTarget).find('.mask');
+    var bar = 0,
+        max = 100;
+
+
+    function addProgress() {
+      bar = bar + 10;
+
+      if (bar < max) {
+        // If we aren't at max, keep progressing
+        setTimeout(addProgress, 200);
+      }
+
+      loader.animate({
+        width: bar + '%'
+      }, 50)
+
+      if (bar === 100) {
+        window.location.href = "hotel-price.html";
+      }
+    }
+
+    addProgress();
+  })
 })

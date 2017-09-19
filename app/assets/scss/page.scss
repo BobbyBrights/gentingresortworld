@@ -354,6 +354,22 @@
     float: left;
     width: 14.285%;
 
+    &:not(.unavailable) {
+      cursor: pointer;
+
+      input[type="checkbox"]:checked {
+        + div {
+          background: $purple;
+          color: #FFF;
+
+          p span {
+            color: #F8E71C;
+          }
+        }
+      }
+    }
+
+
     div {
       border: none;
       background: #FFF;
@@ -389,17 +405,6 @@
 
         p.date {
           border-color: #FFF;
-        }
-      }
-    }
-
-    &.selected {
-      div {
-        background: $purple;
-        color: #FFF;
-
-        p span {
-          color: #F8E71C;
         }
       }
     }
@@ -774,10 +779,6 @@ body.landing {
     @media (max-width: $screen-xs-max) {
       margin-top: 40px;
     }
-  }
-
-  .ui-datepicker-inline {
-    background: darken($purple, 5);
   }
 }
 
