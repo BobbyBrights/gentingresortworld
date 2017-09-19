@@ -10,24 +10,31 @@ class: landing
         <div class="form-wrap">
           {{> info-settings}}
           <form action="" class="clearfix">
+            <div class="col-xs-12">
+              <p><strong>Where do you want to go?</strong></p>
+            </div>
             <div class="form-group search-type">
               <label for="filter-type" class="sr-only">Type:</label>
               <div class="select">
                 <select name="filter-type" id="a" class="form-control">
-                  <option value="hotels">Hotels & Shows & Theme Park</option>
                   <option value="hotels">Hotels Only</option>
-                  <option value="shows">Shows</option>
+                  <option value="shows">Shows Only</option>
+                  <option value="hotels">Hotels + Shows</option>
+                  <option value="hotels">Hotels + Theme Park</option>
+                  <option value="hotels">Hotels + Shows + Theme Park</option>
                 </select>
               </div>
             </div>
 
             <div class="form-group search-date">
               <label for="filter-date" class="sr-only">Date:</label>
-              <div class="input-group">
+              <div class="input-group" id="datepicker-range">
                 <span class="input-group-addon">
                   <span class="icon icon-calendar"></span>
                 </span>
-                <input type="text" class="form-control datepicker" placeholder="Date">
+
+                <input id="" type="text" class="form-control input" placeholder="Date">
+                <div class="range"></div>
               </div>
             </div>
 
@@ -60,7 +67,9 @@ class: landing
             </div>
 
             <div class="form-group search-button">
-              <input type="submit" value="Search Now" class="btn btn-block btn-primary">
+              <!-- Using a tag for demo purposes. Uncomment submit button for real usage -->
+              <a href="hotel-listing.html" class="btn btn-block btn-primary">Search</a>
+              <!-- <input type="submit" value="Search Now" class="btn btn-block btn-primary"> -->
             </div>
             
           </form>
@@ -114,7 +123,3 @@ class: landing
     </div>
   </div>
 </div>
-
-{{> modal-signin}}
-{{> modal-signup}}
-{{> modal-signup-new}}

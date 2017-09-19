@@ -158,6 +158,12 @@ form {
     }
   }
 
+  @include breakpoint(tablet) {
+    .component-info-settings {
+      margin-bottom: 0;
+    }
+  }
+
   ul.inline {
     text-align:center;
 

@@ -665,10 +665,6 @@ body.landing {
     background: transparent;
   }
 
-  .ui-datepicker {
-    width: auto !important;
-  }
-
   .slides-bg {
     position: absolute;
     width: 100%;
@@ -778,6 +774,10 @@ body.landing {
     @media (max-width: $screen-xs-max) {
       margin-top: 40px;
     }
+  }
+
+  .ui-datepicker-inline {
+    background: darken($purple, 5);
   }
 }
 

@@ -678,12 +678,6 @@
   box-sizing: border-box;
   @include clearfix();
 
-  @include breakpoint(tablet) {
-    .form-floating & {
-      width: 674px !important;
-    }
-  }
-
   .ui-datepicker-title {
     color: #FFF;
     font-size: 18px;
@@ -717,10 +711,6 @@
 
   .ui-state-disabled .ui-state-default {
     color: rgba(255, 255, 255, 0.3);
-  }
-
-  .ui-datepicker-calendar {
-    width: 290px;
   }
 
   .ui-datepicker-current-day {
@@ -818,6 +808,88 @@
 
     .ui-datepicker-calendar {
       width: 100%;
+    }
+  }
+}
+
+
+#datepicker-range {
+  input {
+    border-top-right-radius: $border-radius-base;
+    border-bottom-right-radius: $border-radius-base;
+  }
+
+  .hasDatepicker {
+    position: absolute;
+    z-index: 10;
+
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
+      left: 0 !important;
+    }
+
+    .ui-datepicker-inline.ui-datepicker {
+      padding: 20px;
+
+      tbody > tr:first-child > td.date-range-selected:before {
+        top: 6px;
+      }
+    }
+
+    .date-range-selected {
+      position: relative;
+
+      &:before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        display: block;
+        background: #fff;
+        border-radius: 50%;
+        z-index: 0;
+        position: absolute;
+        top: -3px;
+        left: 7px;
+
+        @include breakpoint(tablet) {
+          left: 9px;
+        }
+      }
+      
+      .ui-state-default {
+        position: relative;
+        color: $purple;
+        z-index: 1;
+
+      }
+    }
+
+    .ui-datepicker-buttonpane {
+      text-align: center;
+
+      button {
+        width: auto;
+        background: transparent;
+        border-radius: 4px;
+        padding: 5px 10px 3px;
+        height: auto;
+        margin: 0 7px;
+        border: 1px solid #FFF;
+
+        &.ui-datepicker-current {
+          display: none;
+        }
+      }
+    }
+
+    @include breakpoint(tablet) {
+      .ui-datepicker-inline  {
+        width: 674px !important;
+
+        .ui-datepicker-calendar {
+          width: 290px;
+        }
+      }
     }
   }
 }
