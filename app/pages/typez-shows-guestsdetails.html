@@ -1,0 +1,115 @@
+---
+current: {
+  'pagetickets': true,
+  'type': 'typez'
+}
+
+form: [
+  {
+    'type': 'select',
+    'label': 'Title',
+    'placeholder': ['Mr.', 'Mrs', 'Ms']
+  },
+  {
+    'type': 'input',
+    'label': 'First Name<sup>*</sup>',
+    'placeholder': ''
+  },
+  {
+    'type': 'input',
+    'label': 'Last Name<sup>*</sup>',
+    'placeholder': ''
+  },
+  {
+    'type': 'select',
+    'label': 'Nationality<sup>*</sup>',
+    'placeholder': ['Select Nationality', 'Malaysian']
+  },
+  {
+    'type': 'select',
+    'label': 'ID No.<sup>*</sup>',
+    'placeholder': ['Passport', 'IC No']
+  },
+  {
+    'type': 'input',
+    'label': '',
+    'placeholder': ['IC No.']
+  },
+  {
+    'type': 'datepicker',
+    'label': 'D.O.B<sup>*</sup>',
+    'placeholder': ''
+  },
+  {
+    'type': 'input',
+    'label': 'Contact No.<sup>*</sup>',
+    'placeholder': ''
+  },
+  {
+    'type': 'input',
+    'label': 'Country<sup>*</sup>',
+    'placeholder': ''
+  },
+  {
+    'type': 'select',
+    'label': 'State<sup>*</sup>',
+    'placeholder': ['Kuala Lumpur', 'Selangor', 'Perlis', 'Kedah', 'Penang', 'Pahang', 'Melaka', 'Negeri Sembilan', 'Johor', 'Terengganu', 'Kelantan', 'Labuan', 'Sabah', 'Sarawak']
+  },
+  {
+    'type': 'input',
+    'label': 'Email<sup>*</sup>',
+    'placeholder': ''
+  }
+]
+---
+
+{{>bar-show-steps current}}
+
+<div class="page-body page-shows">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h4>Continue to fill in guest details</h4>
+      </div>
+    </div>
+
+    
+    <div class="form-wrap-center">
+      <div class="clearfix">
+        {{#each form}}
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label>{{{label}}}</label>
+            
+              {{#ifEquals type 'select'}}
+                <div class="select">
+                  <select name="" id="" class="form-control">
+                    {{#each placeholder}}
+                    <option value="{{this}}">{{this}}</option>
+                    {{/each}}
+                  </select>
+                </div>
+              {{/ifEquals}}
+              {{#ifEquals type 'input'}}
+                <input type="text" class="form-control" placeholder="{{placeholder}}">
+              {{/ifEquals}}
+              {{#ifEquals type 'datepicker'}}
+                <input type="text" class="form-control" placeholder="datepicker">
+              {{/ifEquals}}
+            </div>
+          </div>
+        {{/each}}
+
+        <div class="col-sm-12">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" class="form-control">
+              <span>Yes! I would like to apply to become a Genting Rewards™ member and agree to the membership terms and conditions . I acknowledge and agree that my application for membership is subject to consideration and acceptance by Genting Worldcard Services Sdn Bhd.</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="btn btn-primary btn-cont center-block">Continue</a>
+      </div>
+  </div>
+</div>

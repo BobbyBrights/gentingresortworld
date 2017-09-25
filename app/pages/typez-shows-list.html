@@ -1,0 +1,91 @@
+---
+
+
+current: {
+  'pageshows': true,
+  'type': 'typez'
+}
+
+results: [
+  {
+    name: 'Kitaro - Kojiki & The Universe 2017',
+    price: 'From 142 MYR per ticket',
+    date: '16.12.2017'
+  },
+  {
+    name: 'Adventures of the Monkey King - The Golden Hooped Rod (9pm)',stay together.',
+    price: 'From 100 MYR per ticket',
+    date: '11.11.2017 - 01.01.2018'
+  },
+  {
+    name: '2017 New Year Eve Countdown Concert with Grasshopper',
+    price: 'From 132 MYR per ticket',
+    date: '16.12.2017'
+  },
+  {
+    name: 'Lala Hsu "You Made My Day" World Tour Concert 2017',
+    price: 'From 138 MYR per ticket',
+    date: '18.11.2017'
+  },
+  {
+    name: '18th Malaysia National Lion Dance Championship 2017 (Semi Final)',
+    price: 'From 24 MYR per ticket',
+    date: '02.12.2017'
+  },
+  {
+    name: 'Air Supply Live in Malaysia',
+    price: 'From 168 MYR per ticket',
+    date: '02.12.2017'
+  }
+]
+---
+
+{{>bar-show-steps current}}
+
+<div class="page-body page-shows">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>Shows</h2>
+      </div>
+    </div>
+    <div class="clearfix">
+      {{#each results}}
+        <div class="col-sm-6 results-item show-results">
+          <div class="row">
+            <div class="results-wrap">
+              <table>
+                <tr>
+                  <td class="image-holder" rowspan="2">
+                    <img src="assets/img/show-thumbnail.jpg" alt="{{name}}" class="result-image">
+                  </td>
+                  <td class="results-desc top">
+                    <p class="h3">{{name}}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="results-desc bottom">
+                    {{#if @last}}
+                      <p>Sold Out</p>
+                    {{else}}
+                      <p>
+                        <span class="price">{{price}}</span>
+                        <br>
+                        <strong>Date: {{date}}</strong>
+                      </p>
+                      <ul>
+                        <li><a href="typez-shows-ticket.html" class="btn btn-default">More Details</a></li>
+                        <li><a href="#" class="btn btn-default">View Floor Plan</a></li>
+                        <li><a href="#" class="btn btn-primary btn-block">Select</a></li>
+                      </ul>
+                    {{/if}}
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</div>

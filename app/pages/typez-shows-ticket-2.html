@@ -1,0 +1,186 @@
+---
+
+
+current: {
+  'pagetickets': true,
+  'type': 'typez'
+}
+
+tickets: [
+  {
+    name: 'PS5',
+    price: '152 MYR per ticket',
+    price2: '112 MYR per ticket',
+  },
+  {
+    name: 'PS4',
+    price: '250 MYR per ticket',
+    price2: '192 MYR per ticket',
+  },
+  {
+    name: 'PS3',
+    price: '352 MYR per ticket',
+    price2: '272 MYR per ticket',
+  },
+  {
+    name: 'PS2',
+    price: '450 MYR per ticket',
+    price2: '332 MYR per ticket',
+  },
+  {
+    name: 'PS1',
+    price: '552 MYR per ticket',
+    price2: '412 MYR per ticket',
+  },
+  {
+    name: 'VIP',
+    price: '590 MYR per ticket',
+    price2: '492 MYR per ticket',
+  },
+  {
+    name: 'VVIP',
+    price: '650 MYR per ticket',
+    price2: '572 MYR per ticket',
+  }
+]
+---
+
+{{>bar-show-steps current}}
+
+<div class="page-body page-shows">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>Select Schedule and Seats</h2>
+      </div>
+    </div>
+    
+    <div class="layout-purchase-stack">
+      <div class="clearfix section">
+        <table>
+          <tr>
+            <td rowspan="2" class="shows-thumbnail">
+              <img src="assets/img/show-thumbnail.jpg" alt="">
+            </td>
+            <td class="top">
+              <div class="table-padding-wrap">
+                <p class="h3">Kitaro - Kojiki & The Universe 2017</p>
+                <p>From 142 MYR per ticket</p>
+              </div>
+            </td>
+            <td rowspan="2" class="top cell-show-selection">
+              <div class="review-show-selection">
+                <table id="table-show-selection">
+                  <tr>
+                    <th>Time</th>
+                    <th>Seat</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th></th>
+                  </tr>
+                  <tr class="add-row">
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td class="price">-</td>
+                    <td><button class="icon icon-minus-circle"><span class="sr-only">Remove</span></button></td>
+                  </tr>
+                  <tr class="total">
+                    <td colspan="3">Total</td>
+                    <td class="price" colspan="2">MYR</td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="bottom">
+              <div class="row table-padding-wrap form-gutter">
+                <div class="col-sm-7">
+                  <div class="form-group">
+                    <label>
+                      Selected Date &amp; Time
+                      <small><i>*Schedules may change without prior notice.</i></small>
+                    </label>
+                    <div class="select">
+                      <select class="form-control">
+                        <option value="">07 Oct, 2017 (Sat) 8:30PM - 10:30PM</option>
+                        <option value="">08 Oct, 2017 (Sat) 8:30PM - 10:30PM</option>
+                      </select>
+                    </div>
+                  </div>
+                  <p>
+                    <a href="#">View Floor Plan</a>
+                  </p>                
+                </div>
+                <div class="col-sm-5">
+                  <div class="form-group">
+                    <label for="">
+                      Currency/Point
+                      <small><i>&nbsp;</i></small>
+                    </label>
+                    <div class="select">
+                      <select class="form-control">
+                        <option value="">Credit/Debit Card/MasterCard</option>
+                        <option value="">PayPal</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="section">
+        <table>
+          <tr>
+            <td>
+              <div class="table-padding-wrap">
+                <p><strong>Please add Package and then click Continue to proceed.</strong></p>
+              </div>
+            </td>
+            <td class="cell-show-notice">
+              <p><i>
+                Your seat selection will only be reserved for 10 minutes, please complete your transaction within the alloted time.
+              </i></p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="section clearfix">
+        {{#each tickets}}
+        <div class="col-sm-6 stubs">
+          <table>
+            <tr>
+              <td>
+                <img src="assets/img/stubs/{{name}}.jpg" alt="name">
+              </td>
+              <td>
+                <p>
+                  <span class="h4">{{name}}</span><br>
+                  <span><s>{{price}}</s></span><br>
+                  <span>{{price}}</span>
+                </p>
+              </td>
+              <td>
+                <div class="form-group">
+                  <div class="select">
+                    <select name="" id="" class="form-control">
+                      <option>QTY</option>
+                      <option value="">1</option>
+                      <option value="">2</option>
+                    </select>
+                  </div>
+                </div>
+                <button id="add-show" class="btn btn-primary btn-block">Add</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+    <a href="#" class="btn btn-primary btn-cont center-block">Continue</a>
+  </div>
+</div>

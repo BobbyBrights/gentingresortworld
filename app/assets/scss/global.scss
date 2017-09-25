@@ -265,6 +265,7 @@ hr {
 
   input, select {
     font-weight: $weight-reg;
+    border-color: #FFF;
   }
 }
 
@@ -604,4 +605,25 @@ ul.separator {
 
 .ui-datepicker {
   display: none;
+}
+
+
+.table-padding-wrap {
+  padding: 0 16px;
+
+  &.form-gutter {
+    padding: 0 22px;
+  }
+}
+
+table {
+  td {
+    &.top {
+      vertical-align: top !important;
+    }
+
+    &.bottom {
+      vertical-align: bottom !important;
+    }
+  }
 }

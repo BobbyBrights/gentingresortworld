@@ -4,9 +4,6 @@ $(document).ready(function () {
   // Detect mobile
   var md = new MobileDetect(window.navigator.userAgent);
 
-  console.log('hery')
-
-
   // Open Menu
   var $btnMenu = $('#toggle-menu'),
       $contentMenu = $('#nav-menu');
@@ -16,7 +13,7 @@ $(document).ready(function () {
     $('body').toggleClass('modal-open');
   });
 
-  console.log(md);
+  // console.log(md);
 
 
   // Landing Page Background
@@ -48,7 +45,21 @@ $(document).ready(function () {
   })
   
 
-  // Datepicker
+  // Truncate Text
+  function truncate(string, length) {
+    if (string.length > length) {
+      return string.substring(0, length) + '...';
+    } else {
+      return string;
+    }
+  }
+
+  $('.truncate-text').each(function() {
+    var str = truncate($(this).text(), $(this).attr('data-count'));
+    $(this).text(str);
+  });
+
+
   
 
   // RANGE DATEPICKER

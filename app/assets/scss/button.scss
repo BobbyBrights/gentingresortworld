@@ -136,3 +136,18 @@
     }
   }
 }
+
+button.icon {
+  border: none;
+  background-color: transparent;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn-cont {
+  width: 40%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}

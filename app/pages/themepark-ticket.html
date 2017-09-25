@@ -1,0 +1,140 @@
+---
+
+
+current: {
+  'pagetickets': true,
+  'type': 'typez'
+}
+
+tickets: [
+  {
+    name: 'Adult',
+    price: '10 MYR per ticket',
+    price2: '8 MYR per ticket',
+  },
+  {
+    name: 'Child',
+    price: '8 MYR per ticket',
+    price2: '6 MYR per ticket',
+  }
+]
+---
+
+{{>bar-show-steps current}}
+
+<div class="page-body page-shows">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>Theme Park</h2>
+      </div>
+    </div>
+    
+    <div class="layout-purchase-stack">
+      <div class="clearfix section">
+        <table>
+          <tr>
+            <td rowspan="2" class="shows-thumbnail">
+              <img src="assets/img/show-thumbnail.jpg" alt="">
+            </td>
+            <td class="top">
+              <div class="table-padding-wrap">
+                <p class="h3">SeniKome Péng Hēng</p>
+              </div>
+            </td>
+            <td rowspan="2" class="top cell-show-selection">
+              <div class="review-show-selection">
+                <table id="table-show-selection">
+                  <tr>
+                    <th>Time</th>
+                    <th>Seat</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th></th>
+                  </tr>
+                  <tr class="add-row">
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td class="price">-</td>
+                    <td><button class="icon icon-minus-circle"><span class="sr-only">Remove</span></button></td>
+                  </tr>
+                  <tr class="total">
+                    <td colspan="3">Total</td>
+                    <td class="price" colspan="2">MYR</td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="bottom">
+              <div class="row table-padding-wrap form-gutter">
+                <div class="col-sm-7">
+                  <div class="form-group">
+                    <label>
+                      Selected Date &amp; Time
+                      <small><i>*Schedules may change without prior notice.</i></small>
+                    </label>
+                    <div class="select">
+                      <select class="form-control">
+                        <option value="">07 Oct, 2017 (Sat) 8:30PM - 10:30PM</option>
+                        <option value="">08 Oct, 2017 (Sat) 8:30PM - 10:30PM</option>
+                      </select>
+                    </div>
+                  </div>  
+                </div>
+                <div class="col-sm-7">
+                  <div class="form-group">
+                    <label for="">
+                      Currency/Point
+                    </label>
+                    <div class="select">
+                      <select class="form-control">
+                        <option value="">Credit/Debit Card/MasterCard</option>
+                        <option value="">PayPal</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="section clearfix">
+        {{#each tickets}}
+        <div class="col-sm-6 stubs">
+          <table>
+            <tr>
+              <td>
+                <p class="stub-name">{{name}}</p>
+              </td>
+              <td>
+                <p>
+                  <span class="h4">{{name}}</span><br>
+                  <span><s>{{price}}</s></span><br>
+                  <span>{{price2}}</span>
+                </p>
+              </td>
+              <td>
+                <div class="form-group">
+                  <div class="select">
+                    <select name="" id="" class="form-control">
+                      <option>QTY</option>
+                      <option value="">1</option>
+                      <option value="">2</option>
+                    </select>
+                  </div>
+                </div>
+                <button id="add-show" class="btn btn-primary btn-block">Add</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+    <a href="#" class="btn btn-primary btn-cont center-block">Continue</a>
+  </div>
+</div>

@@ -3,7 +3,15 @@
     <table>
       <tr>
         <td class="hidden-xs">
-          {{> steps-indicator-shows}}
+          {{#ifEquals type 'typez'}}
+            {{> steps-indicator-shows-typez}}
+          {{/ifEquals}}
+          {{#ifEquals type 'typea'}}
+            {{> steps-indicator-shows}}
+          {{/ifEquals}}
+          {{#ifEquals type 'themepark'}}
+            {{> steps-indicator-themeparks}}
+          {{/ifEquals}}
         </td>
         {{> bar-search-partial}}
       </tr>
@@ -13,6 +21,14 @@
 
 <div class="header-bar visible-xs">
   <div class="container">
-    {{> steps-indicator-shows}}
+    {{#ifEquals type 'typez'}}
+      {{> steps-indicator-shows-typez}}
+    {{/ifEquals}}
+    {{#ifEquals type 'typea'}}
+      {{> steps-indicator-shows}}
+    {{/ifEquals}}
+    {{#ifEquals type 'themepark'}}
+      {{> steps-indicator-themeparks}}
+    {{/ifEquals}}
   </div>
 </div>

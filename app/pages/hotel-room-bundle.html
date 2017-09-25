@@ -1,0 +1,141 @@
+---
+current: {
+  'pagehotels': true
+  }
+
+dates: [
+  {
+    'date': '20',
+    'price': '1,300<small>MYR</small>'
+  },
+  {
+    'date': '21',
+    'price': '1,100<small>MYR</small>'
+  },
+  {
+    'date': '22',
+    'price': '1,200<small>MYR</small>'
+  },
+  {
+    'date': '23',
+    'price': 'SOLD OUT'
+  },
+  {
+    'date': '24',
+    'price': '1,100<small>MYR</small>'
+  },
+  {
+    'date': '25',
+    'price': '1,200<small>MYR</small>'
+  },
+  {
+    'date': '26',
+    'price': '1,300<small>MYR</small>'
+  }
+]
+---
+
+{{> bar-search-filter current}}
+
+<div class="page-body">
+  <div class="container">
+    <div class="hotel-rooms-hero">
+      <div class="hotel-rooms-slideshow component-slideshow">
+        <div class="slides">
+          <div>
+            <img src="assets/img/hotel-slideshow-01.jpg" alt="">
+            <div class="caption">
+              <p class="header">Grand Lobby</p>
+              <p>Experience a haven of luxury and style</p>
+            </div>
+          </div>
+          <div>
+            <img src="assets/img/hotel-slideshow-01.jpg" alt="">
+            <div class="caption">
+              <p class="header">Slide 2</p>
+              <p>Description 2</p>
+            </div>
+          </div>
+          <div>
+            <img src="assets/img/hotel-slideshow-01.jpg" alt="">
+            <div class="caption">
+              <p class="header">Slide 3</p>
+              <p>This is Slide #3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-rooms-intro item-well item-well-fill">
+        <h2>Genting Grand</h2>
+        <p>Crowned with the trademark Genting logo, Genting Grand is easily the most recognisable hotel at the peak. Enjoy a five-star stay at a resort where elegance and class have stood the test of time, and indulge in the luxury that comes only from staying at the best.</p>
+        <p>Genting Grand is the destination for those who aim for satisfaction, style and exclusivity. Coupled with the assurance that the comfort of home is never far away with the impeccable service and deluxe amenities extended.</p>
+        <p>When you are at Genting Grand, you know you have reached a haven of luxury that is a class of its own.</p>
+      </div>
+    </div>
+    <div class="hotel-rooms-rooms">
+      <div class="hotel-rooms-item">
+        <div class="hotel-rooms-image">
+          <img src="assets/img/hotel-thumbnail-01.jpg" alt="">
+        </div>
+        <div class="hotel-rooms-info">
+          <p class="h4">Premier Executive Suite</p>
+          <p>
+            Satellite TV Programmes (Astro) / In-house Video / In-house Radio / Telephone IDD Access / Tea & Coffee Maker / Kettle / Safe-deposit Box / Bathroom: Long Bath & Standing Shower / 42 inch Plasma TV only / Complimentary WiFi Service / Complimentary Newspaper / Mini Bar / Weighing Scale / Iron & Ironing Board / Medklinn ionizer
+          </p>
+          <ul class="hotel-rooms-size">
+            <li class="hotel-rooms-bed">
+              1 King Size Bed
+            </li>
+            <li class="hotel-rooms-guest">
+              1 to 2 pax
+            </li>
+          </ul>
+        </div>
+        <div class="hotel-rooms-rate">
+          <div class="clearfix calendar-header">
+            <table class="calendar-weekly-room">
+              <tr>
+                <td><button class="prev">7 Days Before</button></td>
+                <td><span class="title">19 Aug 2017</span></td>
+                <td><button class="next">7 Days After</button></td>
+              </tr>
+            </table>
+          </div>
+          <div class="calendar-date-price clearfix">
+            {{#each dates}}
+              <div>
+                <p class="date">{{date}}/<strong>08</strong></p>
+                <p class="price">{{{price}}}</p>
+              </div>
+            {{/each}}
+          </div>
+        </div>
+        <div class="hotel-rooms-price">
+          <table class="component-price-option">
+            <tr>
+              <td>
+                <div class="top-height">
+                  <p class="price">
+                    281
+                    <sup>MYR</sup>
+                  </p>
+                  <p>Per Night</p>
+                </div>
+              </td>
+              <td>
+                <a href="hotel-room-calendar.html" class="btn btn-gray btn-block">
+                  Rate Calendar
+                </a>
+              </td>
+              <td>
+                <a href="hotel-price.html" class="btn btn-primary btn-block">
+                  Select
+                </a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>      
+    </div>
+  </div>
+</div>

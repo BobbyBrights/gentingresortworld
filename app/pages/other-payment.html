@@ -2,6 +2,24 @@
 current: {
   pageconfirm: true
 }
+
+hotels: [
+  {
+    name: 'First World Hotel',
+    desc: 'Offers a variety of room types to suit your budget and needs.',
+    price: '275'
+  },
+  {
+    name: 'Hotel on the Park',
+    desc: 'Hotel on the Park is a boutique hotel perfect for those who like to stay together. ',
+    price: '281'
+  },
+  {
+    name: 'Awana @ Resorts World Genting',
+    desc: 'Indulge in five-star luxury while taking in breathtaking views of a majestic mountain range landscape within the comfort of your room',
+    price: '337'
+  }
+]
 ---
 
 {{> bar-search-filter current}}
@@ -133,6 +151,9 @@ current: {
         </div>
 
         <div class="column-right column-payment">
+          <div class="sections purple">
+            <p><i>Your seat selection will only be reserved for 10 minutes, please complete your transaction within the alloted time.</i></p>
+          </div>
           <div class="sections">
             <h3 class="text-center">Payment</h3>
             {{> payment-method}}
@@ -142,6 +163,42 @@ current: {
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="upsell-wrap">
+      <p class="h4">Don't miss out on the best offers to go with your trip.</p>
+
+      <div class="clearfix">
+        {{#each hotels}}
+        <div class="upsell-item">
+          <div class="upsell-item-wrap">
+            <p class="h4">{{name}}</p>
+            <p>
+              <span class="truncate-text" data-count="75">{{desc}}</span>
+              <a href="hotel-room.html">More Details</a>
+            </p>
+
+            <table>
+              <tr>
+                <td>
+                  <img src="assets/img/hotel-thumbnail.jpg" alt="{{name}}" class="result-image">
+                </td>
+                <td class="bottom">
+                  <div class="component-price-option">
+                    <p class="price">
+                      {{price}}
+                      <sup>MYR</sup>
+                    </p>
+                    <p>AVG Per Night</p>
+                  </div>
+                  <a href="hotel-room-calendar.html" class="btn btn-primary btn-block">Select</a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        {{/each}}
       </div>
     </div>
   </div>

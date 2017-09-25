@@ -57,7 +57,7 @@ form {
   }
 
   .select {
-    background: #FFF;
+    background: #FFF;    
   }
 
   .checkbox {
@@ -143,6 +143,13 @@ form {
 
 
   .page-landing & {
+    p strong {
+      color: $text-color;
+
+      @include breakpoint(tablet) {
+        color: #FFF;
+      }
+    }
     h3, h4, a, p {
       color: #FFF;
     }
@@ -332,6 +339,7 @@ label.radio-as-list {
 .select {
   position: relative;
   border-radius: $border-radius-base;
+  border: 1px solid #CECECE;
 
   select {
     -webkit-appearance: none;
@@ -371,5 +379,19 @@ label.radio-as-list {
     select, &:after {
       color: #FFF;
     }
+  }
+}
+
+.form-gutter [class^="col-sm-"] {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.form-wrap-center {
+  border: 1px solid #ECECEC;
+
+  .clearfix {
+    width: 80%;
+    margin: 30px auto 20px;
   }
 }

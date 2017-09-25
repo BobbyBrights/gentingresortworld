@@ -48,14 +48,19 @@ results: [
 
 <div class="page-body">
   <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>Hotels</h2>
+      </div>
+    </div>
     {{#each results}}
       <div class="col-sm-6 results-item hotel-results">
         <div class="row">
-          <div class="hotel-results-wrap">
+          <div class="results-wrap">
             <div class="hotel-image-holder hidden-xs">
               <img src="assets/img/hotel-thumbnail.jpg" alt="{{name}}" class="result-image">
             </div>
-            <div class="hotel-results-desc">
+            <div class="results-desc">
               <div class="top-height">
                 <p class="h3">{{name}}</p>
                 <p class="result-description">
