@@ -7,37 +7,44 @@ results: [
   {
     name: 'First World Hotel',
     desc: 'Offers a variety of room types to suit your budget and needs.',
-    price: '275'
+    price: '275',
+    room: '5 Rooms left'
   },
   {
     name: 'Hotel on the Park',
     desc: 'Hotel on the Park is a boutique hotel perfect for those who like to stay together. ',
-    price: '281'
+    price: '281',
+    room: '2 Rooms left'
   },
   {
     name: 'Awana @ Resorts World Genting',
     desc: 'Indulge in five-star luxury while taking in breathtaking views of a majestic mountain range landscape within the comfort of your room',
-    price: '337'
+    price: '337',
+    room: '25 Rooms left'
   },
   {
     name: 'Maxims',
     desc: 'Offers world-class services, from a wide variety of dining choices to entertainment venues.',
-    price: '400'
+    price: '400',
+    room: '15 Rooms left'
   },
   {
     name: 'Resort Hotel',
     desc: 'Offers a wide range of amenities and facilities, both for business and leisure',
-    price: '550'
+    price: '550',
+    room: '15 Rooms left'
   },
   {
     name: 'Genting Grand',
     desc: 'Offers a convenient and relaxing stay with its modern amenities and first-class services.',
-    price: '1,485'
+    price: '1,485',
+    room: '10 Rooms left'
   },
   {
     name: 'Crockfords',
     desc: 'The prestigious Crockfords offers premium accommodation with top-notch facilities and service.',
-    price: '1,650'
+    price: '1,650',
+    room: '3 Rooms left'
   }
 ]
 ---
@@ -77,13 +84,16 @@ results: [
                     <div class="component-price-option">
                       <div class="top-height">
                         {{#if @last}}
-                          <p class="price">SOLD OUT</p>
+                          <p class="price">Fully Booked</p>
                         {{else}}
                           <p class="price">
                             {{price}}
                             <sup>MYR</sup>
                           </p>
-                          <p>AVG Per Night</p>
+                          <p>
+                            AVG Per Night<br>
+                            <span class="text-uppercase">{{room}}</span>
+                          </p>
                         {{/if}}
                       </div>
                       {{#unless @last}}
