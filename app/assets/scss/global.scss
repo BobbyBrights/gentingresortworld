@@ -627,3 +627,24 @@ table {
     }
   }
 }
+
+ul {
+  padding: 0;
+  font-weight: $weight-reg;
+
+  &.list-dash {
+    li {
+      list-style: none;
+
+      &:before {
+        content: '-';
+        margin-right: 5px;
+      }
+
+      &.head:before {
+        content: '';
+        margin: 0;
+      }
+    }
+  }
+}

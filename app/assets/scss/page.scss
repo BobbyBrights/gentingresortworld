@@ -86,6 +86,17 @@
 .hotel-rooms-item {
   @include clearfix;
 
+  @media (max-width: $screen-xs-max) {
+    table, tbody, tr, td {
+      display: block;
+
+      &.hotel-rooms-price {
+        display: table-cell;
+        width: 1%;
+      }
+    }
+  }
+
   > div {
     padding: 20px;
   }
@@ -93,7 +104,7 @@
   @include breakpoint(tablet) {
     border: 1px solid $gray-line;
     margin: 10px 0;
-    padding: 8px 0px;
+    padding: 8px;
 
     > div {
       float: left;
@@ -121,7 +132,7 @@
     line-height: 16px;
 
     @include breakpoint(tablet) {
-      width: 340px;
+      /*width: 340px;*/
     }
   }
 
@@ -140,11 +151,18 @@
   }
 
   .hotel-rooms-price {
+    padding: 16px;
+
     @include breakpoint(tablet) {
       width: 130px;
+      padding: 0;
 
       .top-height {
         height: 86px;
+      }
+
+      .btn-gray {
+        line-height: 14px;
       }
     }
   }

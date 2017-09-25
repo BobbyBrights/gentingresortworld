@@ -2,37 +2,6 @@
 current: {
   'pagehotels': true
   }
-
-dates: [
-  {
-    'date': '20',
-    'price': '1,300<small>MYR</small>'
-  },
-  {
-    'date': '21',
-    'price': '1,100<small>MYR</small>'
-  },
-  {
-    'date': '22',
-    'price': '1,200<small>MYR</small>'
-  },
-  {
-    'date': '23',
-    'price': 'SOLD OUT'
-  },
-  {
-    'date': '24',
-    'price': '1,100<small>MYR</small>'
-  },
-  {
-    'date': '25',
-    'price': '1,200<small>MYR</small>'
-  },
-  {
-    'date': '26',
-    'price': '1,300<small>MYR</small>'
-  }
-]
 ---
 
 {{> bar-search-filter current}}
@@ -73,68 +42,58 @@ dates: [
       </div>
     </div>
     <div class="hotel-rooms-rooms">
+
       <div class="hotel-rooms-item">
-        <div class="hotel-rooms-image">
-          <img src="assets/img/hotel-thumbnail-01.jpg" alt="">
-        </div>
-        <div class="hotel-rooms-info">
-          <p class="h4">Premier Executive Suite</p>
-          <p>
-            Satellite TV Programmes (Astro) / In-house Video / In-house Radio / Telephone IDD Access / Tea & Coffee Maker / Kettle / Safe-deposit Box / Bathroom: Long Bath & Standing Shower / 42 inch Plasma TV only / Complimentary WiFi Service / Complimentary Newspaper / Mini Bar / Weighing Scale / Iron & Ironing Board / Medklinn ionizer
-          </p>
-          <ul class="hotel-rooms-size">
-            <li class="hotel-rooms-bed">
-              1 King Size Bed
-            </li>
-            <li class="hotel-rooms-guest">
-              1 to 2 pax
-            </li>
-          </ul>
-        </div>
-        <div class="hotel-rooms-rate">
-          <div class="clearfix calendar-header">
-            <table class="calendar-weekly-room">
-              <tr>
-                <td><button class="prev">7 Days Before</button></td>
-                <td><span class="title">19 Aug 2017</span></td>
-                <td><button class="next">7 Days After</button></td>
-              </tr>
-            </table>
-          </div>
-          <div class="calendar-date-price clearfix">
-            {{#each dates}}
-              <div>
-                <p class="date">{{date}}/<strong>08</strong></p>
-                <p class="price">{{{price}}}</p>
+        <table>
+          <tr>
+            <td class="hotel-rooms-image" rowspan="2">
+              <img src="assets/img/hotel-thumbnail-01.jpg" alt="">
+            </td>
+            <td class="hotel-rooms-info" rowspan="2">
+              <div class="table-padding-wrap">
+                <p class="h4">Premier Executive Suite</p>
+                <p>
+                  Satellite TV Programmes (Astro) / In-house Video / In-house Radio / Telephone IDD Access / Tea & Coffee Maker / Kettle / Safe-deposit Box / Bathroom: Long Bath & Standing Shower / 42 inch Plasma TV only / Complimentary WiFi Service / Complimentary Newspaper / Mini Bar / Weighing Scale / Iron & Ironing Board / Medklinn ionizer
+                </p>
+                <ul class="hotel-rooms-size">
+                  <li class="hotel-rooms-bed">
+                    1 King Size Bed
+                  </li>
+                  <li class="hotel-rooms-guest">
+                    1 to 2 pax
+                  </li>
+                </ul>
               </div>
-            {{/each}}
-          </div>
-        </div>
-        <div class="hotel-rooms-price">
-          <table class="component-price-option">
-            <tr>
-              <td>
-                <div class="top-height">
-                  <p class="price">
-                    281
-                    <sup>MYR</sup>
-                  </p>
-                  <p>Per Night</p>
-                </div>
-              </td>
-              <td>
-                <a href="hotel-room-calendar.html" class="btn btn-gray btn-block">
-                  Rate Calendar
-                </a>
-              </td>
-              <td>
-                <a href="hotel-price.html" class="btn btn-primary btn-block">
-                  Select
-                </a>
-              </td>
-            </tr>
-          </table>
-        </div>
+            </td>
+            <td class="top hotel-rooms-price">
+              <div class="component-price-option"">
+                <p class="price">
+                  281
+                  <sup>MYR</sup>
+                </p>
+                <p>Per Night</p>
+              </div>
+            </td>
+            <td class="bottom hotel-rooms-price visible-xs">
+              <a href="hotel-room-calendar.html" class="btn btn-gray btn-block">
+                Rate Calendar
+              </a>
+              <a href="hotel-price.html" class="btn btn-primary btn-block">
+                Select
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="bottom hotel-rooms-price hidden-xs">
+              <a href="hotel-room-calendar.html" class="btn btn-gray btn-block">
+                Rate Calendar
+              </a>
+              <a href="hotel-price.html" class="btn btn-primary btn-block">
+                Select
+              </a>
+            </td>
+          </tr>
+        </table>
       </div>      
     </div>
   </div>
