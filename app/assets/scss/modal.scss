@@ -90,14 +90,6 @@
     padding: 0;
     text-align: center;
 
-    @include breakpoint(tablet) {
-      text-align: right;
-
-      &.center {
-        text-align: center;
-      }
-    }
-
     li {
       display: inline-block; 
       vertical-align: middle;
@@ -486,16 +478,10 @@
 
   label {
     text-align: left;
-
-    @include breakpoint(tablet) {
-      height: 30px;
-      line-height: 30px;
-    }
   }
 
   span {
     font-size: 14px;
-    font-weight: $weight-bold;
     padding-left: 35px !important;
 
     &:before {
