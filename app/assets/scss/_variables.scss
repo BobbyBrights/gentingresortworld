@@ -35,7 +35,7 @@ $gray: #3A3A3A; // footer background
 $gray-dark: #202020; // footer background
 $header-color: #1e252b;
 
-
+$label-primary-bg:  $purple;
 
 $navbar-height: 85px;
 $navbar-border-radius: 0;
@@ -64,9 +64,26 @@ $input-border: #CECECE;
 $input-color-placeholder: $gray-light;
 
 $modal-lg:                    1030px;
-$modal-md:                    605px;
+$modal-md:                    700px;
 $modal-sm:                    360px;
 $modal-backdrop-opacity:  0.9;
+
+
+$pagination-color:    #FFF;
+$pagination-bg:       $purple-red;
+$pagination-border:   #FFF;
+
+$pagination-hover-color:               #FFF;
+$pagination-hover-bg:                  $purple;
+$pagination-hover-border:              #FFF;
+
+$pagination-active-color:              #FFF;
+$pagination-active-bg:                 $purple;
+$pagination-active-border:             #FFF;
+
+$pagination-disabled-color:            $gray-light;
+$pagination-disabled-bg:               #fff !default;
+$pagination-disabled-border:           #FFF;
 
 /* -- FONT -------- */
 $icon-arrow-down:         '\e800';
@@ -105,4 +122,4 @@ $icon-edit:               '\e819';
 $icon-language:           '\e81a';
 $icon-coin:               '\e81b';
 $icon-google:             '\e825';
-
+$icon-tag:                '\e81c';
