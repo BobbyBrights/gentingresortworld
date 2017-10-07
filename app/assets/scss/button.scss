@@ -34,6 +34,14 @@
   }
 }
 
+.btn-purple {
+  background-color: $purple;
+
+  &:hover {
+    background-color: darken($purple, 5);
+  }
+}
+
 .btn-gray {
   background-color: #9B9B9B;
   color: #FFF; 
@@ -136,6 +144,7 @@
     }
   }
 }
+
 
 button.icon {
   border: none;

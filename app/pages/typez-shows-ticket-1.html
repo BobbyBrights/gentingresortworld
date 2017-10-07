@@ -11,118 +11,128 @@ current: {
 
 <div class="page-body page-shows">
   <div class="container">
-    <div class="row">
+    <div class="row page-header">
       <div class="col-sm-12">
-        <h2>Select Schedule and Seats</h2>
+        <h2 class="hidden-xs">Select Schedule and Seats</h2>
+        <h2 class="visible-xs">Shows</h2>
       </div>
     </div>
     <div class="layout-purchase-stack">
       <div class="clearfix section">
-        <table>
-          <tr>
-            <td rowspan="2" class="shows-thumbnail">
-              <img src="assets/img/show-thumbnail.jpg" alt="">
-            </td>
-            <td class="top">
-              <div class="table-padding-wrap">
-                <p class="h3">Kitaro - Kojiki & The Universe 2017</p>
-                <p>From 142 MYR per ticket</p>
-              </div>
-            </td>
-            <td rowspan="2" class="top cell-show-selection">
-              <div class="review-show-selection">
-                <table id="table-show-selection">
-                  <tr>
-                    <th>Time</th>
-                    <th>Seat</th>
-                    <th>Qty</th>
-                    <th>Price</th>
-                    <th></th>
-                  </tr>
-                  <tr class="add-row">
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td class="price">-</td>
-                    <td><button class="icon icon-minus-circle"><span class="sr-only">Remove</span></button></td>
-                  </tr>
-                  <tr class="total">
-                    <td colspan="3">Total</td>
-                    <td class="price" colspan="2">MYR</td>
-                  </tr>
-                </table>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td class="bottom">
-              <div class="row table-padding-wrap form-gutter">
-                <div class="col-sm-7">
-                  <div class="form-group">
-                    <label>
-                      Selected Date &amp; Time
-                      <small><i>*Schedules may change without prior notice.</i></small>
-                    </label>
-                    <div class="select">
-                      <select class="form-control">
-                        <option value="">07 Oct, 2017 (Sat) 8:30PM - 10:30PM</option>
-                        <option value="">08 Oct, 2017 (Sat) 8:30PM - 10:30PM</option>
-                      </select>
+        <div class="ticket-columns-wrap">
+          <div class="ticket-column ticket-column-image">
+            <table>
+              <tr>
+                <td class="image-holder"><img src="assets/img/show-thumbnail.jpg" alt=""></td>
+                <td class="visible-xs">
+                  <p class="h3">Kitaro - Kojiki & The Universe 2017</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="ticket-column ticket-column-desc">
+            <table>
+              <tr class="hidden-xs">
+                <td class="top">
+                  <p class="h3">Kitaro - Kojiki & The Universe 2017</p>
+                  <p>From 142 MYR per ticket</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="bottom">
+                  <div class="clearfix form-gutter">
+                    <div class="col-sm-7">
+                      <div class="form-group">
+                        <label>
+                          Selected Date &amp; Time
+                          <small><i>*Schedules may change without prior notice.</i></small>
+                        </label>
+                        <div class="select">
+                          <select class="form-control">
+                            <option value="">07 Oct, 2017 (Sat) 8:30PM - 10:30PM</option>
+                            <option value="">08 Oct, 2017 (Sat) 8:30PM - 10:30PM</option>
+                          </select>
+                        </div>
+                      </div>
+                      <p>
+                        <a href="#">View Floor Plan</a>
+                      </p>                
+                    </div>
+                    <div class="col-sm-5">
+                      <div class="form-group">
+                        <label for="">
+                          Currency/Point
+                          <small><i>&nbsp;</i></small>
+                        </label>
+                        <div class="select">
+                          <select class="form-control">
+                            <option value="">Credit/Debit Card/MasterCard</option>
+                            <option value="">PayPal</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <label>Please select package, quantity, click Add, then click Proceed to continue.</label>
+                    </div>
+                    <div class="col-sm-7">
+                      <div class="form-group">
+                        <div class="select">
+                          <select class="form-control">
+                            <option value="">PS1: 80.00MYR/50GP</option>
+                            <option value="">PS2: 60.00MYR/60GP</option>
+                            <option value="">PS3: 70.00MYR/70GP</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="form-group">
+                        <div class="select">
+                          <select class="form-control">
+                            <option value="">QTY</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="form-group">
+                        <button class="btn btn-block btn-primary" id="add-show">Add</button>
+                      </div>
                     </div>
                   </div>
-                  <p>
-                    <a href="#">View Floor Plan</a>
-                  </p>                
-                </div>
-                <div class="col-sm-5">
-                  <div class="form-group">
-                    <label for="">
-                      Currency/Point
-                      <small><i>&nbsp;</i></small>
-                    </label>
-                    <div class="select">
-                      <select class="form-control">
-                        <option value="">Credit/Debit Card/MasterCard</option>
-                        <option value="">PayPal</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-12">
-                  <label>Please select package, quantity, click Add, then click Proceed to continue.</label>
-                </div>
-                <div class="col-sm-7">
-                  <div class="form-group">
-                    <div class="select">
-                      <select class="form-control">
-                        <option value="">PS1: 80.00MYR/50GP</option>
-                        <option value="">PS2: 60.00MYR/60GP</option>
-                        <option value="">PS3: 70.00MYR/70GP</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-2">
-                  <div class="form-group">
-                    <div class="select">
-                      <select class="form-control">
-                        <option value="">QTY</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="form-group">
-                    <button class="btn btn-block btn-primary" id="add-show">Add</button>
-                  </div>
-                </div>
-              </div>
-            </td>
-          </tr>
-        </table>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="ticket-column ticket-column-selection">
+            <div class="review-show-selection">
+              <table id="table-show-selection">
+                <tr>
+                  <th>Time</th>
+                  <th>Seat</th>
+                  <th>Qty</th>
+                  <th>Price</th>
+                  <th></th>
+                </tr>
+                <tr class="add-row">
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td class="price">-</td>
+                  <td><button class="icon icon-minus-circle"><span class="sr-only">Remove</span></button></td>
+                </tr>
+                <tr class="total">
+                  <td colspan="3">Total</td>
+                  <td class="price" colspan="2">MYR</td>
+                </tr>
+              </table>
+            </div>
+          </div>    
+        </div>
       </div>
     </div>
     <a href="#" class="btn btn-primary btn-cont center-block">Continue</a>

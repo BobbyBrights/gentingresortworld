@@ -44,7 +44,7 @@ results: [
 
 <div class="page-body page-shows">
   <div class="container">
-    <div class="row">
+    <div class="row page-header">
       <div class="col-sm-12">
         <h2>Shows</h2>
       </div>
@@ -73,12 +73,23 @@ results: [
                         <br>
                         <strong>Date: {{date}}</strong>
                       </p>
-                      <ul>
+                      <ul class="hidden-xs">
                         <li><a href="typez-shows-ticket.html" class="btn btn-default">More Details</a></li>
                         <li><a href="#" class="btn btn-default">View Floor Plan</a></li>
                         <li><a href="#" class="btn btn-primary btn-block">Select</a></li>
                       </ul>
                     {{/if}}
+                  </td>
+                </tr>
+                <tr class="visible-xs">
+                  <td class="results-desc" colspan="2">
+                    {{#unless @last}}
+                      <ul>
+                        <li><a href="typez-shows-ticket.html" class="btn btn-default">More Details</a></li>
+                        <li><a href="#" class="btn btn-default">View Floor Plan</a></li>
+                        <li><a href="#" class="btn btn-primary btn-block">Select</a></li>
+                      </ul>
+                    {{/unless}}
                   </td>
                 </tr>
               </table>

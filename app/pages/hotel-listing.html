@@ -49,13 +49,13 @@ results: [
 ]
 ---
 
-
-
 {{> bar-search-filter current}}
+{{> bar-member}}
 
 <div class="page-body">
   <div class="container">
-    <div class="row">
+    {{> bar-signin}}
+    <div class="row page-header">
       <div class="col-sm-12">
         <h2>Hotels</h2>
       </div>
@@ -64,6 +64,65 @@ results: [
       <div class="col-sm-6 results-item hotel-results">
         <div class="row">
           <div class="results-wrap">
+            <table>
+              <tr class="visible-xs">
+                <td colspan="2">
+                  <p class="h3">{{name}}</p>
+                  <p class="result-description">
+                    <span class="truncate-text" data-count="75">{{desc}}</span>
+                    <a href="hotel-room.html" class="visible-xs-inline">More Details</a>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td rowspan="2" class="image-holder hidden-xs">
+                  <img src="assets/img/hotel-thumbnail.jpg" alt="{{name}}" class="result-image">
+                </td>
+                <td class="results-desc top">
+                  <div class="top-height hidden-xs">
+                    <p class="h3">{{name}}</p>
+                    <p class="result-description">
+                      <span class="truncate-text" data-count="75">{{desc}}</span>
+                    </p>
+                  </div>
+                  <div class="image-holder visible-xs">
+                    <img src="assets/img/hotel-thumbnail.jpg" alt="{{name}}" class="result-image">
+                  </div>
+                </td>
+                <td class="results-desc top">
+                  <div class="component-price-option">
+                    {{#if @last}}
+                      <p class="price">Fully Booked</p>
+                    {{else}}
+                      <p class="price">
+                        {{price}}
+                        <sup>MYR</sup>
+                      </p>
+                      <p>
+                        AVG Per Night<br>
+                        <span class="text-uppercase">{{room}}</span>
+                      </p>
+                    {{/if}}
+                    {{#unless @last}}
+                      <a href="hotel-room-calendar.html" class="btn btn-primary btn-block">
+                        Select
+                      </a>
+                    {{/unless}}
+                  </div>
+                </td>
+              </tr>
+              <tr class="hidden-xs">
+                <td class="results-desc bottom"><a href="hotel-room.html" class="btn btn-default">More Details</a></td>
+                <td class="results-desc bottom">
+                  {{#unless @last}}
+                    <a href="hotel-room-calendar.html" class="btn btn-primary btn-block">
+                      Select
+                    </a>
+                  {{/unless}}
+                </td>
+              </tr>
+            </table>
+            <!--  
             <div class="hotel-image-holder hidden-xs">
               <img src="assets/img/hotel-thumbnail.jpg" alt="{{name}}" class="result-image">
             </div>
@@ -106,6 +165,7 @@ results: [
                 </tr>
               </table>
             </div>
+            -->
           </div>
         </div>
 

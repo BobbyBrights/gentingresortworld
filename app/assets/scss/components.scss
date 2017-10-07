@@ -314,9 +314,9 @@
   }
 
   .price {
-    color: $brand-primary;
-    font-size: 36px;
-    line-height: 32px;
+    color: $brand-primary !important;
+    font-size: 36px !important;
+    line-height: 32px !important;
     margin-bottom: 0;
 
     sup {

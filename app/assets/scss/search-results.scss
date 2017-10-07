@@ -43,19 +43,34 @@
 }
 
 .results-desc {
-  padding-left: 10px;
+
+  @include breakpoint(tablet) {
+    padding-left: 10px;
+  }
   
   .h3 {
     margin-top: 0;
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 20px;
+    }
   }
 
   .price {
-    font-size: 20px;
+    font-size: 16px;
     color: $text-color;
+
+    @include breakpoint(tablet) {
+      font-size: 20px;
+    }
   }
 
   ul {
     margin: 0 -3px;
+
+    .visible-xs & {
+      margin-top: 10px;
+    }
   }
 
   li {
@@ -69,7 +84,7 @@
       line-height: 28px;
     }
 
-    &:last-child() {
+    &:last-child {
       margin-top: 5px;
       width: 100%;
     }
@@ -77,14 +92,7 @@
 }
 
 .hotel-results {
-  .hotel-image-holder {
-    width: 175px;
-    float: left;
-  }
-
   .results-desc {
-    @include make-xs-column(12);
-    @include make-sm-column(5);
     font-weight: $weight-light;
 
     .h3 {
@@ -95,18 +103,12 @@
         width: auto;
       }
     }
-
-    .btn-moredetails {
-      float: right;
-    }
-
-    .top-height {
-      margin-bottom: 10px;
-    }
   }
 
-  .top-height {
-    overflow: hidden;
+  td:last-child {
+    @include breakpoint(tablet) {
+      width: 120px;
+    }
   }
 }
 
@@ -128,9 +130,19 @@
   }
 }
 
-.show-results, .themepark-results {
-  .image-holder {
-    width: 194px;
+.image-holder {
+  .show-results &, .themepark-results & {
+    width: 130px;
+    padding-right: 10px;
+
+    @include breakpoint(tablet) {
+      width: 194px;
+      padding-right: 0;
+    }
+  }
+
+  .hotel-results & {
+    width: 175px;
   }
 }
 

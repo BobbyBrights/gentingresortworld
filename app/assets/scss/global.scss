@@ -1,5 +1,5 @@
 html, body {
-  font-weight: $weight-light;
+  font-weight: $weight-reg;
 }
 
 .font-notera {
@@ -646,5 +646,108 @@ ul {
         margin: 0;
       }
     }
+  }
+}
+
+.pagination {
+  li {
+    a:before {
+      font-family: 'icons';
+    }
+
+    &:first-child a {
+      padding-left: 8px;
+      padding-right: 10px;
+
+      &:before {
+        content: $icon-arrow-left;
+      }
+    }
+
+    &:last-child a {
+      padding-left: 10px;
+      padding-right: 8px;
+
+      &:before {
+        content: $icon-arrow-right;
+      }
+    }
+  }
+}
+
+.label {
+  font-size: $font-size-base;
+  font-weight: $weight-reg;
+  padding: 8px;
+}
+
+.bar-signin {
+  background-color: #561136;
+  background-image: url('../img/bg-circle.png');
+  background-repeat: no-repeat;
+  color: #FFF;
+  background-position: 50% 50%;
+  padding: 0 20px 5px;
+  @include clearfix;
+  @include breakpoint(tablet) {
+    background-position: 70% 0;
+  }
+
+  p {
+    float: left;
+
+    &.icon {
+      font-size: 34px;
+      position: relative;
+      top: 8px;
+      width: 65%;
+
+      @include breakpoint(tablet) {
+        font-size: 40px;
+      }
+
+      &:before {
+        position: absolute;
+        left: -10px;
+      }
+    }
+
+    span {
+      font-size: 14px;
+      display: block;
+      padding-left: 40px;
+
+      @include breakpoint(tablet) {
+        padding-left: 50px;
+      }
+    }
+  }
+
+  .btn {
+    float: right;
+    margin-top: 10px;
+    height: 30px;
+    font-size: 12px;
+    line-height: 14px;
+    
+    @include breakpoint(tablet) {
+      font-size: 14px;
+      line-height: 18px;
+      height: 30px;
+    }
+  }
+}
+
+.page-header {
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 1px solid #DDD;
+  text-align: center;
+
+  @include breakpoint(tablet) {
+    text-align: left;   
+    border: none;   
   }
 }

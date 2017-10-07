@@ -53,6 +53,19 @@
   }
 }
 
+.show-selection, .show-info-wrap {
+  @media (max-width: $screen-xs-max) {
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 0;
+
+    .form-show-selection {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+    }
+  }
+}
+
 .show-info {
   color: #FFF;
   font-weight: $weight-reg;
@@ -330,7 +343,7 @@
     border-radius: 0;
     color: $purple;
     margin: 0;
-    width: 330px;
+    width: 100%;
     padding: 20px;
 
     table {
@@ -355,20 +368,59 @@
     }
   }
 
-  .shows-thumbnail {
-    width: 217px;
-  }
-
-  .cell-show-selection {
-    background: #ECECEC;
-    width: 330px;
-  }
-
   .cell-show-notice {
     background: $purple;
     color: #FFF;
-    width: 330px;
     padding: 20px 20px 10px;
+    
+    @include breakpoint(tablet) {
+      width: 330px;
+    }
+  }
+}
+
+.ticket-columns-wrap {
+  @include clearfix;
+
+  .ticket-column {
+    float: left;
+    padding: 10px;
+
+    @include breakpoint(tablet) {
+      padding: 0;
+    }
+  }
+
+  .ticket-column-desc {
+    width: 100%;
+
+    @include breakpoint(tablet) {
+      width: calc(100% - 547px);
+      padding: 0 16px;
+    }
+  }
+
+  .ticket-column-image {
+    td {
+      vertical-align: top;
+    }
+
+    .image-holder {
+      width: 120px;
+
+      @include breakpoint(tablet) {
+        width: 217px;
+      }
+    }
+  }
+
+  .ticket-column-selection {
+    width: 100%;
+
+    @include breakpoint(tablet) {
+      background: #ECECEC;
+      width: 330px;
+    }
   }
 }
 
@@ -380,12 +432,36 @@
   color: $purple;
 
   td {
-    &:first-child {
-      width: 190px;
+    width: 50%;
+
+    @include breakpoint(tablet) {
+      width: auto;
+
+      &:first-child {
+        width: 190px;
+      }
+
+      &:last-child {
+        width: 125px;
+      }
     }
 
-    &:last-child {
-      width: 125px;
+    @media (max-width: $screen-xs-max) {
+      display: inline-block;
+
+      &:last-child {
+        width: 100%;
+        display: block;
+
+        .form-group, button {
+          width: 49%;
+          display: inline-block;
+        }
+
+        .form-group {
+          margin-top: 10px;
+        }
+      }
     }
   }
 

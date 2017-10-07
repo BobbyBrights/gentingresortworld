@@ -729,20 +729,39 @@ body.landing {
 }
 
 .upsell-wrap {
-  margin: 40px auto 20px;
+  margin: 40px auto 0;
+
+  @include breakpoint(tablet) {
+    margin: 40px auto 20px;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    > .h4 {
+      padding: 0 16px;
+    }
+  }
 
   .clearfix {
     background: $purple;
-    border-radius: $border-radius-base;
-    padding: 10px 5px;
+    padding: 16px 10px;
+
+    @include breakpoint(tablet) {
+      padding: 10px 5px;
+      border-radius: $border-radius-base;
+    }
   }
 
   .upsell-item {
     @include make-xs-column(12);
     @include make-sm-column(4);
-    margin: 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
     padding-left: 5px;
     padding-right: 5px;
+    
+    @include breakpoint(tablet) {
+      margin: 0;
+    }
   }
 
   .upsell-item-wrap {
@@ -761,6 +780,74 @@ body.landing {
   }
 }
 
+.page-bookings {
+  table.transactions {
+    border-color: transparent;
+
+    @include breakpoint(tablet) {
+      border-color: #DDD;
+    }
+
+    tbody tr, tfoot tr, thead tr {
+      td, th {
+        padding: 13px 20px 10px;
+      }
+    }
+
+    @media (max-width: $screen-xs-max) {
+      thead, tfoot, tbody, tr, th, td {
+        display: block;
+      }
+
+      tr {
+        padding-bottom: 10px;
+        border-top: 1px solid #D6D6D6;
+        background: #Fff;
+      }
+
+      tbody tr td {
+        border: none;
+        border-bottom: 1px solid #D6D6D6; 
+        position: relative;
+        padding-left: 50%; 
+
+        &:before {
+          background: #F4F4F4;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 45%; 
+          padding: 6px 10px; 
+          white-space: nowrap;
+          height: 100%;
+          border-right: 1px solid #D6D6D6;
+        }
+
+        &:nth-child(1):before {
+          content: 'Transaction Date';
+        }
+
+        &:nth-child(2):before {
+          content: 'Booking No.';
+        }
+      
+        &:nth-child(3):before {
+          content: 'Status';
+        }
+      
+      
+        &:nth-child(4):before {
+          content: 'Product';
+        }
+
+
+        &:nth-child(5):before {
+          content: 'Total Amount';
+        }
+      }
+    }
+  }
+}
 
 /* MEMBERS */
 @import 'pages/members';
