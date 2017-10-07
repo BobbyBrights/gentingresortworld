@@ -280,7 +280,13 @@ hr {
     width: 65%;
     
     @include breakpoint(tablet) {
-      width: 320px;
+      width: 50%;
+    }
+  }
+
+  .hasIndicator + .bar-select {
+    @include breakpoint(tablet) {
+      width: 25%;
     }
   }
 

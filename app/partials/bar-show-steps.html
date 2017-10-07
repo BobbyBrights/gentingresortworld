@@ -2,17 +2,21 @@
   <div class="container">
     <table>
       <tr>
-        <td class="hidden-xs">
-          {{#ifEquals type 'typez'}}
+        {{#ifEquals type 'typez'}}
+          <td class="hidden-xs hasIndicator">
             {{> steps-indicator-shows-typez}}
-          {{/ifEquals}}
-          {{#ifEquals type 'typea'}}
+          </td>
+        {{/ifEquals}}
+        {{#ifEquals type 'typea'}}
+          <td class="hidden-xs hasIndicator">
             {{> steps-indicator-shows}}
-          {{/ifEquals}}
-          {{#ifEquals type 'themepark'}}
+          </td>
+        {{/ifEquals}}
+        {{#ifEquals type 'themepark'}}
+          <td class="hidden-xs hasIndicator">
             {{> steps-indicator-themeparks}}
-          {{/ifEquals}}
-        </td>
+          </td>
+        {{/ifEquals}}
         {{> bar-search-partial}}
       </tr>
     </table>

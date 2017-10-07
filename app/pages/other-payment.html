@@ -7,17 +7,20 @@ hotels: [
   {
     name: 'First World Hotel',
     desc: 'Offers a variety of room types to suit your budget and needs.',
-    price: '275'
+    price: '275',
+    column: '4'
   },
   {
     name: 'Hotel on the Park',
     desc: 'Hotel on the Park is a boutique hotel perfect for those who like to stay together. ',
-    price: '281'
+    price: '281',
+    column: '4'
   },
   {
     name: 'Awana @ Resorts World Genting',
     desc: 'Indulge in five-star luxury while taking in breathtaking views of a majestic mountain range landscape within the comfort of your room',
-    price: '337'
+    price: '337',
+    column: '4'
   }
 ]
 ---
@@ -171,33 +174,7 @@ hotels: [
 
       <div class="clearfix">
         {{#each hotels}}
-        <div class="upsell-item">
-          <div class="upsell-item-wrap">
-            <p class="h4">{{name}}</p>
-            <p>
-              <span class="truncate-text" data-count="75">{{desc}}</span>
-              <a href="hotel-room.html">More Details</a>
-            </p>
-
-            <table>
-              <tr>
-                <td>
-                  <img src="assets/img/hotel-thumbnail.jpg" alt="{{name}}" class="result-image">
-                </td>
-                <td class="bottom">
-                  <div class="component-price-option">
-                    <p class="price">
-                      {{price}}
-                      <sup>MYR</sup>
-                    </p>
-                    <p>AVG Per Night</p>
-                  </div>
-                  <a href="hotel-room-calendar.html" class="btn btn-primary btn-block">Select</a>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </div>
+          {{> upsell-hotel this}}
         {{/each}}
       </div>
     </div>

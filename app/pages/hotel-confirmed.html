@@ -1,0 +1,88 @@
+---
+current: {
+  pageconfirm: true
+}
+
+hotels: [
+  {
+    name: 'First World Hotel',
+    desc: 'Offers a variety of room types to suit your budget and needs.',
+    price: '275',
+    column: '12'
+  },
+  {
+    name: 'Hotel on the Park',
+    desc: 'Hotel on the Park is a boutique hotel perfect for those who like to stay together. ',
+    price: '281',
+    column: '12'
+  }
+]
+
+table: [
+  {
+    th: 'Booking Number',
+    td: '1040366BB'
+  },
+  {
+    th: 'Booking Date',
+    td: '03 October 2017'
+  },
+  {
+    th: 'Customer Name',
+    td: 'James McAvoy'
+  },
+  {
+    th: 'Customer Contact',
+    td: '012 2065500'
+  },
+  {
+    th: 'Total Amount',
+    td: '15 GP'
+  },
+  {
+    th: 'GP Balance',
+    td: '450 GP'
+  },
+  {
+    th: "Member's Card No.",
+    td: '000000000028'
+  }
+]
+---
+
+{{> bar-search-filter current}}
+
+<div class="page-body">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="item-well item-well-fill booking-well">
+          <h3>Booking Confirmation</h3>
+          <p>Thank you for booking with us and have a pleasant stay at our property.</p>
+
+          <table class="table table-bordered table-booking-confirmed">
+            {{#each table}}
+              <tr>
+                <th>{{th}}</th>
+                <td>{{td}}</td>
+              </tr>
+            {{/each}}
+          </table>
+
+          <a href="#" class="btn btn-primary btn-cont center-block">View Details</a>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="upsell-wrap sidebar">
+          <p class="h4">Don't miss out on the best offers to go with your trip.</p>
+
+          <div class="clearfix">
+            {{#each hotels}}
+              {{> upsell-hotel this}}
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

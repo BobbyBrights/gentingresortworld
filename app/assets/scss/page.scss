@@ -733,7 +733,12 @@ body.landing {
 
   @include breakpoint(tablet) {
     margin: 40px auto 20px;
+    
+    &.sidebar {
+      margin-top: 0;
+    }
   }
+
 
   @media (max-width: $screen-xs-max) {
     > .h4 {
@@ -746,21 +751,19 @@ body.landing {
     padding: 16px 10px;
 
     @include breakpoint(tablet) {
-      padding: 10px 5px;
+      padding: 6px 5px;
       border-radius: $border-radius-base;
     }
   }
 
   .upsell-item {
-    @include make-xs-column(12);
-    @include make-sm-column(4);
     margin-top: 8px;
     margin-bottom: 8px;
     padding-left: 5px;
     padding-right: 5px;
     
     @include breakpoint(tablet) {
-      margin: 0;
+      margin: 4px 0;
     }
   }
 
@@ -849,6 +852,26 @@ body.landing {
   }
 }
 
+.booking-well {
+  padding: 25px !important;
+}
+
+.table-booking-confirmed {
+  tbody > tr {
+    > th {
+      padding: 20px;
+      width: 30%;
+    }
+
+    > td {
+      padding: 20px 40px;
+    }
+  }
+
+  td {
+    background: #FFF;
+  }
+}
 /* MEMBERS */
 @import 'pages/members';
 @import 'pages/others';
