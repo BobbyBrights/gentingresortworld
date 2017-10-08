@@ -208,7 +208,16 @@ $(document).ready(function () {
     });
   }
 
-
+  // FANCYBOX
+  $('.gallery-wrap').lightGallery({
+    thumbnail: true,
+    download: false,
+    counter: false,
+    fullScreen: false,
+    zoom: false,
+    share: false,
+    autoplay: false
+  })
 
 
   // DUMMY FLOW
@@ -237,4 +246,7 @@ $(document).ready(function () {
 
     addProgress();
   })
+
+
+
 })

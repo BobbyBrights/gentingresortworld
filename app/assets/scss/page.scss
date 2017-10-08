@@ -72,13 +72,17 @@
       padding: 32px;
     }
   }
+}
 
-  .hotel-rooms-slideshow {
+.hotel-rooms-slideshow {
+  width: 100%;
+  
+  @include breakpoint(phablet) {
     width: 500px;
-    
-    @include breakpoint(desktop) {
-      width: 700px;
-    }
+  }
+  
+  @include breakpoint(desktop) {
+    width: 700px;
   }
 }
 

@@ -151,7 +151,7 @@
 }
 
 .component-steps-indicator {
-  ul {
+  > ul {
     padding: 0;
     list-style: none;
     background: transparent;
@@ -193,6 +193,23 @@
 
       &:first-child {
         margin-left: 0;
+        float: left;
+      }
+
+      ul {
+        li {
+          &:first-child {
+            margin-left: 5px;
+            
+            &.active {
+              margin-left: 0;
+            }
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
       }
       
       @include breakpoint(tablet) {
@@ -215,11 +232,13 @@
       }
       
       &.chosen-date {
-        margin: 0 0 0 -13px;
+        float: right;
+        margin: 0;
+        /*margin: 0 0 0 -13px;
 
         @include breakpoint(tablet) {
           margin: 0 0 0 -16px;
-        }
+        }*/
 
         &:before {
           content: '';
