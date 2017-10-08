@@ -181,6 +181,12 @@
       }
     }
 
+    &.has-date {
+      li:first-child {
+        float: left;
+      }
+    }
+
     li {
       display: inline-block;
       vertical-align: middle;
@@ -193,7 +199,6 @@
 
       &:first-child {
         margin-left: 0;
-        float: left;
       }
 
       ul {
