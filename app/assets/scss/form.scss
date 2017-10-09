@@ -57,8 +57,19 @@ form {
   }
 
   &.focus {
-    border: 1px solid $purple;
     box-shadow: 0 0 10px rgba(158, 30, 93, 0.15);
+
+    > span, > input {
+      border: 1px solid $purple;
+    }
+
+    span:first-child {
+      border-right: none;
+    }
+
+    input {
+      border-left: none;
+    }
   }
 }
 
@@ -104,7 +115,6 @@ form {
   .input-group {
     .input-group-addon {
       background: white;
-      border: none;
     }
   }
 
