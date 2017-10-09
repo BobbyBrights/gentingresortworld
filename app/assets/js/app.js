@@ -21,12 +21,12 @@ $(document).ready(function () {
       $footer = $('#footer');
 
   if (!md.mobile()) {
-    if ($(window).height() > 645) {
+    if ($(window).height() > 700) {
       $('.page-landing').height($w.height() - $footer.height() - $('.navbar').height());
     }
 
     $(window).on('resize', function () {
-      if ($(window).height() > 645) {
+      if ($(window).height() > 700) {
         $('.page-landing').height($w.height() - $footer.height() - $('.navbar').height());
       }
     });

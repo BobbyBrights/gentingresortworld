@@ -705,7 +705,7 @@ body.landing {
     display: table;
     width: 100%;
     z-index: 2;
-    height: 540px;
+    min-height: 650px;
 
     .container {
       height: 70%;
