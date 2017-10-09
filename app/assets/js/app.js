@@ -220,6 +220,16 @@ $(document).ready(function () {
   })
 
 
+  // Target input group instead of input
+  $('.input-group').find('input').on('focus', function() {
+    $(this).parent().addClass('focus');
+  });
+
+  $('.input-group').find('input').on('blur', function() {
+    $(this).parent().removeClass('focus');
+  })
+
+
   // DUMMY FLOW
   $('#modal-loading').on('shown.bs.modal', function(e) {
     var loader = $(e.currentTarget).find('.mask');
