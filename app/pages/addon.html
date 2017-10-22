@@ -1,0 +1,142 @@
+---
+current: {
+  pageaddon: true
+}
+
+class: 'page-addon'
+
+results: [
+  {
+    name: 'Kitaro - Kojiki & The Universe 2017',
+    date: '16.12.2017'
+  },
+  {
+    name: 'Adventures of the Monkey King - The Golden Hooped Rod (9pm)',stay together.',
+    date: '11.11.2017 - 01.01.2018'
+  },
+  {
+    name: '2017 New Year Eve Countdown Concert with Grasshopper',
+    date: '16.12.2017'
+  },
+  {
+    name: 'Lala Hsu "You Made My Day" World Tour Concert 2017',
+    date: '18.11.2017'
+  },
+  {
+    name: '18th Malaysia National Lion Dance Championship 2017 (Semi Final)',
+    date: '02.12.2017'
+  },
+  {
+    name: 'Air Supply Live in Malaysia',
+    date: '02.12.2017'
+  }
+]
+---
+
+{{> bar-search-filter current}}
+
+<div class="page-body page-shows">
+  <div class="container">
+    <div class="layout-purchase">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="show-info upsell-wrap">
+            <p class="head">Add-on: Shows</p>
+            <hr>
+            <p class="text-center">You may also be interested in the following:</p>
+
+            <div class="clearfix show-upsell-wrap">
+              {{#each results}}
+                <div class="results-item show-results">
+                  <div class="row">
+                    <div class="results-wrap">
+                      <table>
+                        <tr>
+                          <td class="image-holder" rowspan="2">
+                            <img src="assets/img/show-thumbnail.jpg" alt="{{name}}" class="result-image">
+                          </td>
+                          <td class="results-desc top">
+                            <p class="h3">{{name}}</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="results-desc bottom">
+                            <p>
+                              <strong>Date: {{date}}</strong>
+                              <br>
+                              <a href="typez-shows-ticket.html">More Details</a>
+                              <br>
+                              <a href="#">View Floor Plan</a>
+                            </p>
+                            <a href="#" class="btn btn-primary btn-block">Select</a>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-8 column">
+          <div class="clearfix sections">
+            <div class="col-sm-6">
+              <table class="component-review-price">
+                <tr>
+                  <th colspan="2">
+                    <h3>
+                      Hotel
+                      <button class="icon icon-close-circle"></button>
+                    </h3>
+                  </th>
+                </tr>
+                <tr>
+                  <th>Hotel</th>
+                  <td>Genting Grand</td>
+                </tr>
+                <tr>
+                  <th>Room</th>
+                  <td>Premier Executive Suite</td>
+                </tr>
+                <tr>
+                  <th>Check In</th>
+                  <td>5th August 2017</td>
+                </tr>
+                <tr>
+                  <th>Check Out</th>
+                  <td>7th August 2017</td>
+                </tr>
+                <tr>
+                  <th>No of Room(s)</th>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <th>No of Night(s)</th>
+                  <td>1</td>
+                </tr>
+                <tr class="review-total">
+                  <th>Total</th>
+                  <td>998 MYR</td>
+                </tr>
+                <tr class="review-total grand-total">
+                  <th>Grand Total</th>
+                  <td>
+                    <strong>1453.40 MYR</strong>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="col-sm-6">
+              <h3 class="text-center">Payment</h3>
+              {{> payment-method}}
+              <div class="btn-cta-wrap">
+                <a href="hotel-price.html" class="btn btn-gray">Back</a>
+                <a href="hotel-confirmed.html" class="btn btn-primary">Payment</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

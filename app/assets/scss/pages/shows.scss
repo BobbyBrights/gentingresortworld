@@ -175,6 +175,42 @@
 
   a {
     color: $yellow;
+
+    &.btn {
+      color: #FFF;
+    }
+  }
+
+  &.upsell-wrap {
+    margin-top: 0;
+
+    .show-upsell-wrap {
+      max-height: 529px;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    .results-item {
+      background: transparent;
+      border-bottom: 1px solid $purple-line;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .results-wrap {
+        border: none;
+      }
+
+      .h3 {
+        font-size: 20px;
+      }
+    }
+
+    .show-results.results-item .image-holder {
+      width: 120px;
+      padding-right: 10px;
+    }
   }
 }
 
