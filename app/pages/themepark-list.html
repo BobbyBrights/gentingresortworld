@@ -74,7 +74,7 @@ results: [
                         <strong>Date: {{date}}</strong>
                       </p>
                       <ul>
-                        <li><a href="typez-shows-ticket.html" class="btn btn-default">More Details</a></li>
+                        <li><a href="#" class="btn btn-default" data-toggle="modal" data-target="#modal-moredetails">More Details</a></li>
                         <li><a href="#" class="btn btn-primary btn-block">Select</a></li>
                       </ul>
                     {{/if}}
@@ -88,3 +88,5 @@ results: [
     </div>
   </div>
 </div>
+
+{{>modal-moredetails}}

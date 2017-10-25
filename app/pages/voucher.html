@@ -1,0 +1,55 @@
+---
+current: {
+  pageaddon: true
+}
+
+class: 'page-voucher'
+---
+
+{{> bar-search-filter current}}
+
+<div class="page-body">
+  <div class="container">
+    <div class="layout-purchase purple">
+      <div class="clearfix">
+        <h3 class="header-inside">Voucher/Promo Redemption Code</h3>
+        {{#forloop 3}}
+        <div class="item">
+          <table>
+            <tr>
+              <td rowspan="2" class="voucher-image">
+                <img src="assets/img/hotel-thumbnail-01.jpg" alt="">
+              </td>
+              <td rowspan="2">
+                <p class="h3">PLAYSTUDIOS - FWH</p>
+                <p>
+                  <strong>Playstudios</strong>
+                </p>
+                <p>
+                  <strong>Your entitlement:</strong>
+                </p>
+                <ul>
+                  <li>One Night Stay</li>
+                  <li>Room Only</li>
+                </ul>
+              </td>
+              <td class="voucher-price">
+                <p class="label">VOUCHER NO. PSF0001737</p>
+                <p>From <span>0 MYR</span> per night</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="voucher-price">
+                <a href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modal-error">Select</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        {{/forloop}}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{{>modal-error}}
