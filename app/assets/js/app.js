@@ -196,7 +196,8 @@ $(document).ready(function () {
     prevArrow: '<button type="button" class="slick-prev"><span class="icon icon-arrow-left"></span><span>Previous</span></button>',
     nextArrow: '<button type="button" class="slick-next"><span class="icon icon-arrow-right"></span><span>Next</span></button>',
     respondTo: 'slider',
-    mobileFirst: true
+    mobileFirst: true,
+    autoplaySpeed: 8000
   });
 
   if ((md.mobile() && md.tablet()) || (!md.mobile() && !md.tablet())) {
