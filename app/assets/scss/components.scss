@@ -734,7 +734,7 @@
 }
 
 .ui-datepicker {
-  background: $purple;
+  background: $darkpurple;
   border-radius: $border-radius-large;
   padding: 20px;
   box-sizing: border-box;
@@ -892,7 +892,7 @@
 
     .ui-datepicker-inline.ui-datepicker {
       padding: 20px;
-      background: darken($purple, 5);
+      background: darken($purple, 10);
 
       tbody > tr:first-child > td.date-range-selected:before {
         top: 6px;
