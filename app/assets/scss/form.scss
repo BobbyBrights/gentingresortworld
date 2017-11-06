@@ -180,6 +180,10 @@ form {
 }
 
 .form-wide {
+  @media (max-width: $screen-xs-max) {
+    padding: 0 10px;
+  }
+
   .form-wrap {
     padding: 25px;
 
