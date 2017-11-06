@@ -87,10 +87,14 @@
 .btn-link {
   color: $gray-cart;
   font-weight: $weight-reg;
-  font-size: 12px;
+  /*font-size: 12px;*/
 
   &:hover {
     color: $gray-cart;
+  }
+
+  .purple &:hover {
+    color: #FFF;
   }
 }
 
