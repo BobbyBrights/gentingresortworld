@@ -503,6 +503,13 @@
       }
     }
   }
+
+  &.hotel-rooms-slideshow .slick-slide img {
+    @media (max-width: $screen-xs-max) {
+      width: auto !important;
+      height: auto !important;
+    }
+  }
 }
 
 .component-preloader {

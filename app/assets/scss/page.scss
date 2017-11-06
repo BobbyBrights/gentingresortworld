@@ -56,9 +56,17 @@
   }
 
   .hotel-rooms-intro {
-    h2 + p {
-      font-size: 18px;
-      margin-bottom: 30px;
+    div {
+      p {
+        font-size: 14px !important;
+        color: #4a4a4a !important;
+        font-family: $font-family-base !important;
+
+        &:first-child {
+          font-size: 18px !important;
+          margin-bottom: 30px !important;
+        }
+      }
     }
   }
 }
@@ -90,13 +98,24 @@
 .hotel-rooms-item {
   @include clearfix;
 
-  @media (max-width: $screen-xs-max) {
-    table, tbody, tr, td {
-      display: block;
+  table {
+    width: 100%;
+  }
 
-      &.hotel-rooms-price {
-        display: table-cell;
-        width: 1%;
+  .hotel-rooms-price table {
+    width: 100%;
+
+    td {
+      display: table-cell;
+      width: 1%;
+
+      + td {
+        padding: 0 5px;
+      }
+
+      @include breakpoint(tablet) {
+        display: block;
+        width: 100%;
       }
     }
   }
@@ -115,6 +134,7 @@
       padding: 0 10px;
     }
   }
+
   .hotel-rooms-image {
     width: 100%;
     padding: 0;
@@ -136,21 +156,7 @@
     line-height: 16px;
 
     @include breakpoint(tablet) {
-      /*width: 340px;*/
-    }
-  }
-
-  .hotel-rooms-rate {
-    @include breakpoint(tablet) {
-      width: 246px;
-    }
-
-    @include breakpoint(desktop) {
-      width: 376px;
-    }
-
-    .item-well {
-      min-height: 174px;
+      width: calc(100% - 410px);
     }
   }
 

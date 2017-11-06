@@ -63,34 +63,42 @@ results: [
     {{#each results}}
       <div class="col-sm-6 results-item hotel-results">
         <div class="row">
-          <div class="results-wrap">
-            <table>
-              <tr class="visible-xs">
-                <td colspan="2">
-                  <p class="h3">{{name}}</p>
-                  <p class="result-description">
-                    <span class="truncate-text" data-count="75">{{desc}}</span>
-                    <a href="hotel-room.html" class="visible-xs-inline">More Details</a>
-                  </p>
-                </td>
-              </tr>
-              <tr>
-                <td rowspan="2" class="image-holder hidden-xs">
-                  <img src="assets/img/hotel-thumbnail.jpg" alt="{{name}}" class="result-image">
-                </td>
-                <td class="results-desc top">
-                  <div class="top-height hidden-xs">
-                    <p class="h3">{{name}}</p>
-                    <p class="result-description">
+          <div class="results-wrap clearfix">
+            
+            <div class="item-result-thumbnail">
+              <div class="item-result-thumbnail-holder">
+                <img src="assets/img/hotel-thumbnail.jpg" alt="{{name}}" class="result-image">
+              </div>
+            </div>
+            <!-- .item-result-thumbnail -->
+
+            
+            <div class="item-result-description">
+              <table>
+                <tr>
+                  <td valign="top">
+                    <p class="h3 item-result-name">{{name}}</p>
+                    <p>
                       <span class="truncate-text" data-count="75">{{desc}}</span>
+                      <a href="#" class="visible-xs-inline">More details</a>
                     </p>
-                  </div>
-                  <div class="image-holder visible-xs">
-                    <img src="assets/img/hotel-thumbnail.jpg" alt="{{name}}" class="result-image">
-                  </div>
-                </td>
-                <td class="results-desc top">
-                  <div class="component-price-option">
+                  </td>
+                </tr>
+                <tr class="hidden-xs">
+                  <td valign="bottom">
+                    <a href="hotel-room.html" class="btn btn-default">More Details</a>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <!-- .item-result-description -->
+
+            
+            <div class="item-result-price">
+              <table>
+                <tr>
+                  <td valign="top">
+                    <div class="component-price-option">
                     {{#if @last}}
                       <p class="price">Fully Booked</p>
                     {{else}}
@@ -103,25 +111,20 @@ results: [
                         <span class="text-uppercase">{{room}}</span>
                       </p>
                     {{/if}}
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="bottom">
                     {{#unless @last}}
-                      <a href="hotel-room-calendar.html" class="visible-xs btn btn-primary btn-block">
+                      <a href="hotel-room-calendar.html" class="btn btn-primary btn-block">
                         Select
                       </a>
                     {{/unless}}
-                  </div>
-                </td>
-              </tr>
-              <tr class="hidden-xs">
-                <td class="results-desc bottom"><a href="hotel-room.html" class="btn btn-default">More Details</a></td>
-                <td class="results-desc bottom">
-                  {{#unless @last}}
-                    <a href="hotel-room-calendar.html" class="btn btn-primary btn-block">
-                      Select
-                    </a>
-                  {{/unless}}
-                </td>
-              </tr>
-            </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <!-- .item-result-price -->
           </div>
         </div>
 
@@ -129,3 +132,15 @@ results: [
     {{/each}}
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+

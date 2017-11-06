@@ -531,3 +531,10 @@
 
   }
 }
+
+.modal-error {
+  .modal-footer {
+    border: none;
+    padding-bottom: 0;
+  }
+}

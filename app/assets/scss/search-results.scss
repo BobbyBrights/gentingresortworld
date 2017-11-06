@@ -16,6 +16,7 @@
 
   .results-wrap {
     padding: 10px;
+    position: relative;
 
     @include breakpoint(tablet) {
       @include clearfix();
@@ -39,6 +40,10 @@
       display: block;
       float: left;
     }
+  }
+
+  .item-result-name {
+    margin-top: 0;
   }
 }
 
@@ -106,8 +111,75 @@
   }
 
   td:last-child {
+    width: 100%;
+
     @include breakpoint(tablet) {
       width: 120px;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    .results-wrap {
+      height: 155px;
+    }
+  }
+
+  .item-result-thumbnail, .item-result-price {
+    margin-top: 100px;
+
+    @include breakpoint(tablet) {
+      margin-top: 0;
+    }
+  }
+
+  .item-result-thumbnail {
+    width: 200px;
+    overflow: hidden;
+
+    img {
+      max-height: none;
+      width: 100;
+    }
+    
+    @include breakpoint(tablet) {
+      width: 175px;
+    }
+  }
+
+  .item-result-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 10px;
+    margin-top: 15px;
+
+    @include breakpoint(tablet) {
+      width: calc(100% - 295px);
+      margin-top: 0;
+    }
+  }
+
+  .item-result-price {
+    width: calc(100% - 220px);
+    margin-left: 20px;
+
+    @include breakpoint(tablet) {
+      width: 120px;
+      margin-left: 0;
+    }
+  }
+
+  .item-result-thumbnail, .item-result-price, .item-result-description {
+    float: left;
+
+    @include breakpoint(tablet) {
+      position: static;
+      height: 100%;
+    }
+
+    table {
+      height: 100%;
     }
   }
 }
@@ -130,6 +202,7 @@
   }
 }
 
+/* to delete */
 .image-holder {
   vertical-align: top;
   
@@ -144,9 +217,15 @@
   }
 
   .hotel-results & {
-    width: 175px;
+    width: 100%;
+    vertical-align: middle;
+
+    @include breakpoint(tablet) {
+      width: 175px;
+    }
   }
 }
+/* to delete */
 
 .themepark-results {
   ul > li {

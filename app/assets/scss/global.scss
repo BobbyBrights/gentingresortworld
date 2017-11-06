@@ -439,7 +439,7 @@ ul.separator {
     display: inline-block;
   } 
 
-  button {
+  button, input[type="submit"] {
     background: none;
     border: none;
     text-transform: uppercase;
@@ -469,6 +469,26 @@ ul.separator {
 
   .title {
     text-align: center;
+  }
+
+  span {
+    &.next:after, &.prev:after {
+      position: absolute;
+    }
+
+    &.next input[type="submit"] {
+      margin-left: 10px;
+    }
+
+    &.prev input[type="submit"] {
+      margin-right: 10px;
+    }
+  }
+
+  input[type="submit"] {
+    text-indent: -9999px;
+    width: 24px;
+    height: 34px;
   }
 }
 
@@ -697,6 +717,7 @@ ul {
   @include clearfix;
   @include breakpoint(tablet) {
     background-position: 70% 0;
+    padding: 5px 20px 13px;
   }
 
   p {
@@ -725,6 +746,7 @@ ul {
 
       @include breakpoint(tablet) {
         padding-left: 50px;
+        line-height: 34px;
       }
     }
   }
