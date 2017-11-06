@@ -108,9 +108,11 @@
     td {
       display: table-cell;
       width: 1%;
+      padding-bottom: 10px;
 
       + td {
-        padding: 0 5px;
+        padding-left: 5px;
+        padding-right: 5px;
       }
 
       @include breakpoint(tablet) {
@@ -127,11 +129,11 @@
   @include breakpoint(tablet) {
     border: 1px solid $gray-line;
     margin: 10px 0;
-    padding: 8px;
+    padding: 20px 15px;
 
     > div {
       float: left;
-      padding: 0 10px;
+      padding: 0 20px;
     }
   }
 
