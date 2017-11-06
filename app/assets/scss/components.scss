@@ -342,6 +342,13 @@
     font-size: 36px !important;
     line-height: 32px !important;
     margin-bottom: 0;
+    text-transform: uppercase;
+
+    span {
+      font-size: 26px;
+      line-height: 26px !important;
+      display: block;
+    }
 
     sup {
       color: $text-color;

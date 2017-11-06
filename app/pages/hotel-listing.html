@@ -79,16 +79,16 @@ results: [
                   <td valign="top">
                     <p class="h3 item-result-name">{{name}}</p>
                     <p>
-                      <span class="truncate-text" data-count="75">{{desc}}</span>
-                      <a href="#" class="visible-xs-inline">More details</a>
+                      <span class="truncate-text" data-count="100">{{desc}}</span>
+                      <!-- <a href="#" class="visible-xs-inline">More details</a> -->
                     </p>
                   </td>
                 </tr>
-                <tr class="hidden-xs">
+                <!-- <tr class="hidden-xs">
                   <td valign="bottom">
                     <a href="hotel-room.html" class="btn btn-default">More Details</a>
                   </td>
-                </tr>
+                </tr> -->
               </table>
             </div>
             <!-- .item-result-description -->
@@ -100,7 +100,7 @@ results: [
                   <td valign="top">
                     <div class="component-price-option">
                     {{#if @last}}
-                      <p class="price">Fully Booked</p>
+                      <p class="price"><span>Fully Booked</span></p>
                     {{else}}
                       <p class="price">
                         {{price}}
