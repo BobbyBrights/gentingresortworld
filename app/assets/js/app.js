@@ -119,12 +119,23 @@ $(document).ready(function () {
 
   
 
-  
-
 
   // INLINE DATE PICKER
   $('.datepicker').datepicker({
     minDate: 0
+  });
+
+  $('.datepicker-bday').datepicker({
+    changeMonth: true,
+    changeYear: true,
+    yearRange: '1930:1999',
+    dateFormat: 'dd/mm/yy',
+    beforeShow: function (inp, inst) {
+      $(inst.dpDiv[0]).addClass('ui-datepicker-bday');
+    },
+    onClose: function (str, inst) {
+      $(inst.dpDiv[0]).removeClass('ui-datepicker-bday');
+    }
   });
 
   $('.datepicker-inline').datepicker({

@@ -769,6 +769,16 @@
     .ui-datepicker-year {
       font-weight: $weight-light;
     }
+
+    select {
+      font-weight: $weight-light;
+      background: transparent;
+      height: 30px;
+      border: 1px solid #FFF;
+      width: 30%;
+      padding-top: 10px;
+      margin: 0 5px 20px;
+    }
   }
 
   .ui-datepicker-group {
@@ -985,10 +995,20 @@
   }
 
   @include breakpoint(tablet) {
-    width: 674px !important;
+    &:not(.ui-datepicker-bday) {
+      width: 674px !important;
+    }
 
     .ui-datepicker-calendar {
       width: 290px;
+    }
+  }
+
+  &.ui-datepicker-bday {
+    .ui-datepicker-header {
+      a.ui-state-disabled {
+        display: none;
+      }
     }
   }
 }
