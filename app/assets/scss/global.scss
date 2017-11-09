@@ -116,7 +116,7 @@ hr {
 
 #toggle-menu {
   top: 6px;
-  
+
   .modal-open & {
     span:nth-child(1) {
       top: 18px;
@@ -156,7 +156,7 @@ hr {
   top: $navbar-height;
   z-index: 10;
   right: auto;
-  left: -50%;
+  left: -100%;
   width: 100%;
   @include transition(left, 0.8s);
   /*display: none;*/
@@ -407,7 +407,7 @@ hr {
 
   .hasIndicator + .bar-select {
     @include breakpoint(tablet) {
-      width: 25%;
+      width: 19%;
     }
   }
 
@@ -436,7 +436,7 @@ hr {
   }
 
   > .container > table td:last-child {
-    width: 240px;
+    width: 180px;
 
     .btn {
       width: 100%;

@@ -218,11 +218,11 @@ form {
 
     @include breakpoint(tablet) {
       &.search-type {
-        width: 46%;
+        width: 35%;
       }
 
       &.search-date {
-        width: 20%;
+        width: 15%;
       }
 
       &.search-guestroom {

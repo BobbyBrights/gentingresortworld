@@ -26,15 +26,25 @@ class: landing
               </div>
             </div>
 
-            <div class="form-group search-date">
+            <div class="form-group search-date datepicker-range">
               <label for="filter-date" class="sr-only">Date:</label>
-              <div class="input-group" id="datepicker-range">
+              <div class="input-group">
                 <span class="input-group-addon">
                   <span class="icon icon-calendar"></span>
                 </span>
 
-                <input id="" type="text" class="form-control input" placeholder="Date">
-                <div class="range"></div>
+                <input id="datepicker-range-from" type="text" class="form-control input" placeholder="Start Date">
+              </div>
+            </div>
+
+            <div class="form-group search-date datepicker-range">
+              <label for="filter-date" class="sr-only">Date:</label>
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <span class="icon icon-calendar"></span>
+                </span>
+
+                <input id="datepicker-range-to" type="text" class="form-control input" placeholder="End Date">
               </div>
             </div>
 
