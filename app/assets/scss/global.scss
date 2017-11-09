@@ -71,19 +71,63 @@ hr {
 
 /* MENU */
 .menu {
-  background: $purple-header;
+  background: transparent;
   font-weight: $weight-reg;
   padding: 1.875em 0;
   position: absolute;
-  right: 0;
   bottom: 0;
   top: $navbar-height;
-  left: 0;
   z-index: 10;
-  display: none;
+  right: auto;
+  left: -50%;
+  width: 100%;
+  @include transition(left, 0.8s);
+  /*display: none;*/
+
+  .container {
+    @include breakpoint(tablet) {
+      background: $purple-header;
+      width: 50%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+      ul {
+        width: 50%;
+        position: absolute;
+        right: 120px;
+      }
+    }
+  }
+
+
+  &:before {
+    @media (max-width: $screen-xs-max) {
+
+      @include transition(left, 0.8s);
+      background: $purple-header;
+      content: '';
+      display: block;
+      position: absolute;
+      left: -50%;
+      top: 0;
+      width: 80%;
+      height: 100%;
+      z-index: -1;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+  }
 
   &.in {
-    display: block;
+    right: auto;
+    left: 0px;
+
+    &:before {
+      left: 0;
+    }
+    /*display: block;*/
   }
 
   ul {
@@ -363,7 +407,7 @@ hr {
     }
 
     a {
-      color: #999999;
+      color: #FFF;
     }
   }
 }
