@@ -1,0 +1,51 @@
+---
+class: 'shows-selection'
+overlay: 'true'
+
+current: {
+  'pageconfirm': true,
+  'type': 'typea'
+  }
+
+table: [
+  {
+    th: 'Booking Number',
+    td: '1040366BB'
+  },
+  {
+    th: 'Booking Date',
+    td: '03 October 2017'
+  },
+  {
+    th: 'Amount',
+    td: 'MYR 100'
+  }
+]
+---
+
+{{> steps-indicator-shows-typea current}}
+
+
+<div class="page-body">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="item-well item-well-fill booking-well">
+          <h3>Booking Confirmation</h3>
+          <p>Thank you for booking with us and your payment transaction has been completed.</p>
+
+          <table class="table table-bordered table-booking-confirmed">
+            {{#each table}}
+              <tr>
+                <th>{{th}}</th>
+                <td>{{td}}</td>
+              </tr>
+            {{/each}}
+          </table>
+
+          <a href="#" class="btn btn-primary btn-cont center-block">View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -151,6 +151,21 @@
 }
 
 .component-steps-indicator {
+  &.type-a {
+    ul {
+      width: 100%;
+      background: #FFF;
+      
+      @media (max-width: $screen-xs-max) {
+        li:not(.active) {
+          span:not(.badge) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
   > ul {
     padding: 0;
     list-style: none;
