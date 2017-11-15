@@ -20,6 +20,10 @@ $(document).ready(function () {
   var $body = $('body'),
       $footer = $('#footer');
 
+  // MAKE STICY FOOTER IF CONTENT IS SHORT
+  var pageHeight = $body.outerHeight(),
+      windowHeight = $w.outerHeight();
+
   if (!md.mobile()) {
     if ($(window).height() > 700) {
       $('.page-landing').height($w.height() - $footer.height() - $('.navbar').height());
@@ -30,6 +34,12 @@ $(document).ready(function () {
         $('.page-landing').height($w.height() - $footer.height() - $('.navbar').height());
       }
     });
+
+    if (pageHeight < windowHeight) {
+      $footer.addClass('sticky');
+    } else {
+      $footer.removeClass('sticky');
+    }
   }
 
 
@@ -58,8 +68,6 @@ $(document).ready(function () {
     var str = truncate($(this).text(), $(this).attr('data-count'));
     $(this).text(str);
   });
-
-
   
 
   // RANGE DATEPICKER

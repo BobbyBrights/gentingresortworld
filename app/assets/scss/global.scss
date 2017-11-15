@@ -657,8 +657,18 @@ ul.separator {
 }
 
 /* FOOTER */
+.sticky {
+  position: fixed;
+  left: 0;
+  width: 100%;
+}
+
 .footer {
   font-weight: $weight-reg;
+
+  &.sticky {
+    bottom: 0;
+  }
 
   ul {
     margin-bottom: 0;
