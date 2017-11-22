@@ -68,6 +68,9 @@ $(document).ready(function () {
     var str = truncate($(this).text(), $(this).attr('data-count'));
     $(this).text(str);
   });
+
+  // STICKY
+  // $('#btn-booknow').sticky().on('sticky-start', function() { console.log("Started"); });;
   
 
   // RANGE DATEPICKER
@@ -86,43 +89,25 @@ $(document).ready(function () {
     return date;
   }
 
-  if (!md.mobile()) {
-    dateRangeFrom.datepicker({
-      minDate: 0,
-      defaultDate: "+1w",
-      numberOfMonths: 2,
-      dateFormat: 'dd/mm/yy'
-    }).on( "change", function() {
-      dateRangeTo.datepicker( "option", "minDate", getDate( this ) );
-    });
-      
-    dateRangeTo.datepicker({
-      minDate: 0,
-      defaultDate: "+1w",
-      numberOfMonths: 2,
-      dateFormat: 'dd/mm/yy',
-    }).on( "change", function() {
-      dateRangeFrom.datepicker( "option", "maxDate", getDate( this ) );
-    });
-  } else {
-    dateRangeFrom.datepicker({
-      minDate: 0,
-      defaultDate: "+1w",
-      numberOfMonths: 1,
-      dateFormat: 'dd/mm/yy'
-    }).on( "change", function() {
-      dateRangeTo.datepicker( "option", "minDate", getDate( this ) );
-    });
-      
-    dateRangeTo.datepicker({
-      minDate: 0,
-      defaultDate: "+1w",
-      numberOfMonths: 1,
-      dateFormat: 'dd/mm/yy',
-    }).on( "change", function() {
-      dateRangeFrom.datepicker( "option", "maxDate", getDate( this ) );
-    });
-  }
+  dateRangeFrom.datepicker({
+    minDate: 0,
+    defaultDate: "+1w",
+    dateFormat: 'dd/mm/yy',
+    firstDay: 1
+  }).on( "change", function() {
+    dateRangeTo.datepicker( "option", "minDate", getDate( this ) );
+  });
+    
+  dateRangeTo.datepicker({
+    minDate: 0,
+    defaultDate: "+1w",
+    dateFormat: 'dd/mm/yy',
+    firstDay: 1
+  }).on( "change", function() {
+    dateRangeFrom.datepicker( "option", "maxDate", getDate( this ) );
+  });
+
+  
 
 
   
@@ -148,6 +133,7 @@ $(document).ready(function () {
 
   $('.datepicker-inline').datepicker({
     minDate: 0,
+    firstDay: 1,
     altFormat: 'dd/mm/yyyy',
     onSelect: function(dateText, inst) { 
       $('#showDate').val(dateText);

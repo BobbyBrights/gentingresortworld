@@ -431,12 +431,19 @@
     width: 100%;
 
     @include breakpoint(tablet) {
-      width: calc(100% - 547px);
+      width: calc(100% - 517px);
       padding: 0 16px;
     }
   }
 
   .ticket-column-image {
+    padding: 0;
+    width: 100%;
+
+    @include breakpoint(tablet) {
+      width: 517px;
+    }
+
     td {
       vertical-align: top;
     }

@@ -151,6 +151,8 @@
 }
 
 .component-steps-indicator {
+  display: inline-block;
+
   &.type-a {
     ul {
       width: 100%;
@@ -175,11 +177,11 @@
     height: 40px;
     font-size: 12px;
     padding: 4px;
-    text-align: center;
+    text-align: left;
 
     @include breakpoint(tablet) {
       background: #FFF;
-      width: 360px;
+      /*width: 360px;*/
     }
 
     .modal-shows-selection & {
@@ -207,7 +209,7 @@
       vertical-align: middle;
       height: 32px;
       position: relative;
-      margin: 0 13px;
+      margin: 0 5px;
       text-transform: uppercase;
       font-weight: $weight-reg;
       color: $text-color;
@@ -216,28 +218,8 @@
         margin-left: 0;
       }
 
-      ul {
-        li {
-          &:first-child {
-            margin-left: 5px;
-            
-            &.active {
-              margin-left: 0;
-            }
-          }
-
-          &:last-child {
-            margin-right: 0;
-          }
-        }
-      }
-      
-      @include breakpoint(tablet) {
-        margin: 0 12px;
-
-        &.active {
-          margin: 0 16px 0 7px;
-        }
+      &:last-child {
+        margin-right: 0;
       }
 
       + li:before {
@@ -247,42 +229,15 @@
         font-weight: bold;
         font-size: 8px;
         position: absolute;
-        left: -18px;
+        left: -10px;
         top: 11px;
-      }
-      
-      &.chosen-date {
-        float: right;
-        margin: 0;
-        /*margin: 0 0 0 -13px;
-
-        @include breakpoint(tablet) {
-          margin: 0 0 0 -16px;
-        }*/
-
-        &:before {
-          content: '';
-        }
-
-        div {
-          padding: 8px 7px 7px;
-
-          &:before {
-            content: $icon-calendar;
-            font-family: 'icons';
-            margin-right: 5px;
-          }
-        }
-
-        span:after {
-          border-bottom: none;
-          margin: 0;
-        }
       }
 
       > div {
         padding: 8px 7px 7px;
         border-radius: $border-radius-base;
+        background: #9b9b9b;
+        color: #FFF;
       }
 
       .badge {
@@ -995,10 +950,6 @@
   }
 
   @include breakpoint(tablet) {
-    &:not(.ui-datepicker-bday) {
-      width: 674px !important;
-    }
-
     .ui-datepicker-calendar {
       width: 290px;
     }

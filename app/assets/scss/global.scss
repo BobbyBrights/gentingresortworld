@@ -401,22 +401,22 @@ hr {
     width: 65%;
     
     @include breakpoint(tablet) {
-      width: 50%;
-    }
-  }
-
-  .hasIndicator + .bar-select {
-    @include breakpoint(tablet) {
-      width: 19%;
+      width: auto;
     }
   }
 
   .bar-date {
-    width: 160px;
+    .input-group-addon {
+      padding-right: 0;
+    }
+
+    input {
+      padding-left: 4px;
+    }
   }
 
-  .bar-promo {
-    width: 183px;
+  .bar-promo, .bar-date {
+    width: 140px;
   }
 }
 
@@ -434,12 +434,20 @@ hr {
   .btn {
     font-size: 14px;
   }
+}
 
-  > .container > table td:last-child {
-    width: 180px;
+.bar-search-with-indicator {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  width: 100%;
 
-    .btn {
-      width: 100%;
+  > li {
+    display: inline-block;
+    vertical-align: middle;
+
+    &:first-child {
+      margin-right: 3px;
     }
   }
 }

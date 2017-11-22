@@ -1,52 +1,25 @@
 <div class="component-steps-indicator has-date">
   <ul>
-    <li>
-      <ul>
-        <li class="{{#if pagehotels}} active{{/if}}">
-          <div>
-            {{#if pagehotels}}
-              <span>Hotels</span>
-              {{else}}
-              <span class="badge">1</span>
-            {{/if}}
-          </div>
-        </li>
-        <li class="{{#if pageroom}} active{{/if}}">
-          <div>
-            {{#if pageroom}}
-              <span>Room</span>
-              {{else}}
-              <span class="badge">2</span>
-            {{/if}}
-          </div>
-        </li>
-
-        <li class="{{#if pageaddon}} active{{/if}}">
-          <div>
-            {{#if pageaddon}}
-              <span>Add-on</span>
-              {{else}}
-              <span class="badge">3</span>
-            {{/if}}
-          </div>
-        </li>
-
-        <li class="{{#if pageconfirm}} active{{/if}}">
-          <div>
-            {{#if pageconfirm}}
-              <span>Checkout</span>
-              {{else}}
-              <span class="badge">4</span>
-            {{/if}}
-          </div>
-        </li>
-      </ul>
+    <li class="{{#if pagehotels}} active{{/if}}">
+      <div>
+        <span>Hotels</span>
+      </div>
+    </li>
+    <li class="{{#if pageroom}} active{{/if}}">
+      <div>
+        <span>Room</span>
+      </div>
     </li>
 
-
-    <li class="active chosen-date">
+    <li class="{{#if pageaddon}} active{{/if}}">
       <div>
-        <span>17-19 Aug</span>
+        <span>Add-on</span>
+      </div>
+    </li>
+
+    <li class="{{#if pageconfirm}} active{{/if}}">
+      <div>
+        <span>Checkout</span>
       </div>
     </li>
   </ul>

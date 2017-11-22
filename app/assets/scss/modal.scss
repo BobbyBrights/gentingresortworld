@@ -54,25 +54,14 @@
     box-shadow: none;
     border: none;
   }
-
-  .modal-dialog {
-    width: 320px;
-    
-    @include breakpoint(tablet) {
-      width: 765px;
-    }
+  
+  .wrap {
+    background: $darkpurple;
+    padding: 20px 30px 30px;
   }
 
-  .column-setting {
-    @include make-sm-column(6);
-    .wrap {
-      background: $darkpurple;
-      padding: 20px 30px 30px;
-    }
-
-    .btn {
-      margin-top: 20px;
-    }
+  .btn {
+    margin-top: 20px;
   }
 
   .h3, h3 {
@@ -132,14 +121,17 @@
       border-radius: $border-radius-base;
       background: $purple;
 
-      > .header {
-        border-color: $purple-line;
-        font-weight: $weight-reg;
+      h1 {
         font-size: 20px;
 
         @include breakpoint(tablet) {
           font-size: 36px;
         }
+      }
+
+      > .header {
+        border-color: $purple-line;
+        font-weight: $weight-reg;
       }
     }
   }

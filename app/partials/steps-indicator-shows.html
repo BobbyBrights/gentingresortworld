@@ -1,39 +1,30 @@
 <div class="component-steps-indicator has-date">
   <ul>
-    <li>
-      <ul>
-        <li class="{{#if pageticket}} active{{/if}}">
-          <div>
-            {{#if pageticket}}
-              <span>Ticket Selection</span>
-              {{else}}
-              <span class="badge">1</span>
-            {{/if}}
-          </div>
-        </li>
-        <li class="{{#if pagecheckout}} active{{/if}}">
-          <div>
-            {{#if pagecheckout}}
-              <span>Express Checkout</span>
-              {{else}}
-              <span class="badge">2</span>
-            {{/if}}
-          </div>
-        </li>
-        <li class="{{#if pagethankyou}} active{{/if}}">
-          <div>
-            {{#if pagethankyou}}
-              <span>Thank You</span>
-              {{else}}
-              <span class="badge">3</span>
-            {{/if}}
-          </div>
-        </li>
-      </ul>
-    </li>
-    <li class="active chosen-date">
+    <li class="{{#if pageticket}} active{{/if}}">
       <div>
-        <span>17-19 Aug</span>
+        {{#if pageticket}}
+          <span>Ticket Selection</span>
+          {{else}}
+          <span class="badge">1</span>
+        {{/if}}
+      </div>
+    </li>
+    <li class="{{#if pagecheckout}} active{{/if}}">
+      <div>
+        {{#if pagecheckout}}
+          <span>Express Checkout</span>
+          {{else}}
+          <span class="badge">2</span>
+        {{/if}}
+      </div>
+    </li>
+    <li class="{{#if pagethankyou}} active{{/if}}">
+      <div>
+        {{#if pagethankyou}}
+          <span>Thank You</span>
+          {{else}}
+          <span class="badge">3</span>
+        {{/if}}
       </div>
     </li>
   </ul>

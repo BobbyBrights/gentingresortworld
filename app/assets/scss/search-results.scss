@@ -160,6 +160,12 @@
     }
   }
 
+  .item-result-deals {
+    color: $purple;
+    font-style: italic;
+    font-weight: $weight-bold;
+  }
+
   .item-result-price {
     width: calc(100% - 220px);
     margin-left: 20px;

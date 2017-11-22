@@ -1,13 +1,33 @@
 <div class="header_bar-secondary header-bar">
   <div class="container">
-    <table>
+    <ul class="bar-search-with-indicator">
+      <li>
+        {{> steps-indicator-hotel}}
+      </li>
+      <li>
+        <table>
+          <tr>
+            {{> bar-search-partial}}
+          </tr>
+        </table>
+      </li>
+    </ul>
+    <!--  
+    <table class="bar-search-with-indicator">
       <tr>
-        <td class="hidden-xs hasIndicator">
+        <td class="hidden-xs">
           {{> steps-indicator-hotel}}
         </td>
-        {{> bar-search-partial}}
+        <td>
+          <table>
+            <tr>
+              {{> bar-search-partial}}
+            </tr>
+          </table>
+        </td>
       </tr>
     </table>
+    -->
   </div>
 </div>
 

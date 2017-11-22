@@ -10,37 +10,37 @@ tickets: [
   {
     name: 'PS5',
     price: '152 MYR per ticket',
-    price2: '112 MYR per ticket',
+    price2: '<strong>112</strong> MYR per ticket',
   },
   {
     name: 'PS4',
     price: '250 MYR per ticket',
-    price2: '192 MYR per ticket',
+    price2: '<strong>192</strong> MYR per ticket',
   },
   {
     name: 'PS3',
     price: '352 MYR per ticket',
-    price2: '272 MYR per ticket',
+    price2: '<strong>272</strong> MYR per ticket',
   },
   {
     name: 'PS2',
     price: '450 MYR per ticket',
-    price2: '332 MYR per ticket',
+    price2: '<strong>332</strong> MYR per ticket',
   },
   {
     name: 'PS1',
     price: '552 MYR per ticket',
-    price2: '412 MYR per ticket',
+    price2: '<strong>412</strong> MYR per ticket',
   },
   {
     name: 'VIP',
     price: '590 MYR per ticket',
-    price2: '492 MYR per ticket',
+    price2: '<strong>492</strong> MYR per ticket',
   },
   {
     name: 'VVIP',
     price: '650 MYR per ticket',
-    price2: '572 MYR per ticket',
+    price2: '<strong>572</strong> MYR per ticket',
   }
 ]
 ---
@@ -61,19 +61,16 @@ tickets: [
           <div class="ticket-column ticket-column-image">
             <table>
               <tr>
-                <td class="image-holder"><img src="assets/img/show-thumbnail.jpg" alt=""></td>
-                <td class="visible-xs">
-                  <p class="h3">Kitaro - Kojiki & The Universe 2017</p>
-                </td>
+                <td class="image-holder"><img src="assets/img/show-thumbnail-inside.jpg" alt=""></td>
               </tr>
             </table>
           </div>
           <div class="ticket-column ticket-column-desc">
             <table>
-              <tr class="hidden-xs">
+              <tr>
                 <td class="top">
                   <p class="h3">Kitaro - Kojiki & The Universe 2017</p>
-                  <p>From 142 MYR per ticket</p>
+                  <p class="hidden-xs">From 142 MYR per ticket</p>
                 </td>
               </tr>
               <tr>
@@ -110,66 +107,11 @@ tickets: [
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-12">
-                      <label>Please select package, quantity, click Add, then click Proceed to continue.</label>
-                    </div>
-                    <div class="col-sm-7">
-                      <div class="form-group">
-                        <div class="select">
-                          <select class="form-control">
-                            <option value="">PS1: 80.00MYR/50GP</option>
-                            <option value="">PS2: 60.00MYR/60GP</option>
-                            <option value="">PS3: 70.00MYR/70GP</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-2">
-                      <div class="form-group">
-                        <div class="select">
-                          <select class="form-control">
-                            <option value="">QTY</option>
-                            <option value="">1</option>
-                            <option value="">2</option>
-                            <option value="">3</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-3">
-                      <div class="form-group">
-                        <button class="btn btn-block btn-primary" id="add-show">Add</button>
-                      </div>
-                    </div>
                   </div>
                 </td>
               </tr>
             </table>
           </div>
-          <div class="ticket-column ticket-column-selection">
-            <div class="review-show-selection">
-              <table id="table-show-selection">
-                <tr>
-                  <th>Time</th>
-                  <th>Seat</th>
-                  <th>Qty</th>
-                  <th>Price</th>
-                  <th></th>
-                </tr>
-                <tr class="add-row">
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td class="price">-</td>
-                  <td><button class="icon icon-minus-circle"><span class="sr-only">Remove</span></button></td>
-                </tr>
-                <tr class="total">
-                  <td colspan="3">Total</td>
-                  <td class="price" colspan="2">MYR</td>
-                </tr>
-              </table>
-            </div>
-          </div>    
         </div>
       </div>
       <div class="section hidden-xs">
@@ -177,7 +119,7 @@ tickets: [
           <tr>
             <td>
               <div class="table-padding-wrap">
-                <p><strong>Please add Package and then click Continue to proceed.</strong></p>
+                <p class="h4">Please add Package and then click Continue to proceed.</p>
               </div>
             </td>
             <td class="cell-show-notice">
@@ -200,7 +142,7 @@ tickets: [
                 <p>
                   <span class="h4">{{name}}</span><br>
                   <span><s>{{price}}</s></span><br>
-                  <span>{{price}}</span>
+                  <span>{{{price2}}}</span>
                 </p>
               </td>
               <td>
@@ -220,7 +162,7 @@ tickets: [
         </div>
         {{/each}}
       </div>
-      <div class="section clearfix">
+      <div class="section clearfix visible-xs">
         <div class="cell-show-notice">
           <p><i>
             Your seat selection will only be reserved for 10 minutes, please complete your transaction within the alloted time.
