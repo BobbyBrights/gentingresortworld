@@ -152,6 +152,9 @@
 
 .component-steps-indicator {
   display: inline-block;
+  background: #FFF;
+  border-radius: 4px;
+  padding: 4px;
 
   &.type-a {
     ul {
@@ -168,61 +171,24 @@
     }
   }
 
-  > ul {
-    padding: 0;
-    list-style: none;
-    background: transparent;
-    border-radius: $border-radius-base;
-    margin-bottom: 0;
-    height: 40px;
-    font-size: 12px;
-    padding: 4px;
-    text-align: left;
-
-    @include breakpoint(tablet) {
-      background: #FFF;
-      /*width: 360px;*/
-    }
-
-    .modal-shows-selection & {
-      width: 100%;
-      margin-bottom: 20px;
-      background: #FFF;
-
-      @media (max-width: $screen-xs-max) {
-        li:not(.active) {
-          .badge + span {
-            display: none;
-          }
-        }
-      }
-    }
-
-    &.has-date {
-      li:first-child {
-        float: left;
-      }
-    }
-
-    li {
-      display: inline-block;
-      vertical-align: middle;
-      height: 32px;
-      position: relative;
-      margin: 0 5px;
+  td {
+    div {
+      border-radius: $border-radius-base;
       text-transform: uppercase;
       font-weight: $weight-reg;
-      color: $text-color;
+      font-size: 12px;
+      background: #9b9b9b;
+      color: #FFF;
+      height: 32px;
+      padding: 0 7px;
+      line-height: 34px;
+      position: relative;
+    }
 
-      &:first-child {
-        margin-left: 0;
-      }
+    + td {
+      padding-left: 12px;
 
-      &:last-child {
-        margin-right: 0;
-      }
-
-      + li:before {
+      div:before {
         content: $icon-arrow-right;
         font-family: 'icons';
         color: #9B9B9B;
@@ -230,33 +196,27 @@
         font-size: 8px;
         position: absolute;
         left: -10px;
-        top: 11px;
+        top: 0;
       }
+    }
 
-      > div {
-        padding: 8px 7px 7px;
-        border-radius: $border-radius-base;
-        background: #9b9b9b;
-        color: #FFF;
-      }
+    .badge {
+      font-weight: $weight-bold;
+      height: 16px;
+      width: 16px;
+      text-align: center;
+      padding: 3px 0 0;
+      color: #FFF;
+      background: #9b9b9b;
+      position: relative;
+      top: -1px;
 
-      .badge {
-        font-weight: $weight-bold;
-        height: 16px;
-        width: 16px;
-        text-align: center;
-        padding: 3px 0 0;
-        color: #FFF;
-        background: #9b9b9b;
-        position: relative;
-        top: -1px;
-
-        + span {
-          margin-left: 10px;
-        }
+      + span {
+        margin-left: 10px;
       }
     }
   }
+  
 
   .btn {
     font-weight: $weight-reg;

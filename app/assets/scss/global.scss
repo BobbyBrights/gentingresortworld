@@ -393,6 +393,14 @@ hr {
 .header-bar {
   background-color: $purple;
 
+  table {
+    vertical-align: top;
+
+    &:not(.component-steps-indicator) {
+      width: 100%;
+    }
+  }
+
   + .header-bar {
     background-color: $gray-line;
   }
@@ -433,22 +441,7 @@ hr {
 
   .btn {
     font-size: 14px;
-  }
-}
-
-.bar-search-with-indicator {
-  margin: 0;
-  list-style: none;
-  padding: 0;
-  width: 100%;
-
-  > li {
-    display: inline-block;
-    vertical-align: middle;
-
-    &:first-child {
-      margin-right: 3px;
-    }
+    height: 42px;
   }
 }
 

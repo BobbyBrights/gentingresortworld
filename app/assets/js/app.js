@@ -71,6 +71,11 @@ $(document).ready(function () {
 
   // STICKY
   // $('#btn-booknow').sticky().on('sticky-start', function() { console.log("Started"); });;
+
+  // Set width to steps indicator bar
+  if ($('.steps-indicator-wrap').length > 0) {
+    $('.steps-indicator-wrap').width($('.component-steps-indicator').outerWidth());
+  }
   
 
   // RANGE DATEPICKER
