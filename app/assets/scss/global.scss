@@ -393,6 +393,10 @@ hr {
 .header-bar {
   background-color: $purple;
 
+  &.visible-xs {
+    text-align: center;
+  }
+
   table {
     vertical-align: top;
 
