@@ -31,11 +31,13 @@ form {
 }
 
 .input-group {
-  border: 1px solid transparent;
+  border: 1px solid white;
+  border-radius: $border-radius-base;
 
   * {
     border: none;
     box-shadow: none;
+    border-radius: 0;
   }
 
   .input-group-addon {
@@ -51,6 +53,10 @@ form {
     }
   }
 
+  input.form-control {
+    height: 38px;
+  }
+
   input:focus {
     border: none;
     box-shadow: none;
@@ -58,17 +64,16 @@ form {
 
   &.focus {
     box-shadow: 0 0 10px rgba(158, 30, 93, 0.15);
+    border-color: $purple;
 
-    > span, > input {
-      border: 1px solid $purple;
-    }
-
-    span:first-child {
-      border-right: none;
+    .input-group-addon {
+      border-top-left-radius: $border-radius-base;
+      border-bottom-left-radius: $border-radius-base;
     }
 
     input {
-      border-left: none;
+      border-top-right-radius: $border-radius-base;
+      border-bottom-right-radius: $border-radius-base;
     }
   }
 }

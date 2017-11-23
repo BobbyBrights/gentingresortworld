@@ -145,6 +145,12 @@ $(document).ready(function () {
     }
   });
 
+  if (md.mobile()) {
+    // Toggle search bar for mobile
+    $('#open-search-trigger').on('click', function () {
+      $('.header_bar-secondary > .container').addClass('open');
+    });
+  }
 
   // Slick Slider - Content
   $slickElementContent = $('.slides');

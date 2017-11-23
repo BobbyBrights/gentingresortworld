@@ -24,6 +24,8 @@
 
 @mixin transition($type: all, $time: 0.5s) {
   -webkit-transition: $type $time cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -moz-transition: $type $time cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -ms-transition: $type $time cubic-bezier(0.455, 0.03, 0.515, 0.955);
   -o-transition: $type $time cubic-bezier(0.455, 0.03, 0.515, 0.955);
   transition: $type $time cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }

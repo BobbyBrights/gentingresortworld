@@ -1,33 +1,38 @@
-<td class="bar-select">
-  <div class="select">
-    <select name="filter-type" id="a" class="form-control">
-      <option value="hotels">Hotels Only</option>
-      <option value="shows">Shows Only</option>
-      <option value="hotels">Hotels + Shows</option>
-      <option value="hotels">Hotels + Theme Park</option>
-      <option value="hotels">Hotels + Shows + Theme Park</option>
-    </select>
-  </div>
-</td>
-<td class="bar-date hidden-xs">
-  <div class="input-group">
-    <span class="input-group-addon">
-      <span class="icon icon-calendar"></span>
-    </span>
-    <input id="datepicker-range-from" type="text" class="form-control input" placeholder="Start Date">
-  </div>
-</td>
-<td class="bar-date hidden-xs">
-  <div class="input-group">
-    <span class="input-group-addon">
-      <span class="icon icon-calendar"></span>
-    </span>
-    <input id="datepicker-range-to" type="text" class="form-control input" placeholder="End Date">
-  </div>
-</td>
-<td class="bar-promo hidden-xs">
-  <input type="text" class="form-control text-center" placeholder="Promo Code">
-</td>
-<td>
-  <a href="hotel-listing.html" class="btn btn-primary btn-block">Search<span class="hidden-xs"> Now</span></a>
-</td>
+<table>
+  <tr>
+    <td class="bar-select">
+      <div id="open-search-trigger" class="btn-invisible visible-xs"></div>
+      <div class="select">
+        <select name="filter-type" id="a" class="form-control">
+          <option value="hotels">Hotels Only</option>
+          <option value="shows">Shows Only</option>
+          <option value="hotels">Hotels + Shows</option>
+          <option value="hotels">Hotels + Theme Park</option>
+          <option value="hotels">Hotels + Shows + Theme Park</option>
+        </select>
+      </div>
+    </td>
+    <td class="bar-date">
+      <div class="input-group">
+        <span class="input-group-addon">
+          <span class="icon icon-calendar"></span>
+        </span>
+        <input id="datepicker-range-from" type="text" class="form-control input" placeholder="Start Date">
+      </div>
+    </td>
+    <td class="bar-date">
+      <div class="input-group">
+        <span class="input-group-addon">
+          <span class="icon icon-calendar"></span>
+        </span>
+        <input id="datepicker-range-to" type="text" class="form-control input" placeholder="End Date">
+      </div>
+    </td>
+    <td class="bar-promo">
+      <input type="text" class="form-control text-center" placeholder="Promo Code">
+    </td>
+    <td>
+      <a href="hotel-listing.html" class="btn btn-primary btn-block">Search<span class="hidden-xs"> Now</span></a>
+    </td>
+  </tr>
+</table>
