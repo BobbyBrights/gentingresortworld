@@ -126,6 +126,9 @@
       font-weight: $weight-reg;
       font-size: 11px;
       line-height: 10px;
+      text-align: left;
+      text-transform: none;
+      color: #4A4A4A;
     }
   }
 
@@ -146,6 +149,7 @@
 
     &.unavailable {
       background-color: $gray-line;
+      border-color: $gray-line;
     }
   }
 }
@@ -614,7 +618,7 @@
   }
 }
 
-.shows-calendar, .modal-shows-selection .ui-datepicker-inline .ui-datepicker-calendar {
+.typea .ui-datepicker-inline .calendar-wrap, .shows-calendar, .ui-datepicker-inline .ui-datepicker-calendar {
   width: 100%;
   text-align: center;
   margin-bottom: 10px;

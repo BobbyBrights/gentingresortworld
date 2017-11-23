@@ -19,14 +19,6 @@
   }
 }
 
-.modal-shows-selection {
-  .modal-dialog {
-    @media (min-width: $screen-lg-min) {
-      width: $container-lg;
-    }
-  }
-}
-
 .show-info-wrap {
   @include make-sm-column(5);
   

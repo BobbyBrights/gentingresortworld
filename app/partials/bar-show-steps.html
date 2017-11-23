@@ -22,9 +22,12 @@
             {{> steps-indicator-themeparks}}
           </td>
         {{/ifEquals}}
+        {{#ifEquals type 'typea'}}
+        {{else}}
         <td class="bar-search">
           {{> bar-search-partial}}
         </td>
+        {{/ifEquals}}
       </tr>
     </table>
   </div>

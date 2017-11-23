@@ -1,69 +1,16 @@
 ---
-class: 'shows-selection'
-overlay: 'true'
+class: 'typea'
+type: 'typea'
 
 current: {
-  'pageticket': true,
+  'pagecheckout': true,
   'type': 'typea'
   }
 ---
 
-<div class="header_bar-secondary header-bar">
-  <div class="container">
-    <div class="component-steps-indicator type-a">
-      <ul>
-        <li>
-          <div>
-            <span class="badge">1</span>
-            <span>Ticket Selection</span>
-          </div>
-        </li>
-        <li class="active">
-          <div>
-            <span class="badge">2</span>
-            <span>Checkout</span>
-          </div>
-        </li>
-        <li>
-          <div>
-            <span class="badge">3</span>
-            <span>Thank You</span>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
+{{> bar-show-steps current}}
 
-<div class="header-bar visible-xs">
-  <div class="container">
-    <div class="component-steps-indicator">
-      <ul>
-        <li>
-          <div>
-            <span class="badge">1</span>
-            <span>Ticket Selection</span>
-          </div>
-        </li>
-        <li class="active">
-          <div>
-            <span class="badge">2</span>
-            <span>Checkout</span>
-          </div>
-        </li>
-        <li>
-          <div>
-            <span class="badge">3</span>
-            <span>Thank You</span>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
-<div class="page-body">
+<div class="page-body page-shows">
   <div class="container">
     
 

@@ -33,6 +33,12 @@ $(document).ready(function () {
       if ($(window).height() > 700) {
         $('.page-landing').height($w.height() - $footer.height() - $('.navbar').height());
       }
+      
+      if (pageHeight < windowHeight) {
+        $footer.addClass('sticky');
+      } else {
+        $footer.removeClass('sticky');
+      }
     });
 
     if (pageHeight < windowHeight) {

@@ -50,34 +50,38 @@
           <h1 itemprop="name" class="sr-only">Genting Resorts World</h1>
           <span itemprop="image"><img src="assets/img/logo-rw.svg" alt="Genting Resorts World"></span>
         </a>
-        <ul class="navbar-menu">
-          <li>
-            {{> info-settings}}
-          </li>
-          <li>
-            <a href="#">
-              <span class="sr-only">Cart</span>
-              <span class="icon icon-cart"></span>
-              <span class="badge">42</span>
-            </a>
-          </li>
-          <li class="hidden-xs">
-            <a href="#" data-toggle="modal" data-target="#modal-signin">Sign in or create an account</a>
-          </li>
-          <li class="dropdown user-profile">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-              <!-- <span class="icon icon-user-circle-o"></span> -->
-              <img src="assets/img/profile.jpg" alt="" class="avatar">
-            </a>
-            <ul class="dropdown-menu">
-              <li><a href="#" data-toggle="modal" data-target="#modal-signin">Login</a></li>
-              <li><a href="member-profile.html">My Account</a></li>
-              <li><a href="bookings.html">My Booking</a></li>
-              <li><a href="redemption.html">Redemption</a></li>
-              <li><a href="#">Log Out</a></li>
-            </ul>
-          </li>
-        </ul>
+
+        {{#ifEquals type 'typea'}}
+        {{else}}
+          <ul class="navbar-menu">
+            <li>
+              {{> info-settings}}
+            </li>
+            <li>
+              <a href="#">
+                <span class="sr-only">Cart</span>
+                <span class="icon icon-cart"></span>
+                <span class="badge">42</span>
+              </a>
+            </li>
+            <li class="hidden-xs">
+              <a href="#" data-toggle="modal" data-target="#modal-signin">Sign in or create an account</a>
+            </li>
+            <li class="dropdown user-profile">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <!-- <span class="icon icon-user-circle-o"></span> -->
+                <img src="assets/img/profile.jpg" alt="" class="avatar">
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#" data-toggle="modal" data-target="#modal-signin">Login</a></li>
+                <li><a href="member-profile.html">My Account</a></li>
+                <li><a href="bookings.html">My Booking</a></li>
+                <li><a href="redemption.html">Redemption</a></li>
+                <li><a href="#">Log Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        {{/ifEquals}}
       </div>
     </div>
   </nav>

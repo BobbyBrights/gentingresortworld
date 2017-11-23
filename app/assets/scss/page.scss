@@ -636,6 +636,7 @@ body.landing {
     position: absolute;
     width: 100%;
     height: calc(100% - 135px);
+    /*height: 100%;*/
     
     .slick-dots {
       z-index: 5;
@@ -984,6 +985,132 @@ body.landing {
     }
   }
 }
+
+.page-shows {
+  .review-show-selection {
+    margin-top: 0;
+  }
+
+  .layout-purchase {
+    margin-bottom: 0;
+
+    .sections {
+      margin-bottom: 0;
+    }
+  }
+
+  .show-info-wrap {
+    padding-right: 20px;
+  }
+
+  .show-info {
+    background: $purple;
+    border-radius: $border-radius-base;   
+  }
+
+  .show-detail {
+    p {
+      font-size: 14px;
+
+      &.overview {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .show-selection {
+    padding-left: 0;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  .calendar-wrap {
+    margin-left: -20px;
+    margin-right: -20px;
+    background: #FFF;
+    padding: 7px;
+    color: $text-color;
+    margin-bottom: 3px;
+
+    + .calendar-wrap {
+      margin-bottom: 8px;
+    }
+
+    .shows-calendar, .ui-datepicker-inline .ui-datepicker-calendar {
+      th {
+        font-size: 12px;
+        font-weight: $weight-reg;
+        padding-bottom: 5px;
+        border-bottom: none;
+        color: #4a4a4a;
+      }
+
+      td span, td a {
+        height: 33px;
+        width: 40px;
+        line-height: 31px;
+        font-size: 14px;
+
+      }
+    }
+  }
+
+  .component-legend {
+    ul {
+      margin-bottom: 0;
+    }
+  }
+
+  .calendar-header {
+    border-bottom: 1px solid $gray-line;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+
+    .title {
+      margin-bottom: 0;
+    }
+  }
+
+  .ui-datepicker-header {
+    border-bottom: 1px solid $gray-line;
+
+    a, .ui-datepicker-title, .ui-datepicker-next:after, .ui-datepicker-prev:before {
+      color: $text-color;
+      font-size: 24px;
+    }
+
+    .ui-datepicker-title {
+      margin-bottom: 0;
+    }
+
+    .ui-datepicker-next, .ui-datepicker-prev {
+      top: 7px;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      &.ui-state-disabled {
+        opacity: 0.3;
+        cursor: default;
+      }
+    }
+  }
+
+  .ui-datepicker tbody>tr:first-child>td {
+    padding-top: 0;
+  }
+
+  .ui-datepicker-current-day:before {
+    background: transparent;
+    width: 0;
+    height: 0;
+  }
+}
+
 /* MEMBERS */
 @import 'pages/members';
 @import 'pages/others';
