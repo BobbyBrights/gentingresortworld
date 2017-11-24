@@ -3,22 +3,22 @@
     <table>
       <tr>
         {{#ifEquals type 'hotel'}}
-          <td class="steps-indicator-wrap hidden-xs">
+          <td class="steps-indicator-wrap">
             {{> steps-indicator-hotel}}
           </td>
         {{/ifEquals}}
         {{#ifEquals type 'typez'}}
-          <td class="steps-indicator-wrap hidden-xs">
+          <td class="steps-indicator-wrap">
             {{> steps-indicator-shows-typez}}
           </td>
         {{/ifEquals}}
         {{#ifEquals type 'typea'}}
-          <td class="steps-indicator-wrap hidden-xs">
+          <td class="steps-indicator-wrap">
             {{> steps-indicator-shows}}
           </td>
         {{/ifEquals}}
         {{#ifEquals type 'themepark'}}
-          <td class="steps-indicator-wrap hidden-xs">
+          <td class="steps-indicator-wrap">
             {{> steps-indicator-themeparks}}
           </td>
         {{/ifEquals}}
@@ -30,22 +30,5 @@
         {{/ifEquals}}
       </tr>
     </table>
-  </div>
-</div>
-
-<div class="header-bar visible-xs">
-  <div class="container">
-    {{#ifEquals type 'hotel'}}
-      {{> steps-indicator-hotel}}
-    {{/ifEquals}}
-    {{#ifEquals type 'typez'}}
-      {{> steps-indicator-shows-typez}}
-    {{/ifEquals}}
-    {{#ifEquals type 'typea'}}
-      {{> steps-indicator-shows}}
-    {{/ifEquals}}
-    {{#ifEquals type 'themepark'}}
-      {{> steps-indicator-themeparks}}
-    {{/ifEquals}}
   </div>
 </div>
