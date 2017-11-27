@@ -1000,12 +1000,15 @@ body.landing {
   }
 
   .show-info-wrap {
-    padding-right: 20px;
+    /*padding-right: 20px;*/
   }
 
   .show-info {
     background: $purple;
-    border-radius: $border-radius-base;   
+    
+    @include breakpoint(tablet) {
+      border-radius: $border-radius-base;
+    }
   }
 
   .show-detail {

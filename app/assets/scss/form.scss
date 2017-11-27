@@ -433,8 +433,14 @@ label.radio-as-list {
   border: 1px solid #ECECEC;
 
   .clearfix {
-    width: 80%;
-    margin: 30px auto 20px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+    @include breakpoint(tablet) {
+      width: 80%;
+      margin: 30px auto 20px;
+    }
   }
 }
 

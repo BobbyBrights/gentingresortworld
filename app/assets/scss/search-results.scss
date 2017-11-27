@@ -208,30 +208,6 @@
   }
 }
 
-/* to delete */
-.image-holder {
-  vertical-align: top;
-  
-  .show-results &, .themepark-results & {
-    width: 130px;
-    padding-right: 10px;
-
-    @include breakpoint(tablet) {
-      width: 194px;
-      padding-right: 0;
-    }
-  }
-
-  .hotel-results & {
-    width: 100%;
-    vertical-align: middle;
-
-    @include breakpoint(tablet) {
-      width: 175px;
-    }
-  }
-}
-/* to delete */
 
 .themepark-results {
   ul > li {
