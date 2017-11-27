@@ -494,7 +494,7 @@ hr {
       @include transition(max-height, 0.25s)
 
       &.open {
-        max-height: 196px;
+        max-height: 296px;
 
         .btn-invisible {
           display: none !important;
@@ -704,7 +704,7 @@ ul.separator {
   &.item-well-fill {
     background-color: $gray-well;
     border-radius: $border-radius-base;
-    padding: 10px;
+    padding: 10px 20px;
 
     &.purple {
       background-color: $darkpurple;

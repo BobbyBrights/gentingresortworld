@@ -76,7 +76,8 @@ $(document).ready(function () {
   });
 
   // STICKY
-  // $('#btn-booknow').sticky().on('sticky-start', function() { console.log("Started"); });;
+  var sticky = new Sticky('.make-sticky');
+  
 
   // Set width to steps indicator bar
   if ($('.steps-indicator-wrap').length > 0) {
