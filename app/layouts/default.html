@@ -124,11 +124,21 @@
     </div>
   </section>
 
-  {{> modal-currency}}
-  {{> modal-language}}
-  {{> modal-signin}}
-  {{> modal-signin-guest}}
-  {{> modal-signup}}
+  {{#ifEquals type 'typea'}}
+  
+    <!-- ERROR MESSSAGE -->
+    <!-- Please remove this HTML on real site. This is for demonstration purpose only. -->
+    <a href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modal-error">Trigger error</a>
+    <!-- ERROR MESSSAGE -->
+
+    {{>modal-error}}
+  {{else}}
+    {{> modal-currency}}
+    {{> modal-language}}
+    {{> modal-signin}}
+    {{> modal-signin-guest}}
+    {{> modal-signup}}
+  {{/ifEquals}}
 
   
   <script src="assets/js/app.js"></script>

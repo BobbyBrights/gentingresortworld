@@ -307,6 +307,28 @@
   }
 }
 
+.searchbar-toggle {
+  display: block;
+  position: absolute;
+  top: -44px;
+  right: 0;
+  background: #FFF;  
+  border-radius: 4px;
+  height: 40px;
+  padding: 0 10px;
+
+  &:before {
+    content: $icon-arrow-down;
+    font-family: icons;
+    font-size: 28px;
+    color: $purple;
+    line-height: 42px;
+  }
+}
+
+.component-bar-search {
+}
+
 
 /* SLIDESHOW */
 .component-slideshow {

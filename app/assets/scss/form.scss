@@ -189,6 +189,8 @@ form {
 }
 
 .form-wide {
+  margin-bottom: 30px;
+
   @media (max-width: $screen-xs-max) {
     padding: 0 10px;
   }
@@ -205,6 +207,10 @@ form {
     .component-info-settings {
       margin-bottom: 0;
     }
+
+    form {
+      margin-bottom: 20px;
+    }
   }
 
   ul.inline {
@@ -216,9 +222,7 @@ form {
     }
   }
 
-  form {
-    margin-bottom: 20px;
-  }
+  
 
   .form-group {
     float: left;

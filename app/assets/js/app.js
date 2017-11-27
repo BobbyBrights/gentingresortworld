@@ -153,8 +153,8 @@ $(document).ready(function () {
 
   if (md.mobile()) {
     // Toggle search bar for mobile
-    $('#open-search-trigger').on('click', function () {
-      $('.header_bar-secondary > .container').addClass('open');
+    $('#open-search').on('click', function () {
+      $('.header_bar-secondary > .container').toggleClass('open');
     });
   }
 

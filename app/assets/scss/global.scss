@@ -229,6 +229,11 @@ hr {
 }
 
 /* NAVBAR */
+.navbar-toggle {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 .navbar-header {
   width: 100%;
   
@@ -405,6 +410,10 @@ hr {
     }
   }
 
+  .bar-search {
+    position: relative;
+  }
+
   @media (max-width: $screen-xs-max) {
     .bar-search table {
       tr, tbody, td {
@@ -464,6 +473,10 @@ hr {
 
 .header_bar-secondary {
   text-align: center;
+
+  td {
+    vertical-align: top;
+  }
   
   td + td {
     padding-left: 5px;
@@ -486,6 +499,12 @@ hr {
         .btn-invisible {
           display: none !important;
         }
+      }
+
+      > table > tbody > tr > td {
+        vertical-align: top;
+        display: block;
+        width: 100%
       }
     }
   }

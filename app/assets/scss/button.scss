@@ -174,3 +174,13 @@ button.icon {
   left: 0;
   z-index: 2;
 }
+
+#open-search-trigger {
+  background-color: #FFF;
+  
+  &:before {
+    content: $icon-plus-circle;
+    font-family: 'icons';
+    color: $purple;
+  }
+}
