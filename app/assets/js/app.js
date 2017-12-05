@@ -5,7 +5,7 @@ $(document).ready(function () {
   var md = new MobileDetect(window.navigator.userAgent);
 
   // Open Menu
-  var $btnMenu = $('#toggle-menu'),
+  var $btnMenu = $('.toggle-menu'),
       $contentMenu = $('#nav-menu');
 
   $btnMenu.on('click', function() {

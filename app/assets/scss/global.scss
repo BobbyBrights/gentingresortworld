@@ -71,7 +71,7 @@ hr {
 
 /* MENU */
 
-#toggle-menu {
+.toggle-menu {
   /*width: 22px;*/
   /*height: 45px;*/
   position: relative;
@@ -85,12 +85,18 @@ hr {
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   cursor: pointer;
+  top: 0;
+
+  @include breakpoint(tablet) {
+    top: 6px;
+  }
 
   .icon-bar {
     position: absolute; 
     background: #FFF;
     opacity: 1;
     left: 0;
+    display: block;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -100,22 +106,20 @@ hr {
     -o-transition: .25s ease-in-out;
     transition: .25s ease-in-out;
   }
-}
 
-#toggle-menu span:nth-child(1) {
-  top: 0px;
-}
+  span {
+    &:nth-child(1) {
+      top: 0px;
+    }
 
-#toggle-menu span:nth-child(2),#toggle-menu span:nth-child(3) {
-  top: 2px;
-}
+    &:nth-child(2),&:nth-child(3) {
+      top: 2px;
+    }
 
-#toggle-menu span:nth-child(4) {
-  top: 8px;
-}
-
-#toggle-menu {
-  top: 6px;
+    &:nth-child(4) {
+      top: 8px;
+    }
+  }
 
   .modal-open & {
     span:nth-child(1) {
@@ -148,12 +152,12 @@ hr {
 
 
 .menu {
+  border-top: 5px solid $brand-primary;
   background: transparent;
   font-weight: $weight-reg;
-  padding: 1.875em 0;
   position: absolute;
   bottom: 0;
-  top: $navbar-height;
+  top: 0;
   z-index: 10;
   right: auto;
   left: -100%;
@@ -174,7 +178,9 @@ hr {
       ul {
         width: 50%;
         position: absolute;
-        right: 120px;
+        margin-top: 50px;
+        left: calc(100% - 500px);
+        overflow: auto;
       }
     }
   }
@@ -182,7 +188,6 @@ hr {
 
   &:before {
     @media (max-width: $screen-xs-max) {
-
       @include transition(left, 0.8s);
       background: $purple-header;
       content: '';
@@ -204,11 +209,15 @@ hr {
     &:before {
       left: 0;
     }
-    /*display: block;*/
   }
 
   ul {
+    margin-top: 50px;
     padding: 0;
+
+    @include breakpoint(tablet) {
+      margin-top: 0;
+    }
 
     li {
       list-style-type: none;
@@ -223,8 +232,17 @@ hr {
     font-size: 16px;
 
     @include breakpoint(tablet) {
-      padding: 0.625em 0;
+      padding: 10px 0;
       font-size: 20px;
+    }
+  }
+
+  .navbar-toggle {
+    display: block;
+    margin-right: 23%;
+
+    @include breakpoint(tablet) {
+      margin-right: 0;
     }
   }
 }
@@ -486,6 +504,7 @@ hr {
   .btn {
     font-size: 14px;
     height: 42px;
+    overflow: hidden;
   }
 
   @media (max-width: $screen-xs-max) {

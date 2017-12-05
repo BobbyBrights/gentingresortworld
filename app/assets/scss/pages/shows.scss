@@ -17,6 +17,10 @@
       position: absolute;
     }
   }
+
+  .show-results .image-holder {
+    width: 110px;
+  }
 }
 
 .show-info-wrap {
@@ -464,14 +468,32 @@
 }
 
 .stubs {
+  @include make-xs-column(12);
   border-bottom: 1px solid #ECECEC;
   margin-top: -1px;
   margin-left: -1px;
   padding: 20px;
   color: $purple;
 
+  @include breakpoint(mobile) {
+    @include make-xs-column(6);
+  }
+
   td {
     width: 50%;
+
+    @include breakpoint(mobile) {
+      width: 33.3333%;
+
+      &:first-child {
+        width: 30%;
+        padding-right: 10px;
+      }
+
+      &:last-child {
+        padding-left: 10px;
+      }
+    }
 
     @include breakpoint(tablet) {
       width: auto;
@@ -485,7 +507,7 @@
       }
     }
 
-    @media (max-width: $screen-xs-max) {
+    @media (max-width: 479px) {
       display: inline-block;
 
       &:last-child {

@@ -192,6 +192,10 @@
       padding: 0 7px;
       line-height: 34px;
       position: relative;
+
+      span {
+        white-space: nowrap;
+      }
     }
 
     + td {
@@ -326,11 +330,15 @@
   padding: 0 10px;
 
   &:before {
-    content: $icon-arrow-down;
+    content: $icon-search;
     font-family: icons;
     font-size: 28px;
     color: $purple;
     line-height: 42px;
+  }
+
+  @include breakpoint(tablet) {
+    display: none;
   }
 }
 

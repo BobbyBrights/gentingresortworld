@@ -1,24 +1,27 @@
 /* RESULTS PAGE */
 
 .results-item {
+  @include make-xs-column(12);
   border-bottom: 10px solid #e6e6e6;
   margin-bottom: 10px;
   background: #FFF;
   margin: 2px 0;
 
+  @include breakpoint(mobile) {
+    @include make-xs-column(6);
+    border-bottom: none;
+  }
+
   table {
     width: 100%;
   }
 
-  @include breakpoint(tablet) {
-    border-bottom: none;
-  }
 
   .results-wrap {
     padding: 20px 15px;
     position: relative;
 
-    @include breakpoint(tablet) {
+    @include breakpoint(mobile) {
       @include clearfix();
       border: 1px solid $gray-line;
       margin: 5px;
@@ -48,6 +51,9 @@
 }
 
 .results-desc {
+  &.top, &.bottom {
+    padding-left: 15px;
+  }
 
   @include breakpoint(tablet) {
     padding-left: 10px;

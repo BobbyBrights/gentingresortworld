@@ -319,29 +319,6 @@
   }
 }
 
-/*
-.modal-shows-selection {
-  &.purple .modal-content .modal-body {
-    background-color: transparent;
-    padding: 0;
-    color: $text-color;
-  }
-
-  
-
-  @media (max-width: $screen-xs-max) {
-    .modal-dialog {
-      margin: 0;
-
-      .show-info-wrap, .show-selection {
-        padding-right: 0;
-        padding-left: 0;
-      }
-    }
-  }
-}
-*/
-
 .terms-well {
   background: #ECECEC;
   padding: 15px;
@@ -354,37 +331,6 @@
   }
 }
 
-.terms.checkbox {
-  margin-left: 10px;
-  margin-right: 10px;
-
-  @include breakpoint(tablet) {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  label {
-    text-align: left;
-  }
-
-  span {
-    font-size: 14px;
-    padding-left: 35px !important;
-
-    &:before {
-      font-size: 20px;
-      font-weight: $weight-reg;
-    }
-
-    @include breakpoint(tablet) {
-      padding-left: 45px !important;
-
-      &:before {
-        font-size: 25px;
-      }
-    }
-  }
-}
 
 .modal-details {
   .modal-dialog {    
@@ -402,6 +348,10 @@
 
     .modal-body {
       padding: 0;
+
+      img {
+        width: 100%;
+      }
 
       .content {
         padding: 0 10px 10px;

@@ -51,7 +51,7 @@ results: [
     </div>
     <div class="clearfix">
       {{#each results}}
-        <div class="col-sm-6 results-item show-results">
+        <div class="results-item show-results">
           <div class="row">
             <div class="results-wrap">
               <table>
@@ -74,7 +74,7 @@ results: [
                         <strong>Date: {{date}}</strong>
                       </p>
                       <ul class="hidden-xs">
-                        <li><a href="typez-shows-ticket-2.html" class="btn btn-default">More Details</a></li>
+                        <li><a href="#" class="btn btn-default" data-toggle="modal" data-target="#modal-moredetails">More Details</a></li>
                         <li><a href="#" class="btn btn-default">View Floor Plan</a></li>
                         <li><a href="typez-shows-ticket-1.html" class="btn btn-primary btn-block">Select</a></li>
                       </ul>
@@ -85,7 +85,7 @@ results: [
                   <td class="results-desc" colspan="2">
                     {{#unless @last}}
                       <ul>
-                        <li><a href="typez-shows-ticket-1.html" class="btn btn-default">More Details</a></li>
+                        <li><a href="#" class="btn btn-default" data-toggle="modal" data-target="#modal-moredetails">More Details</a></li>
                         <li><a href="#" class="btn btn-default">View Floor Plan</a></li>
                         <li><a href="typez-shows-ticket-2.html" class="btn btn-primary btn-block">Select</a></li>
                       </ul>
@@ -100,3 +100,5 @@ results: [
     </div>
   </div>
 </div>
+
+{{>modal-moredetails}}
